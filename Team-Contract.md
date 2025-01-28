@@ -38,7 +38,7 @@ In this section, the team will discuss and clearly define their collective expec
 ### **4. Meetings**
 
 - **Expectation:** Regarding team meetings:
-  - **Frequency:** The team will meet weekly Mondays at 1pm and occasionally Wednesdays at 1pm when needed, or Monday through Wednesdays after 5pm.
+  - **Frequency:** The team will meet weekly Mondays at 5pm and occasionally Wednesdays at 5pm when needed. Additional meeting times will be planned when necessary.
   - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
   - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research. Aside from weekly meetings, other meetings must be communicated at least a week in advance.
 
@@ -74,11 +74,11 @@ Unique roles may emerge throughout the life of the project, and this contract wi
 
 ## **Additional Agreements**
 
-Include any other important agreements the team decides upon.
+Duy pays for food
 
 
 ## **Team Member Signatures**
 
 By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-[List all student names here]
+Michael Feiel
