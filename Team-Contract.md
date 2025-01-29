@@ -1,7 +1,7 @@
 # **Teamwork Contract**
 
 **Team 4**  
-**Team Members:** Mohammed Almehmadi, Michael Feiel, Henry Hurst, Duy Tran
+**Team Members:** Mohammed Almehmadi, Michael Feiel, Henry Hurst, Duy Tran  
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
 
