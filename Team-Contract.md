@@ -74,7 +74,7 @@ Unique roles may emerge throughout the life of the project, and this contract wi
 
 ## **Additional Agreements**
 
-Michael Feiel will sing many songs before presentation
+Any agreements reached will be added here.
 
 
 ## **Team Member Signatures**
