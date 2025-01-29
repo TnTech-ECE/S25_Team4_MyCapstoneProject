@@ -74,7 +74,7 @@ Unique roles may emerge throughout the life of the project, and this contract wi
 
 ## **Additional Agreements**
 
-Duy pays for food
+Michael Feiel will sing many songs before presentation
 
 
 ## **Team Member Signatures**
