@@ -81,4 +81,4 @@ Duy pays for food
 
 By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-Michael Feiel
+Michael Feiel, Henry Hurst
