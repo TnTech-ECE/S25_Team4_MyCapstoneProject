@@ -7,7 +7,7 @@
 
 ## **Introduction**
 
-*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team X. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our project.*
+*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team 4. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our project.*
 
 
 ## **Team Expectations**
