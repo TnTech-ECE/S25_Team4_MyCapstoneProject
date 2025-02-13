@@ -73,5 +73,3 @@ Michael Feiel – Measures of Success, Resources, Uploading to Github
 Henry Hurst – Formulating the Problem, Constraints, Specific and Broader implications
 
 Mohammed Almehmadi – Constraints, Broader Implications, Resources
-
-
