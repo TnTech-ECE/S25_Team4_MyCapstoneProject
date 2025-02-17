@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As technology advances, its integration with agriculture follows. One such application is for greenhouses. Essentially, greenhouses are buildings used to grow plants in a controlled environment. This project proposal is to design a portable sensory network to detect and control CO2, O2, light, temperature, and humidity. There will also be camera implementation to show plant growth through time.
+As technology advances, its integration with agriculture follows. One such application is for greenhouses. Essentially, greenhouses are buildings used to grow plants in a controlled environment. This project proposal is to design a portable sensory network to detect and control CO<sub>2</sub>, O<sub>2</sub>, light, temperature, and humidity. There will also be camera implementation to show plant growth through time.
 
 ## Formulating the Problem
 
@@ -14,7 +14,7 @@ The problem identified affects Tennessee Tech’s Biology department specializin
 
 ### Specifications
 
-Size should be lightweight also everything will need to fit in a small space. Also, power in a portable device will be limited, and several components will need a lot of power that need to be minimized. Modules shall be powered via ethernet connection, while the modules’ data shall be transmitted wirelessly to a central processor. The processor shall transmit, via WiFi, to update a website with live data. There shall also be some degree of data storage. The live website shall have controls for the system, which shall be able to change desired parameters for CO2, O2, light, temperature, and humidity.
+Size should be lightweight, and everything will need to fit in a small space. Also, power in a portable device will be limited, and several components will need power that needs to be minimized. Modules shall be powered via ethernet connection, while the modules’ data shall be transmitted wirelessly to a central processor. The processor shall transmit, via WiFi, to update a website with live data. There shall also be some degree of data storage. The live website shall have controls for the system, which shall be able to change desired parameters for CO<sub>2</sub>, O<sub>2</sub>, light, temperature, and humidity. The system shall also automatically control CO<sub>2</sub>, O<sub>2</sub>, temperature, and humidity through the use of opening or closing the greenhouse flaps, activation or deactivation of fans, and activation or deactivation of the present humidity system (whether that be a humidifier, a water pump, or sprinkler system).
 
 
 ### Constraints
@@ -31,7 +31,7 @@ The project’s success will be measured by the system’s usability in a greenh
 
 ## Resources
 
-This project will require multiple sensors for various elements, such as CO2, humidity, sunlight, and temperature. These sensors will need to receive power via ethernet cable and transmit their data wirelessly to a central processing unit. This unit will then upload the data to a live webpage that can monitor and manually control modules. The protocol that will be used for the sensor network will be MQTT which allows the sensors to communicate over a network with limited bandwidth. 
+This project will require multiple sensors for various elements, such as CO<sub>2</sub>, humidity, sunlight, and temperature. These sensors will need to receive power via ethernet cable and transmit their data wirelessly to a central processing unit. This unit will then upload the data to a live webpage that can monitor and manually control modules. The protocol that will be used for the sensor network will be MQTT which allows the sensors to communicate over a network with limited bandwidth. 
 
 ### Budget
 
@@ -43,7 +43,7 @@ The team has similar experience overall but can learn the necessary knowledge to
  
 ### Timeline
 
-![Gantt Chart](https://github.com/TnTech-ECE/S25_Team4_MyCapstoneProject/blob/6b491942bbbfa6d045a560bc66826962298cc58d/gantt-chart.png)
+![Gantt Chart](https://github.com/TnTech-ECE/S25_Team4_MyCapstoneProject/blob/6b491942bbbfa6d045a560bc66826962298cc58d/gantt-chart.png) 
 
 ## Specific Implications
 
@@ -51,12 +51,7 @@ The implications of the implementation of the greenhouse sensor network are accu
 
 ## Broader Implications
 
-One of the main economic impacts is power. Our system will draw more power; however, using sleep modes on certain sensors or cameras will draw less power to the system. Another impact is the wiring and sensors within the greenhouse. There is a potential chance it will affect the greenhouse in unexpected ways and give errors to the sensors with the high humidity. 
-
-## Automation
-
-The CO2, O2, temperature, sunlight, and humidity sensors will collect the data from the farmhouse, then the raspberry pi reads the sensor data and stores it. According to the data obtained the system will adjust optional water pumps, fan speeds, and ventilation angles. 
-
+One of the main economic impacts is power. Our system will draw more power; however, using sleep modes on certain sensors or cameras will draw less power to the system. Another impact is the wiring and sensors within the greenhouse. There is a potential chance it will affect the greenhouse in unexpected ways and give errors to the sensors with the high humidity.
 
 ## References
 
@@ -78,4 +73,4 @@ Michael Feiel – Measures of Success, Resources, Uploading to Github
 
 Henry Hurst – Formulating the Problem, Constraints, Specific and Broader implications
 
-Mohammed Almehmadi – Constraints, Broader Implications, Automation, Resources. 
+Mohammed Almehmadi – Constraints, Broader Implications, Automation, Resources
