@@ -2,11 +2,11 @@
 
 ## Introduction
 
-As technology advances, its integration with agriculture follows. One such application is for greenhouses. Essentially, greenhouses are buildings used to grow plants in a controlled environment. Our project proposal is to design a portable sensory network to detect and control CO2, O2, light, temperature, and humidity. There will also be camera implementation to show plant growth through time.
+As technology advances, its integration with agriculture follows. One such application is for greenhouses. Essentially, greenhouses are buildings used to grow plants in a controlled environment. This project proposal is to design a portable sensory network to detect and control CO2, O2, light, temperature, and humidity. There will also be camera implementation to show plant growth through time.
 
 ## Formulating the Problem
 
-Greenhouses can have inaccurate measures of temperature causing issues with plant growth. Our plan is to work with Dr. Kenmonth-Schultz, as well as the biological department at Tennessee Tech, to make a sensory network that is capable of detecting specific variables mentioned above and regulating the temperature. Website Design, hardware implementation, and running wires requires a diverse set of engineers and minds to solve this problem. All solutions that are currently available have soaring prices, and other specific devices might be required. There seems to be no all-in-one solution for our project.
+Greenhouses can have inaccurate measures of temperature causing issues with plant growth. The group is to work with Dr. Kenmonth-Schultz, as well as the biological department at Tennessee Tech, to make a sensory network that is capable of detecting specific variables mentioned above and regulating the temperature and optional water pumps, fan speeds, and ventilation angles. Website Design, hardware implementation, and running wires requires a diverse set of engineers and minds to engineer a solution to these problems. All solutions that are currently available have soaring prices, and other specific devices might be required. There seems to be no all-in-one solution for this application.
 
 ### Background
 
@@ -14,23 +14,24 @@ The problem identified affects Tennessee Tech’s Biology department specializin
 
 ### Specifications
 
-Size should be lightweight also everything will need to fit in a small space. Also, power in a portable device will be limited, and several components will need a lot of power that need to be reduced to extend battery life. However, our aim is to make the device as efficient as possible with a low budget, finding sensors and materials will be challenging.
+Size should be lightweight also everything will need to fit in a small space. Also, power in a portable device will be limited, and several components will need a lot of power that need to be minimized. Modules shall be powered via ethernet connection, while the modules’ data shall be transmitted wirelessly to a central processor. The processor shall transmit, via WiFi, to update a website with live data. There shall also be some degree of data storage. The live website shall have controls for the system, which shall be able to change desired parameters for CO2, O2, light, temperature, and humidity.
+
 
 ### Constraints
  
-The environment of the green house will be a challenge because the device must work in an environment that will be affected by water, dust, and humidity. So, we will need to make the device as efficient as possible in this environment. The required power shall not exceed 50 V according to occupational safety and health administration. 
+The environment of the green house will be a challenge because the device must work in an environment that will be affected by water, dust, and humidity. So, the device will be made as efficient as possible in this environment. The required power shall not exceed 50 V according to occupational safety and health administration. Additionally, the sensor network must interface properly with given actuators depending on data ascertained. As such, the actuation circuits shall have circuit protection against overloads in the case of a fire. Our solution shall also comply with NEC regulations requiring GFCI protection for outlets supplying horticultural lighting with flexible cords. 
 
 ## Survey of Existing Solutions
 
-Many DIY videos of a similar caliber are present on YouTube. Additionally, a few companies dedicated to industrial-grade sensors and software offer similar solutions. The “backyard greenhouse” designs seem too small-scale, while the industrial-grade setup is too pricy for a project this size.
+Many DIY videos of a similar caliber are present on YouTube. Additionally, a few companies dedicated to industrial-grade sensors and software offer similar solutions. The “backyard greenhouse” designs seem too small-scale, while the industrial-grade setup is too pricy for a project this size. This project aims to sit right between the two scales, being usable for a medium-sized greenhouse project.
 
 ## Measures of Success
 
-The project’s success will be measured by the system’s usability in a greenhouse setting. Specific successes will include sensor accuracy, data acquisition, power efficiency, and meeting customer expectations. 
+The project’s success will be measured by the system’s usability in a greenhouse setting. Specific successes will include sensor accuracy, data acquisition, power efficiency, and meeting customer expectations. The ability for the website to store and modify the system will be an additional measure of success.
 
 ## Resources
 
-This project will require multiple sensors for various elements, such as CO2, humidity, sunlight, and temperature. These sensors will need to receive power via ethernet cable and transmit their data wirelessly to a central processing unit. This unit will then upload the data to a live webpage that can monitor and manually control modules.
+This project will require multiple sensors for various elements, such as CO2, humidity, sunlight, and temperature. These sensors will need to receive power via ethernet cable and transmit their data wirelessly to a central processing unit. This unit will then upload the data to a live webpage that can monitor and manually control modules. The protocol that will be used for the sensor network will be MQTT which allows the sensors to communicate over a network with limited bandwidth. 
 
 ### Budget
 
@@ -52,6 +53,11 @@ The implications of the implementation of the greenhouse sensor network are accu
 
 One of the main economic impacts is power. Our system will draw more power; however, using sleep modes on certain sensors or cameras will draw less power to the system. Another impact is the wiring and sensors within the greenhouse. There is a potential chance it will affect the greenhouse in unexpected ways and give errors to the sensors with the high humidity. 
 
+## Automation
+
+The CO2, O2, temperature, sunlight, and humidity sensors will collect the data from the farmhouse, then the raspberry pi reads the sensor data and stores it. According to the data obtained the system will adjust optional water pumps, fan speeds, and ventilation angles. 
+
+
 ## References
 
 DATASHEET raspberry pi 4 model B. (n.d.). https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf 
@@ -66,10 +72,10 @@ Karle, S., Bansode, V., Tambe, P., & Bhambare, R. (n.d.). (PDF) IOT based greenh
 
 ## Statement of Contributions
 
-Duy Tran – Gantt Chart, References, Introduction, Background, and Specifications
+Duy Tran – Gantt Chart, References, Introduction, Background, Specifications
 
 Michael Feiel – Measures of Success, Resources, Uploading to Github
 
 Henry Hurst – Formulating the Problem, Constraints, Specific and Broader implications
 
-Mohammed Almehmadi – Constraints, Broader Implications, Resources
+Mohammed Almehmadi – Constraints, Broader Implications, Automation, Resources. 
