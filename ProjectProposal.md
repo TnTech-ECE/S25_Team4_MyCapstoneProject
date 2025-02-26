@@ -188,11 +188,23 @@ These broader implications highlight the importance of balancing power efficienc
 
 ## Specific Implications
 
-The implications of the implementation of the greenhouse sensor network are accurate data acquisition tools, visual feed of growth time, and regulation of temperatures. The general user shall receive data easily and effectively, and the temperature regulation shall gather info from the greenhouse. 
+The implementation of the greenhouse sensor network will have the following key implications:
+
+- Accurate Data Acquisition: The system will provide precise, real-time measurements of environmental conditions, ensuring optimal monitoring of plant growth factors.
+- Visual Growth Monitoring: A visual feed will allow users to track plant development over time, enabling better analysis and decision-making.
+- The system will present data in an easy-to-understand format, ensuring that general users can interpret and utilize the information effectively.
+
+By integrating these features, the project will improve greenhouse management efficiency and support data-driven decision-making for plant growth optimization.
 
 ## Broader Implications
 
-One of the main economic impacts is power. Our system will draw more power; however, using sleep modes on certain sensors or cameras will draw less power to the system. Another impact is the wiring and sensors within the greenhouse. There is a potential chance it will affect the greenhouse in unexpected ways and give errors to the sensors with the high humidity.
+The implementation of the greenhouse sensor network will have several economic and operational impacts:
+
+- Energy Consumption: While the system requires power to operate, implementing sleep modes on certain sensors and cameras will help reduce overall power consumption, making the system more energy efficient.
+- Infrastructure Impact: The addition of wiring and sensors within the greenhouse may lead to unexpected interactions with the environment, such as interference with plant growth, maintenance challenges, or potential disruptions in greenhouse operations.
+- Long-Term Cost Considerations: While the system may increase initial power usage, optimizing energy efficiency and automating data collection could lead to long-term savings by improving resource management and reducing manual labor.
+
+These broader implications highlight the importance of balancing power efficiency, system integration, and long-term sustainability for effective greenhouse monitoring.
 
 ## References
 
