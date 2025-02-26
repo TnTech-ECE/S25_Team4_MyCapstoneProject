@@ -6,7 +6,7 @@ As technology continues to advance, its integration into agriculture is becoming
 
 This system will serve two main purposes:
 
-1. **Improving Climate Consistency:** Greenhouses often experience uneven temperature and climate conditions across different areas. This inconsistency can stress plants, reduce growth rates, and make it difficult to maintain ideal conditions. The sensory network will enable precise monitoring of temperature, humidity, and CO₂ levels throughout the greenhouse, allowing for targeted adjustments and more uniform conditions.
+1. **Improving Climate Consistency:** Greenhouses often experience uneven temperature and climate conditions across different areas. This inconsistency can stress plants, reduce growth rates, and make it difficult to maintain ideal conditions. The sensory network will enable precise monitoring of temperature, humidity, and CO₂ levels throughout the greenhouse, allowing for targeted adjustments and more uniform conditions [5].
 
 2. **Enhancing Experimental Accuracy:** When conducting research and experiments to understand plant behaviors, it's essential to have a clear and accurate picture of the environmental conditions throughout the plant canopy. By integrating sensors that monitor light intensity, temperature, and humidity at multiple levels and locations, the system will provide the necessary data to ensure consistent and reproducible experimental conditions.
 
