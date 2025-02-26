@@ -181,8 +181,8 @@ https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srs
 
 Duy Tran – Gantt Chart, References, Introduction, Background, Specifications
 
-Michael Feiel – Measures of Success, Resources, Uploading to Github
+Michael Feiel – Measures of Success, Resources, Personnel, Github Management
 
 Henry Hurst – Formulating the Problem, Constraints, Specific and Broader implications
 
-Mohammed Almehmadi – Constraints, Broader Implications, Automation, Resources
+Mohammed Almehmadi – Constraints, Broader Implications, Resources
