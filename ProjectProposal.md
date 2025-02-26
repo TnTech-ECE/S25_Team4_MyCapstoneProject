@@ -165,9 +165,9 @@ The estimated budget for the project is outlined below:
 | MG811 | CO₂ Monitoring | 1 | $49.90 |
 | MT3608 | Boost Converter | 1 | $5.99 per 5 |
 
-- Primary Costs: The largest expenses will be for sensors and batteries to power the system.
-- Sensor Pricing: Individual sensor costs range between $7 - $20 each, depending on type and functionality.
-- Processing Unit: A Raspberry Pi 4 ($35) will serve as the central microcontroller.
+- Primary Costs: The largest expenses will be for sensors and batteries to power the system [6].
+- Sensor Pricing: Individual sensor costs range between $7 - $20 each, depending on type and functionality [2][3][4][7].
+- Processing Unit: A Raspberry Pi 4 ($35) will serve as the central microcontroller [1].
 - Estimated Total: Given the number of sensors and power components needed, the project budget is estimated to cap at $1000.
 
 ### Personnel
