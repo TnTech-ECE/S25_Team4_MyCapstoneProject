@@ -14,7 +14,7 @@ By combining real-time environmental monitoring with camera-based plant growth t
 
 ## Formulating the Problem
 
-A major challenge in greenhouse monitoring is the inconsistent distribution of temperature and humidity readings due to fixed sensor locations. This can lead to uneven plant growth and unreliable data for research. The group’s aim is to work with Dr. Kinmonth-Schultz, as well as the Biology Department at Tennessee Tech, to make a sensory network that will collect data on the specific variables mentioned above. Website design, data storage, hardware implementation, and running wires require a diverse set of engineers and minds to engineer a solution to these problems. All solutions that are currently available have soaring prices, and other specific devices might be required. There seems to be no all-in-one solution for this application.
+A major challenge in greenhouse monitoring is the inconsistent distribution of temperature and humidity readings due to fixed sensor locations [8]. This can lead to uneven plant growth and unreliable data for research. The group’s aim is to work with Dr. Kinmonth-Schultz, as well as the Biology Department at Tennessee Tech, to make a sensory network that will collect data on the specific variables mentioned above. Website design, data storage, hardware implementation, and running wires require a diverse set of engineers and minds to engineer a solution to these problems. All solutions that are currently available have soaring prices, and other specific devices might be required. There seems to be no all-in-one solution for this application.
 
 ### Background
 
@@ -225,9 +225,10 @@ https://www.amazon.com/Panasonic-BK-3HCCA8BA-eneloop-Pre-Charged-Rechargeable/dp
 https://www.amazon.com/AITRIP-Converter-Adjustable-Voltage-Regulator/dp/B0C858YYQ1/
 
 [7] Elecfreaks. CO2 Monitoring Sensor
-
 https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srsltid=AfmBOoo9ZJgZG6MylX-AZjXNEBDBYNR3Z3_EC5a-3VQngJpJEwLPc0AH
 
+[8]
+Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
 
 ## Statement of Contributions
 
