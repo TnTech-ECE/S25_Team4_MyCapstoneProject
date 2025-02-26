@@ -6,7 +6,7 @@ As technology continues to advance, its integration into agriculture is becoming
 
 This system will serve two main purposes:
 
-1. **Improving Climate Consistency:** Greenhouses often experience uneven temperature and climate conditions across different areas. This inconsistency can stress plants, reduce growth rates, and make it difficult to maintain ideal conditions. The sensory network will enable precise monitoring of temperature, humidity, and CO₂ levels throughout the greenhouse, allowing for targeted adjustments and more uniform conditions [5].
+1. **Improving Climate Consistency:** Greenhouses often experience uneven temperature and climate conditions across different areas. This inconsistency can stress plants, reduce growth rates, and make it difficult to maintain ideal conditions. The sensory network will enable precise monitoring of temperature, humidity, and CO₂ levels throughout the greenhouse, allowing for targeted adjustments and more uniform conditions.
 
 2. **Enhancing Experimental Accuracy:** When conducting research and experiments to understand plant behaviors, it's essential to have a clear and accurate picture of the environmental conditions throughout the plant canopy. By integrating sensors that monitor light intensity, temperature, and humidity at multiple levels and locations, the system will provide the necessary data to ensure consistent and reproducible experimental conditions.
 
@@ -20,7 +20,7 @@ A major challenge in greenhouse monitoring is the inconsistent distribution of t
 
 Effective greenhouse management relies on precise control of environmental factors such as temperature, humidity, CO₂ levels, oxygen concentration, and light intensity. However, maintaining uniform conditions throughout a greenhouse is challenging due to spatial variations caused by airflow patterns, structural differences, and equipment placement. These inconsistencies can negatively impact plant growth, resource efficiency, and the accuracy of scientific research conducted in greenhouse settings.
 
-A key limitation of current monitoring solutions is their reliance on fixed sensor placements, which fail to account for localized microclimates. Without flexible and portable sensing capabilities, greenhouse operators and researchers may be unable to detect subtle environmental variations that influence plant health and growth patterns. Moreover, commercially available sensor networks are often expensive, proprietary, and difficult to customize, making them impractical for smaller research facilities or educational institutions.
+A key limitation of current monitoring solutions is their reliance on fixed sensor placements, which fail to account for localized microclimates. Without flexible and portable sensing capabilities, greenhouse operators and researchers may be unable to detect subtle environmental variations that influence plant health and growth patterns. Moreover, commercially available sensor networks are often expensive, proprietary, and difficult to customize, making them impractical for smaller research facilities or educational institutions [5].
 
 The Biology Department at Tennessee Tech, which specializes in botany and plant sciences, has identified these limitations as a barrier to conducting precise research and optimizing greenhouse environments. Existing solutions do not provide sufficient mobility, scalability, or cost-effectiveness to meet their needs.
 
