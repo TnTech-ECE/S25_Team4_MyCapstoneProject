@@ -79,12 +79,52 @@ This project aims to bridge the gap between these two extremes by developing a c
 
 ## Measures of Success
 
-The success of this project will be evaluated based on its functionality, reliability, and usability in a greenhouse environment. Key performance indicators include:
+The success of this project will be evaluated based on its ability to meet functional, technical, and usability requirements in a greenhouse environment. The following key performance indicators (KPIs) and verification methodologies will be used to ensure the system meets its specifications and constraints.
 
-- **Sensor Accuracy:** The system must provide precise and reliable environmental readings.
-- **Data Acquisition & Transmission:** The system should efficiently collect, store, and display real-time and historical data.
-- **Power Efficiency:** The system must operate within defined power constraints, ensuring sustainability.
-- **User Satisfaction & Usability:** The solution should be easy to install, operate, and maintain.
+### 1. Sensor Accuracy and Reliability  
+**Objective:** Ensure that the system provides precise and reliable environmental readings.  
+**Methodology:**  
+- **Calibration Testing:** Compare sensor readings against existing-use calibration devices for CO₂, humidity, light intensity, temperature, and oxygen concentration.  
+- **Environmental Stress Testing:** Expose sensors to various humidity and temperature conditions to verify their stability and accuracy over extended periods.  
+- **Data Consistency Checks:** Deploy multiple sensors in the same location and compare their readings to detect discrepancies or sensor drift.
+
+### 2. Data Acquisition and Transmission  
+**Objective:** Ensure efficient data collection, storage, and wireless transmission.  
+**Methodology:**  
+- **Real-Time Data Logging:** Verify that the system continuously records environmental data without interruptions.  
+- **Wireless Communication Range Test:** Measure the effective range of the WiFi or MQTT-based data transmission by placing sensors at increasing distances from the central processing unit (Raspberry Pi).  
+- **Offline Data Storage Verification:** Disable the internet connection and ensure data is stored locally and successfully retrieved later.  
+- **Data Latency Evaluation:** Measure the time delay between sensor readings and data display on the web interface to ensure near real-time monitoring.
+
+### 3. Power Efficiency and Battery Life  
+**Objective:** Verify that the system meets power constraints and maintains long operational times.  
+**Methodology:**  
+- **Battery Discharge Testing:** Fully charge the system’s batteries and track how long it operates under normal usage conditions.  
+- **Power Consumption Profiling:** Measure energy usage of each module and identify any excessive power draws.  
+- **Sleep Mode Effectiveness:** Evaluate how implementing low-power modes affects system longevity without compromising data collection.  
+
+### 4. System Durability and Environmental Resilience  
+**Objective:** Ensure the system withstands greenhouse conditions, including high humidity, temperature fluctuations, and dust.  
+**Methodology:**  
+- **Moisture and Dust Resistance Testing:** Place modules in high-humidity conditions and verify functionality over an extended period.  
+- **Temperature Endurance Test:** Expose sensors to expected greenhouse temperature extremes and assess performance degradation over time.  
+- **Physical Durability Assessment:** Simulate accidental drops or rough handling to confirm robustness of enclosures and wiring.
+
+### 5. Usability and User Experience  
+**Objective:** Ensure ease of installation, operation, and data interpretation.  
+**Methodology:**  
+- **User Testing with Researchers and Greenhouse Staff:** Gather feedback from intended users on system setup, usability, and data accessibility.  
+- **Dashboard Functionality Testing:** Verify that the web interface correctly displays real-time and historical data, with intuitive controls.  
+- **Error Handling and Troubleshooting:** Simulate sensor failures and network interruptions to evaluate how the system detects issues and notifies users.
+
+### 6. Cost-Effectiveness and Scalability  
+**Objective:** Ensure that the system provides an affordable alternative to commercial solutions and can be expanded for future use.  
+**Methodology:**  
+- **Cost Analysis:** Compare total project cost with commercial greenhouse monitoring systems.  
+- **Modular Expansion Test:** Add additional sensors to verify that the system can handle increased data loads without performance degradation.  
+- **Long-Term Maintenance Assessment:** Document required maintenance efforts and component replacement frequency to evaluate system longevity.
+
+By meeting these success criteria, the project will demonstrate its effectiveness in bridging the gap between low-cost DIY solutions and expensive industrial-grade greenhouse monitoring systems.
 
 ## Resources
 
