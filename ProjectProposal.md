@@ -192,7 +192,8 @@ The implementation of the greenhouse sensor network will have the following key 
 
 - Accurate Data Acquisition: The system will provide precise, real-time measurements of environmental conditions, ensuring optimal monitoring of plant growth factors.
 - Visual Growth Monitoring: A visual feed will allow users to track plant development over time, enabling better analysis and decision-making.
-- The system will present data in an easy-to-understand format, ensuring that general users can interpret and utilize the information effectively.
+- User-Friendly Data Access: The system will present data in an easy-to-understand format, ensuring that general users can interpret and utilize the information effectively.
+- Functionality of Sensors: The ideal CO2 Sensor creates heat, which in turn would interfere with the temperature measurements. However, this can be avoided by placing the CO2 above the other sensors.
 
 By integrating these features, the project will improve greenhouse management efficiency and support data-driven decision-making for plant growth optimization.
 
