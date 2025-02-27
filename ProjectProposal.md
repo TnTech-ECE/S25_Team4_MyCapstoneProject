@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-As technology continues to advance, its integration into agriculture is becoming increasingly vital. Greenhouses provide controlled environments for plant growth, but managing these conditions effectively requires continuous monitoring of factors such as temperature, humidity, CO₂ levels, light intensity, and oxygen concentration. This project aims to design a portable sensory network for greenhouses to improve climate consistency and enhance experimental accuracy.
+As technology continues to advance, its integration into agriculture is becoming increasingly vital [9]. Greenhouses provide controlled environments for plant growth, but managing these conditions effectively requires continuous monitoring of factors such as temperature, humidity, CO₂ levels, light intensity, and oxygen concentration. This project aims to design a portable sensory network for greenhouses to improve climate consistency and enhance experimental accuracy.
 
 This system will serve two main purposes:
 
@@ -229,9 +229,9 @@ These broader implications highlight the importance of balancing power efficienc
 [7] Elecfreaks. CO2 Monitoring Sensor
 https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srsltid=AfmBOoo9ZJgZG6MylX-AZjXNEBDBYNR3Z3_EC5a-3VQngJpJEwLPc0AH
 
-[8]
-Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
+[8] Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
 
+[9] Abdul-Majid, M., Zahari, S. A., Othman, N., & Nadzri, S. (2024). Influence of technology adoption on farmers' well-being: Systematic literature review and bibliometric analysis. Heliyon, 10(2), e24316. https://doi.org/10.1016/j.heliyon.2024.e24316
 ## Statement of Contributions
 
 Duy Tran – Gantt Chart, References, Introduction, Background, Specifications
