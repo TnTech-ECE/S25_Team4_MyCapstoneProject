@@ -75,6 +75,10 @@ Existing solutions for greenhouse monitoring range from DIY approaches to indust
 - **DIY Solutions:** Numerous YouTube videos showcase small-scale "backyard greenhouse" monitoring systems. While these are cost-effective, they often lack accuracy, durability, and advanced data management features needed for reliable operation in larger setups [5].
 - **Industrial Solutions:** Several companies offer high-end sensors and software for commercial greenhouse management. However, these solutions are often cost-prohibitive for small to mid-sized projects, making them impractical for this application.
 
+  * One example of an industrial solution is the iGrow 800 Environmental Controller [10], which provides advanced environmental monitoring but comes at a high cost of $4,145.00.
+  * Another example would be the WIFI Greenhouse Monitoring System from ACF Greenhouses [11] which comes at an affordable price of $69.00 but does not address the problem with varying temperature gradients in a greenhouse.
+  * Lastly, an industrial solution of the Sensaphone 1800 [12] allows for a system that monitors up to 8 locations in a greenhouse enclosure but comes at the cost of $1,014.95. 
+
 This project aims to bridge the gap between these two extremes by developing a cost-effective, accurate, and scalable greenhouse monitoring system.
 
 ## Measures of Success
@@ -232,6 +236,13 @@ https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srs
 [8] Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
 
 [9] Abdul-Majid, M., Zahari, S. A., Othman, N., & Nadzri, S. (2024). Influence of technology adoption on farmers' well-being: Systematic literature review and bibliometric analysis. Heliyon, 10(2), e24316. https://doi.org/10.1016/j.heliyon.2024.e24316
+
+[10]IGrow 800 environmental controller. Greenhouse Megastore. (n.d.). https://www.greenhousemegastore.com/collections/environmental-controls/products/igrow-800-environmental-controller?variant=42701245382855 
+
+[11] WIFI greenhouse monitoring system with temperature & humidity alarms. ACF Greenhouses. (n.d.). https://www.acfgreenhouses.com/wifi-greenhouse-monitoring-system 
+
+[12] Sensaphone 1800 Monitoring System w/NEMA 4X solid door enclosure FGD-1800-SD. Core & Main. (n.d.). https://supply.coreandmain.com/Sensaphone-1800-Monitoring-System-w-NEMA-4X-Solid-Door-Enclosure-FGD-1800-SD 
+
 ## Statement of Contributions
 
 Duy Tran – Gantt Chart, References, Introduction, Background, Specifications
