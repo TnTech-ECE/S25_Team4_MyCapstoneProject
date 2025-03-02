@@ -53,20 +53,44 @@ The system will meet the following requirements to ensure portability, reliabili
 5. **Environmental Considerations**
    - Modules shall withstand greenhouse conditions, including humidity, dust, and temperature fluctuations.
    - The enclosure shall provide sufficient protection to prevent sensor degradation.
-
 ## Constraints
-
+The system will be designed to operate efficiently within the greenhouse environment while adhering to safety and regulatory requirements:
 ### Environmental Conditions
-- The device must function in a high-humidity, dust-prone, and water-exposed environment without failure.
+- The device must function in a high-humidity, dust-prone, and water-exposed environment without failure. For this project, the IP67 standard would be the best solution because it’s less expensive than other options and efficient in environments like the greenhouse. 
 - Enclosures and components must be resistant to moisture and particulate matter to ensure longevity and reliability.
-
+- **Ingress Protection (IP Rating)** – Ensure enclosures and components meet:
+   - **IP65 or higher:** Protection against dust and low-pressure water jets.
+   - **IP67/IP68:** If submersion resistance is required.
+- **NEMA Ratings** – Alternative to IP ratings, for enclosures:
+   - **NEMA 4X:** Dust-tight, watertight, and corrosion-resistant.
+   - **NEMA 6:** Waterproof for temporary submersion.
+- **Humidity & Corrosion Resistance** – Select materials compliant with:
+   - **ASTM B117:** Salt fog resistance for corrosion-prone areas.
+   - **MIL-STD-810H:** Environmental testing for humidity and thermal cycling.
 ### Power Limitations
 - The system shall not exceed 50V operating voltage, in compliance with Occupational Safety and Health Administration (OSHA) regulations.
 - Power supply and electrical components must ensure safe operation under greenhouse conditions and prevent electrical hazards.
-
+- **OSHA Regulations** – Comply with:
+   - **29 CFR 1910.303:** General electrical safety.
+   - **29 CFR 1910.307:** Electrical safety in wet/damp locations.
+   - **50V or lower DC systems:** Classified as "low voltage" per OSHA safety standards.
+- **Low Voltage Directive (LVD) – 2014/35/EU** (if applicable for EU compliance)
+   - Covers electrical safety for 50V–1000V AC or 75V–1500V DC.
 ### Safety & Regulatory Compliance
 - Actuation circuits must have overload protection to prevent damage or fire risks.
 - The system must comply with National Electrical Code (NEC) regulations, requiring GFCI protection for outlets supplying horticultural lighting using flexible cords.
+- **National Electrical Code (NEC)** – Compliance required for greenhouse installations:
+   - **NEC Article 547:** Agricultural buildings (greenhouse-specific).
+   - **NEC 210.8(B):** Requires GFCI protection for 15A & 20A, 120V outlets in damp/wet locations.
+   - **NEC 250.32:** Grounding requirements for separate structures.
+- **Circuit Protection Standards**
+   - **UL 508A:** Industrial control panels (if applicable).
+   - **UL 943:** GFCI safety compliance.
+   - **UL 1449:** Surge protection device compliance.
+   - **UL 60950-1 / UL 62368-1:** IT and communication equipment safety.
+### Sensor & Actuator Integration
+- The sensor network must properly interface with given actuators to ensure accurate responses based on environmental data.
+- Sensors and actuators must be designed to function consistently despite greenhouse conditions that may impact electrical and mechanical components.
 
 ## Survey of Existing Solutions
 
@@ -156,7 +180,6 @@ This project will require a combination of hardware components, power sources, a
 This resource plan ensures the project is equipped with the necessary components for efficient, real-time environmental monitoring in a greenhouse setting.
 
 ### Budget
-
 The estimated budget for the project is outlined below:
 
 | Item | Description | Quantity | Cost |
@@ -185,7 +208,7 @@ The project team possesses a strong foundation in Electrical Engineering, ensuri
 - Long-Term Cost Considerations: While the system may increase initial power usage, optimizing energy efficiency and automating data collection could lead to long-term savings by improving resource management and reducing manual labor.
 
 These broader implications highlight the importance of balancing power efficiency, system integration, and long-term sustainability for effective greenhouse monitoring.
-
+ 
 ### Timeline
 
 ![Gantt Chart](https://github.com/TnTech-ECE/S25_Team4_MyCapstoneProject/blob/6b491942bbbfa6d045a560bc66826962298cc58d/gantt-chart.png) 
@@ -211,6 +234,7 @@ The implementation of the greenhouse sensor network will have several economic a
 
 These broader implications highlight the importance of balancing power efficiency, system integration, and long-term sustainability for effective greenhouse monitoring.
 
+
 ## References
 
 [1] DATASHEET raspberry pi 4 model B. (n.d.). https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf 
@@ -221,34 +245,50 @@ These broader implications highlight the importance of balancing power efficienc
 
 [4] Dfrobot. (n.d.-c). https://image.dfrobot.com/image/data/SEN0159/CO2b%20MG811%20datasheet.pdf 
 
-[5] Karle, S., Bansode, V., Tambe, P., & Bhambare, R. (n.d.). (PDF) IOT based greenhouse monitoring system using Raspberry Pi. IoT Based Greenhouse Monitoring System Using Raspberry Pi. https://www.researchgate.net/publication/354297402_IoT_Based_Greenhouse_Monitoring_System_Using_Raspberry_Pi 
+[5] Karle, S., Bansode, V., Tambe, P., & Bhambare, R. (n.d.). (PDF) IOT based greenhouse monitoring system using Raspberry Pi. IoT Based Greenhouse Monitoring System Using Raspberry Pi. https://www.researchgate.net/publication/354297402_IoT_Based_Greenhouse_Monitoring_System_Using_Raspberry_Pi
 
-[6] Amazon. (n.d.). Environmental monitoring, light measurement, batteries, and boost converter devices. 
+[6] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI.
+
+[7] Amazon. (n.d.). Environmental monitoring, light measurement, batteries, and boost converter devices. 
 
 - BME280 Sensor: https://www.amazon.com/Atmospheric-Pressure-Temperature-Humidity-GY-BME280/dp/B0DHPCFXCK/
 - BH1750 Light Sensor: https://www.amazon.com/HiLetgo-BH1750FVI-intensity-illumination-arduino/dp/B00M0F29OS/
 - Eneloop Pro Batteries: https://www.amazon.com/Panasonic-BK-3HCCA8BA-eneloop-Pre-Charged-Rechargeable/dp/B00MXCIK32/
 - MT3608 Boost Converter: https://www.amazon.com/AITRIP-Converter-Adjustable-Voltage-Regulator/dp/B0C858YYQ1/
 
-[7] Elecfreaks. CO2 Monitoring Sensor
+[8] Elecfreaks. CO2 Monitoring Sensor
 https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srsltid=AfmBOoo9ZJgZG6MylX-AZjXNEBDBYNR3Z3_EC5a-3VQngJpJEwLPc0AH
 
-[8] Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
+[9] International Electrotechnical Commission (IEC). (1989). Degrees of Protection Provided by Enclosures (IP Code), IEC 60529. IEC.
 
-[9] Abdul-Majid, M., Zahari, S. A., Othman, N., & Nadzri, S. (2024). Influence of technology adoption on farmers' well-being: Systematic literature review and bibliometric analysis. Heliyon, 10(2), e24316. https://doi.org/10.1016/j.heliyon.2024.e24316
+[10] Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
 
-[10]IGrow 800 environmental controller. Greenhouse Megastore. (n.d.). https://www.greenhousemegastore.com/collections/environmental-controls/products/igrow-800-environmental-controller?variant=42701245382855 
+[11] Abdul-Majid, M., Zahari, S. A., Othman, N., & Nadzri, S. (2024). Influence of technology adoption on farmers' well-being: Systematic literature review and bibliometric analysis. Heliyon, 10(2), e24316. https://doi.org/10.1016/j.heliyon.2024.e24316
 
-[11] WIFI greenhouse monitoring system with temperature & humidity alarms. ACF Greenhouses. (n.d.). https://www.acfgreenhouses.com/wifi-greenhouse-monitoring-system 
+[12] IGrow 800 environmental controller. Greenhouse Megastore. (n.d.). https://www.greenhousemegastore.com/collections/environmental-controls/products/igrow-800-environmental-controller?variant=42701245382855 
 
-[12] Sensaphone 1800 Monitoring System w/NEMA 4X solid door enclosure FGD-1800-SD. Core & Main. (n.d.). https://supply.coreandmain.com/Sensaphone-1800-Monitoring-System-w-NEMA-4X-Solid-Door-Enclosure-FGD-1800-SD 
+[13] WIFI greenhouse monitoring system with temperature & humidity alarms. ACF Greenhouses. (n.d.). https://www.acfgreenhouses.com/wifi-greenhouse-monitoring-system 
+
+[14] Sensaphone 1800 Monitoring System w/NEMA 4X solid door enclosure FGD-1800-SD. Core & Main. (n.d.). https://supply.coreandmain.com/Sensaphone-1800-Monitoring-System-w-NEMA-4X-Solid-Door-Enclosure-FGD-1800-SD
+
+Sources for Conditions and Constraints: 
+- ASTM International.
+- U.S. Department of Defense.
+- International Electrotechnical Commission (IEC) 60529 Standard.
+- National Electrical Manufacturers Association (NEMA) Standards Publication 250.
+- Occupational Safety and Health Administration (OSHA) regulations.
+- European Union Directive 2014/35/EU.
+- National Fire Protection Association (NFPA) 70 – National Electrical Code (NEC).
+- Underwriters Laboratories (UL) Standards.
 
 ## Statement of Contributions
 
 Duy Tran – Gantt Chart, References, Introduction, Background, Specifications
 
-Michael Feiel – Measures of Success, Resources, Personnel, Github Management
+Michael Feiel – Measures of Success, Resources, Github//Version Management
 
-Henry Hurst – Formulating the Problem, Constraints, Specific and Broader implications
+Henry Hurst – Formulating the Problem, Constraints, Specific, Budget, and Broader implications
 
 Mohammed Almehmadi – Constraints, Broader Implications, Resources
+
+All – Proofreading and Editing
