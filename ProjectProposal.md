@@ -255,6 +255,9 @@ The estimated budget for the project is outlined below:
 | BH1750 | Light Measurement | 1 | $7.49 per 3 |
 | MG811 | CO₂ Monitoring | 1 | $49.90 |
 | MT3608 | Boost Converter | 1 | $5.99 per 5 |
+| AlphaSense O2-A3 Oxygen Sensor | Oxygen Sensor | 1 | $82 |
+| 3D Printing Plastic Filaments | Used for Case Prototype | 1 | $12.99 |
+| DS18B20 | Temperature Sensor | 1 | $9.95 |
 
 - Primary Costs: The largest expenses will be for sensors and batteries to power the system [6].
 - Sensor Pricing: Individual sensor costs range between $7 - $20 each, depending on type and functionality [2][3][4][7][15][22].
