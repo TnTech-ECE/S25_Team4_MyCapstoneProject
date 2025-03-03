@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Gantt Chart</h2>
+    <input type="file" id="uploadCSV" accept=".csv">
+    <table id="dataTable">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        document.getElementById("uploadCSV").addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                Papa.parse(file, {
+                    complete: function (results) {
+                        displayTable(results.data);
+                    }
+                });
+            }
+        });
+
+        function displayTable(data) {
+            let tableHead = document.querySelector("#dataTable thead");
+            let tableBody = document.querySelector("#dataTable tbody");
+            tableHead.innerHTML = "";
+            tableBody.innerHTML = "";
+
+            if (data.length > 0) {
+                let headerRow = document.createElement("tr");
+                data[0].forEach(header => {
+                    let th = document.createElement("th");
+                    th.textContent = header;
+                    headerRow.appendChild(th);
+                });
+                tableHead.appendChild(headerRow);
+            }
+
+            for (let i = 1; i < data.length; i++) {
+                let row = document.createElement("tr");
+                data[i].forEach(cell => {
+                    let td = document.createElement("td");
+                    td.textContent = cell;
+                    row.appendChild(td);
+                });
+                tableBody.appendChild(row);
+            }
+        }
+    </script>
+</body>
+</html>
