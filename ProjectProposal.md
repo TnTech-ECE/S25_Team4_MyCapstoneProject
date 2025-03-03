@@ -32,65 +32,64 @@ This project addresses these challenges by developing a portable, wireless senso
 The system will meet the following requirements to ensure portability, reliability, and usability:
 
 1. **Portability & Size**
-   - Modules shall be lightweight and compact for easy deployment and relocation.
-   - Modules shall be designed to minimize physical footprint while maintaining functionality.
+     - Modules shall be lightweight and compact for easy deployment and relocation.
+     - Modules shall be designed to minimize physical footprint while maintaining functionality.
 
 2. **Power & Energy Management**
-   - Modules shall operate on battery power to eliminate the need for permanent wiring.
-   - Batteries shall support a minimum operational time of 72 hours before requiring a recharge.
-   - Power levels shall be monitored and reported to ensure timely recharging or replacement.
+     - Modules shall operate on battery power to eliminate the need for permanent wiring.
+     - Batteries shall support a minimum operational time of 72 hours before requiring a recharge.
+     - Power levels shall be monitored and reported to ensure timely recharging or replacement.
 
 3. **Data Collection & Transmission**
-   - Sensors shall measure CO₂, O₂, light intensity, temperature, and humidity at configurable intervals.
-   - Modules shall transmit data wirelessly to a central processor via WiFi (when available).
-   - If the internet is unavailable, modules shall store data locally for later retrieval.
+     - Sensors shall measure CO₂, O₂, light intensity, temperature, and humidity at configurable intervals.
+     - Modules shall transmit data wirelessly to a central processor via WiFi (when available).
+     - If the internet is unavailable, modules shall store data locally for later retrieval.
 
 4. **User Interface & Data Management**
-   - A web-based dashboard shall provide real-time monitoring and historical data visualization.
-   - Users shall be able to access average values across sensors and view individual sensor data on demand.
-   - The system shall allow data to be manually offloaded via USB or SD card when needed.
+     - A web-based dashboard shall provide real-time monitoring and historical data visualization.
+     - Users shall be able to access average values across sensors and view individual sensor data on demand.
+     - The system shall allow data to be manually offloaded via USB or SD card when needed.
 
 5. **Environmental Considerations**
-   - Modules shall withstand greenhouse conditions, including humidity, dust, and temperature fluctuations.
-   - The enclosure shall provide sufficient protection to prevent sensor degradation.
+     - Modules shall withstand greenhouse conditions, including humidity, dust, and temperature fluctuations.
+     - The enclosure shall provide sufficient protection to prevent sensor degradation.
 ## Constraints
+
 The system will be designed to operate efficiently within the greenhouse environment while adhering to safety and regulatory requirements:
 ### Environmental Conditions
-- The device must function in a high-humidity, dust-prone, and water-exposed environment without failure. For this project, the IP67 standard would be the best solution because it’s less expensive than other options and efficient in environments like the greenhouse. 
-- Enclosures and components must be resistant to moisture and particulate matter to ensure longevity and reliability.
-- **Ingress Protection (IP Rating)** – Ensure enclosures and components meet:
-   - **IP65 or higher:** Protection against dust and low-pressure water jets.
-   - **IP67/IP68:** If submersion resistance is required.
-- **NEMA Ratings** – Alternative to IP ratings, for enclosures:
-   - **NEMA 4X:** Dust-tight, watertight, and corrosion-resistant.
-   - **NEMA 6:** Waterproof for temporary submersion.
-- **Humidity & Corrosion Resistance** – Select materials compliant with:
-   - **ASTM B117:** Salt fog resistance for corrosion-prone areas.
-   - **MIL-STD-810H:** Environmental testing for humidity and thermal cycling.
+1. The device shall function in a high-humidity, dust-prone, and water-exposed environment without failure.
+2. The device shall meet the IP67 standard for environmental protection, as it provides cost-effective and efficient protection in greenhouse environments.
+3. Enclosures and components shall be resistant to moisture and particulate matter to ensure longevity and reliability.
+4. The enclosures and components shall meet an Ingress Protection (IP) rating of:
+     - IP65 or higher for protection against dust and low-pressure water jets.
+     - IP67 if additional submersion resistance is required.
+     - The enclosures shall comply with NEMA 4X as an alternative to IP ratings, providing dust-tight, watertight, and corrosion-resistant enclosures.
+6. The materials used in enclosures and components shall comply with ASTM B117 for salt fog resistance in corrosion-prone areas.
+
 ### Power Limitations
-- The system shall not exceed 50V operating voltage, in compliance with Occupational Safety and Health Administration (OSHA) regulations.
-- Power supply and electrical components must ensure safe operation under greenhouse conditions and prevent electrical hazards.
-- **OSHA Regulations** – Comply with:
-   - **29 CFR 1910.303:** General electrical safety.
-   - **29 CFR 1910.307:** Electrical safety in wet/damp locations.
-   - **50V or lower DC systems:** Classified as "low voltage" per OSHA safety standards.
-- **Low Voltage Directive (LVD) – 2014/35/EU** (if applicable for EU compliance)
-   - Covers electrical safety for 50V–1000V AC or 75V–1500V DC.
+
+7. The system shall not exceed 50V operating voltage to comply with OSHA regulations.
+8. The power supply and electrical components shall be designed for safe operation in greenhouse conditions to prevent electrical hazards.
+9. The system shall comply with the following OSHA Regulations for electrical safety:
+     - 29 CFR 1910.303 for general electrical safety compliance.
+     - 29 CFR 1910.307 for electrical safety in wet/damp locations.
+     - 50V or lower DC systems classified as "low voltage" per OSHA standards.
+
 ### Safety & Regulatory Compliance
-- Actuation circuits must have overload protection to prevent damage or fire risks.
-- The system must comply with National Electrical Code (NEC) regulations, requiring GFCI protection for outlets supplying horticultural lighting using flexible cords.
-- **National Electrical Code (NEC)** – Compliance required for greenhouse installations:
-   - **NEC Article 547:** Agricultural buildings (greenhouse-specific).
-   - **NEC 210.8(B):** Requires GFCI protection for 15A & 20A, 120V outlets in damp/wet locations.
-   - **NEC 250.32:** Grounding requirements for separate structures.
-- **Circuit Protection Standards**
-   - **UL 508A:** Industrial control panels (if applicable).
-   - **UL 943:** GFCI safety compliance.
-   - **UL 1449:** Surge protection device compliance.
-   - **UL 60950-1 / UL 62368-1:** IT and communication equipment safety.
+
+10. The actuation circuits shall include overload protection to prevent damage or fire risks.
+11. The system shall comply with the National Electrical Code (NEC) regulations for greenhouse installations, including:
+     - NEC Article 547, which covers electrical safety requirements for agricultural buildings, including greenhouses.
+     - NEC 210.8(B), which mandates GFCI protection for 15A & 20A, 120V outlets in damp/wet locations.
+     - NEC 250.32, which specifies grounding requirements for separate structures.
+12. The system shall comply with the following circuit protection standards:
+     - UL 943 for GFCI safety compliance.
+     - UL 1449 for surge protection device compliance.
+
 ### Sensor & Actuator Integration
-- The sensor network must properly interface with given actuators to ensure accurate responses based on environmental data.
-- Sensors and actuators must be designed to function consistently despite greenhouse conditions that may impact electrical and mechanical components.
+
+13. The sensor network shall properly interface with actuators to ensure accurate responses based on environmental data.
+14. The sensors and actuators shall be designed to function consistently despite greenhouse conditions, including high humidity, dust, and temperature variations.
 
 ## Survey of Existing Solutions
 
@@ -99,9 +98,74 @@ Existing solutions for greenhouse monitoring range from DIY approaches to indust
 - **DIY Solutions:** Numerous YouTube videos showcase small-scale "backyard greenhouse" monitoring systems. While these are cost-effective, they often lack accuracy, durability, and advanced data management features needed for reliable operation in larger setups [5].
 - **Industrial Solutions:** Several companies offer high-end sensors and software for commercial greenhouse management. However, these solutions are often cost-prohibitive for small to mid-sized projects, making them impractical for this application.
 
-  * One example of an industrial solution is the iGrow 800 Environmental Controller [10], which provides advanced environmental monitoring but comes at a high cost of $4,145.00.
-  * Another example would be the WIFI Greenhouse Monitoring System from ACF Greenhouses [11] which comes at an affordable price of $69.00 but does not address the problem with varying temperature gradients in a greenhouse.
-  * Lastly, an industrial solution of the Sensaphone 1800 [12] allows for a system that monitors up to 8 locations in a greenhouse enclosure but comes at the cost of $1,014.95. 
+Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
+
+- iGrow 800 Environmental Controller [12]: Provides advanced environmental monitoring, including temperature, humidity, and CO₂ control, but comes at a high cost of $4,145.00.
+
+   - Cons: 
+     - Expensive and may be overkill for smaller greenhouse operations.
+     - Does not include oxygen monitoring.
+
+- WIFI Greenhouse Monitoring System from ACF Greenhouses [13]: Priced at $69.00, this system offers affordable monitoring but does not address issues related to varying temperature gradients in a greenhouse.
+
+   - Cons: 
+     - Limited functionality and lacks advanced environmental control features.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability.
+
+- Sensaphone 1800 [14]: Allows monitoring of up to 8 locations within a greenhouse enclosure at a cost of $1,014.95, providing remote alerts for environmental changes.
+
+   - Cons:
+     - High upfront cost.
+     - Primarily focuses on monitoring rather than automated control.
+     - Lacks modularity and portability due to requiring telephone lines. 
+
+- ECLIPSE F90 Master Environmental Controller [16]: This controller offers precise monitoring and control of temperature, humidity, and CO₂ levels from a centralized unit. It features three digital screens displaying real-time data, along with LED indicators for active modes and errors.
+
+   - Cons: 
+     - Complex setup and may require additional sensors for full functionality.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability and offloading of data. 
+
+- Monnit Wireless Sensor Systems [17]: A comprehensive solution that includes wireless sensors to monitor temperature, humidity, light levels, soil moisture, and HVAC performance. Pricing varies depending on sensor configurations.
+
+   - Cons: 
+     - It can become expensive when multiple sensors are needed. 
+     - Wireless connectivity may be unreliable in certain greenhouse environments.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability and offloading of data.
+
+- Ceres SunSense™ Controller [18]: A centralized system designed for advanced greenhouse control, tracking parameters such as temperature, relative humidity, CO₂ levels, leaf/canopy temperature, and PAR (photosynthetically active radiation). Custom pricing available based on configuration.
+
+   - Cons: 
+     - High cost and complexity.
+     - Requiring a learning curve for proper setup and management.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability and offloading of data.
+
+- EDYCARX CO₂ Controller [19]: A digital controller that monitors and regulates CO₂ levels, temperature, and humidity, commonly used in grow rooms and greenhouses. Available for purchase on Amazon, with pricing typically around $300.
+
+   - Cons: 
+     - Primarily focused on CO₂ monitoring.
+     - Lacks broader environmental controls such as light intensity and oxygen concentration.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability and offloading of data.
+
+- INKBIRD CO₂ Controllers [20]: Designed for grow tents, greenhouses, and ventilation systems, these controllers help maintain optimal CO₂ levels, improving plant growth efficiency. Prices range from $100 to $400 depending on features.
+
+   - Cons: 
+     - Limited to CO₂ regulation, requiring additional systems for full greenhouse management.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability and offloading of data.
+
+- Sensaphone 400 Monitoring System: A smaller-scale alternative to the Sensaphone 1800, capable of monitoring up to four environmental conditions, including temperature, humidity, and power failures. Priced around $455.00, making it a more affordable option for smaller greenhouses.
+
+   - Cons: 
+     - Limited input capacity (only 4 monitoring points), making it unsuitable for larger greenhouses with more complex monitoring needs.
+     - Does not include oxygen monitoring or light intensity sensors.
+     - No offline portability and offloading of data.
+
+Despite the availability of these solutions, challenges such as cost, scalability, integration, and customization remain key factors in selecting the ideal greenhouse monitoring system. The development of a new solution should address these limitations by offering affordability, modularity, ease of use, and enhanced integration with existing greenhouse infrastructure.
 
 This project aims to bridge the gap between these two extremes by developing a cost-effective, accurate, and scalable greenhouse monitoring system.
 
@@ -193,7 +257,7 @@ The estimated budget for the project is outlined below:
 | MT3608 | Boost Converter | 1 | $5.99 per 5 |
 
 - Primary Costs: The largest expenses will be for sensors and batteries to power the system [6].
-- Sensor Pricing: Individual sensor costs range between $7 - $20 each, depending on type and functionality [2][3][4][7].
+- Sensor Pricing: Individual sensor costs range between $7 - $20 each, depending on type and functionality [2][3][4][7][15][22].
 - Processing Unit: A Raspberry Pi 4 ($35) will serve as the central microcontroller [1].
 - Estimated Total: Given the number of sensors and power components needed, the project budget is estimated to cap at $1000.
 
@@ -207,11 +271,19 @@ The project team possesses a strong foundation in Electrical Engineering, ensuri
 - Infrastructure Impact: The addition of wiring and sensors within the greenhouse may lead to unexpected interactions with the environment, such as interference with plant growth, maintenance challenges, or potential disruptions in greenhouse operations.
 - Long-Term Cost Considerations: While the system may increase initial power usage, optimizing energy efficiency and automating data collection could lead to long-term savings by improving resource management and reducing manual labor.
 
+Duy Tran: LTSpice, KiCAD, Power Electronic Topologies, C/C++, Microcontrollers, MATLAB
+
+Henry Hurst: Inventor, LTSpice, Digital System Design, C/C++/R/MATLAB
+
+Michael Feiel: LTSpice, C/C++/Python, Interfacing, Microcontrollers
+
+Mohammed Almehmadi: LTSpice, Power Electronics
+
 These broader implications highlight the importance of balancing power efficiency, system integration, and long-term sustainability for effective greenhouse monitoring.
  
 ### Timeline
 
-![Gantt Chart](https://github.com/TnTech-ECE/S25_Team4_MyCapstoneProject/blob/6b491942bbbfa6d045a560bc66826962298cc58d/gantt-chart.png) 
+<img src="resources/gantt-chart.png" alt="Gantt Chart" width="auto" height="400"> 
 
 ## Specific Implications
 
@@ -270,6 +342,24 @@ https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srs
 [13] WIFI greenhouse monitoring system with temperature & humidity alarms. ACF Greenhouses. (n.d.). https://www.acfgreenhouses.com/wifi-greenhouse-monitoring-system 
 
 [14] Sensaphone 1800 Monitoring System w/NEMA 4X solid door enclosure FGD-1800-SD. Core & Main. (n.d.). https://supply.coreandmain.com/Sensaphone-1800-Monitoring-System-w-NEMA-4X-Solid-Door-Enclosure-FGD-1800-SD
+
+[15] Alphasense O2-A3 Oxygen Sensor. Gaslab.com. (n.d.). https://gaslab.com/products/alphasense-02-a3-oxygen-sensor?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google+Shopping&variant=15400019165219 
+
+[16] Eclipse F90 master environmental controller. Gothic Arch Greenhouses. (n.d.). https://www.gothicarchgreenhouses.com/eclipse-f90-master-environmental-controller 
+
+[17] Monnit Wireless Sensor Systems. Long-range Wireless Sensors for Remote Monitoring. (n.d.). https://www.monnit.com/products/sensors/ 
+
+[18] SunSenseTM controller. Ceres Greenhouse. (n.d.). https://ceresgs.com/sunsense-controller/ 
+
+[19] EDYCARX CO2 Controller with temperature and humidity display day and night with relay function 15ft Ndir Sensor Cable, CO2 Controller for Grow Room, greenhouse, Grow Tent, home, office, factory : Patio, Lawn & Garden. (n.d.-b). https://www.amazon.com/EDYCARX-Dioxide-Controller-Function-Greenhouse/dp/B0BQR8GHR5 
+
+[20] INKBIRD programmable CO2 Controller W/ S01 sensor ICC-500T. INKBIRD. (n.d.). https://inkbird.com/products/programmable-co-controller-icc-500t 
+
+[21] Sensaphone 400 & 800 monitoring systems. Sensaphone. (n.d.). https://sensaphone.com/products/sensaphone-400-and-800-monitoring-systems/ 
+
+[22] Industries, A. (n.d.). Waterproof 1-wire DS18B20 digital temperature sensor. adafruit industries blog RSS. https://www.adafruit.com/product/381?gQT=1 
+
+
 
 Sources for Conditions and Constraints: 
 - ASTM International.
