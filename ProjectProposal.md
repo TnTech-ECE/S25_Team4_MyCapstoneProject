@@ -262,6 +262,7 @@ The estimated budget for the project is outlined below:
 - Primary Costs: The largest expenses will be for sensors and batteries to power the system [6].
 - Sensor Pricing: Individual sensor costs range between $7 - $20 each, depending on type and functionality [2][3][4][7][15][22].
 - Processing Unit: A Raspberry Pi 4 ($35) will serve as the central microcontroller [1].
+- A sloped plastic chassis will be designed to house the components such that the sensors are protected from the environment costing the price of the filament ($12.99). 
 - Estimated Total: Given the number of sensors and power components needed, the project budget is estimated to cap at $1000.
 
 ### Personnel
