@@ -232,7 +232,23 @@ By implementing this high-level solution, the system will effectively bridge the
   - UL 943 for GFCI safety compliance.
   - UL 1449 for surge protection device compliance.
 ## Resources
-- Budget: 
+- Budget:
+- The estimated budget for the project is outlined below:
+
+| Item | Description | Quantity | Cost |
+|------|-------------|----------|------|
+| Raspberry Pi | Central Microcontroller | 1 | $35 |
+| ESP-WROOM-32 | Sensors Microcontroller | 3 | $12 per 4|
+| Eneloop Pro | Batteries | 16 | $36.45 per 8 |
+| BME280 | Humidity Sensor | 3 | $15.99 per 2 |
+| BH1750 | Light Measurement | 3 | $7.49 per 3 |
+| MG811 | CO₂ Monitoring | 3 | $49.90 |
+| MT3608 | Boost Converter | 3 | $5.99 per 5 |
+| AlphaSense O2-A3 Oxygen Sensor | Oxygen Sensor | 3 | $82 |
+| 3D Printing Plastic Filaments | Used for Case Prototype | 3 | $12.99 |
+| DS18B20 | Temperature Sensor | 3 | $9.95 |
+| Go Pro | Visual Feed | 1 | $20.00 |
+
   - Sensor Nodes: $400 (sensors, ESP32, enclosures, batteries).
   - Raspberry Pi 4: $100 (Pi, camera, power supply).
   - Total: $500.
