@@ -45,90 +45,97 @@ DIY greenhouse monitoring systems are commonly showcased in online tutorials and
 
 Advantages:
 - Low Cost: Affordable components make these systems budget friendly.
-- Customizability: Flexible design options allow for adaptation to specific needs.
+- Customizability: The flexible design options allow for tailored solutions to meet specific needs.
 - Educational Value: Building a DIY system offers valuable hands-on experience.
 Disadvantages:
-- Lack of Accuracy and Durability: Often built with low-cost sensors, which may degrade over time.
+- Lack of Accuracy and Durability: These systems are often built with inexpensive sensors, which can diminish in performance over time.
+- High Maintenance: They require regular adjustments and troubleshooting to stay operational.
 - Limited Data Management: Typically lacks advanced data processing and cloud integration.
-- High Maintenance: Requires frequent adjustments and troubleshooting.
 ________________________________________
-Industrial Solutions
-Industrial-grade greenhouse monitoring systems are comprehensive and precise, designed for large-scale commercial operations. Some notable solutions include:
-1. iGrow 800 Environmental Controller
-   - Cost: $4,145.00
-   - Pros: Advanced environmental monitoring (temperature, humidity, CO₂).
-   - Cons: 
+
+#### Industrial Solutions
+Industrial-grade greenhouse monitoring systems offer comprehensive and precise data, tailor-made for large-scale commercial operations. Below is the analysis of some notable options: 
+1. **iGrow 800 Environmental Controller**
+
+   - **Cost:** $4,145.00
+
+   - **Pros:** Provides advanced environmental monitoring for temperature, humidity, and CO₂.
+
+   - **Cons:**
       - High cost makes it impractical for small to mid-sized greenhouses.
       - Does not include oxygen monitoring.
-      - Complexity may require specialized training.
-2. WIFI Greenhouse Monitoring System from ACF Greenhouses
-   - Cost: $69.00
-   - Pros: Affordable and easy to set up.
-   - Cons: 
-      - Limited functionality, lacking advanced features like oxygen monitoring and light intensity sensors.
-      - Inconsistent data coverage due to WiFi dependency.
-      - No offline portability.
-3. Sensaphone 1800 Monitoring System
-   - Cost: $1,014.95
-   - Pros: Can monitor up to 8 environmental conditions.
-   - Cons: 
-      - High upfront cost.
-      - Primarily monitoring-focused without automation capabilities.
-      - Requires telephone lines, reducing portability.
-4. ECLIPSE F90 Master Environmental Controller
-   - Cost: Varies
-   - Pros: Precise control of temperature, humidity, and CO₂ levels.
-   - Cons: 
+      - Its complexity may necessitate specialized training.
+2. **WIFI Greenhouse Monitoring System from ACF Greenhouses**
+   - **Cost:** $69.00
+   - **Pros:** Affordable and simple to set up.
+   - **Cons:
+     - Limited functionality, lacking advanced features like oxygen monitoring and light
+intensity sensors.
+      - Data coverage can be inconsistent due to Wi-Fi reliance.
+      - Not portable for offline use.
+3. **Sensaphone 1800 Monitoring System**
+   - **Cost:** $1,014.95
+   - **Pros:** Monitors up to 8 environmental conditions.
+   - **Cons:**
+      - High initial cost.
+      - Primarily focused on monitoring without automation capabilities.
+      - Requires telephone lines, which limits portability.   
+4. **ECLIPSE F90 Master Environmental Controller**
+   - **Cost:** Varies
+   - **Pros:** Offers precise control of temperature, humidity, and CO₂ levels.
+
+   - **Cons:**
       - Complex setup requiring technical knowledge.
-      - Lacks oxygen and light intensity monitoring.
-      - No offline data portability.
-5. Monnit Wireless Sensor Systems
-   - Cost: Varies based on configuration
-   - Pros: Comprehensive wireless monitoring for multiple environmental factors.
-   - Cons: 
-      - Potentially expensive with multiple sensors.
-      - Wireless connectivity may be unreliable in dense greenhouse setups.
-      - Lacks offline data collection and oxygen monitoring.
-6. Ceres SunSense™ Controller
-   - Cost: Custom pricing
-   - Pros: Advanced monitoring with temperature, humidity, CO₂, and PAR tracking.
-   - Cons: 
+      - Lacks monitoring for oxygen and light intensity.
+      - No offline data portability.   
+5. **Monnit Wireless Sensor Systems**
+   - **Cost:** Varies based on configuration
+   - **Pros:** Provides comprehensive wireless monitoring for multiple environmental factors.
+   - **Cons:**
+      - Can become expensive, especially with multiple sensors.
+      - Wireless connectivity may be unreliable in dense greenhouse environments.
+      - Lacks offline data collection and oxygen monitoring.   
+6. **Ceres SunSense™ Controller**
+   - **Cost:** Custom pricing
+   - **Pros:** Advanced monitoring capabilities including temperature, humidity, CO₂, and PAR tracking.
+   - **Cons:**
       - High cost and steep learning curve.
-      - No oxygen monitoring or offline data offloading.
-7. EDYCARX CO₂ Controller
-   - Cost: Approximately $300
-   - Pros: Effective CO₂, temperature, and humidity monitoring.
-   - Cons: 
-      - Focused on CO₂ regulation, requiring additional systems for complete monitoring.
-      - Lacks light intensity and oxygen concentration monitoring.
-8. INKBIRD CO₂ Controllers
-   - Cost: $100 to $400
-   - Pros: Maintains optimal CO₂ levels for plant growth.
-   - Cons: 
-      - Limited scope, primarily CO₂ monitoring.
-      - No comprehensive environmental control or offline data capability.
-9. Sensaphone 400 Monitoring System
-   - Cost: $455.00
-   - Pros: Monitors four environmental conditions efficiently.
-   - Cons: 
-      - Limited monitoring points (only 4), unsuitable for larger greenhouses.
+      - No oxygen monitoring or offline data offloading.  
+7. **EDYCARX CO₂ Controller**
+   - **Cost:** Approximately $300
+   - **Pros:** Effectively monitors CO₂, temperature, and humidity.
+   - **Cons:**
+      - Focused on CO₂ regulation, requiring supplementary systems for complete monitoring.
+      - Lacks light intensity and oxygen concentration monitoring.   
+8. **INKBIRD CO₂ Controllers**
+   - **Cost:** Ranges from $100 to $400
+
+   - **Pros:** Maintains optimal CO₂ levels for plant growth.
+   - **Cons:**
+      - Limited in scope, primarily focused on CO₂ monitoring.
+      - No comprehensive environmental control or offline data capabilities.   
+9. **Sensaphone 400 Monitoring System**
+   - **Cost:** $455.00
+   - **Pros:** Efficiently monitors four environmental conditions.
+   - **Cons:**
+      - Limited to only four monitoring points, which may not suit larger greenhouses.
       - No light intensity or oxygen monitoring.
       - Lacks offline data portability.
 #### Analysis and Selection
 
-Existing solutions either lack modularity and scalability or come at a prohibitive cost for small to medium-sized greenhouse operations. Additionally, many systems do not offer oxygen monitoring, light intensity tracking, or offline data management, which are crucial for reliable and adaptable greenhouse management.
+Current solutions often lack modularity and scalability or are too costly for small to medium-sized greenhouse operations. Furthermore, many systems fall short in offering critical features such as oxygen monitoring, light intensity tracking, and offline data management, which are essential for effective and flexible greenhouse management.
 
-After evaluating the advantages and disadvantages of current systems, it is clear that a new solution must address the following gaps:
-1. Affordability and Scalability: Suitable for small to mid-sized operations.
-2. Modular and Customizable Design: Allowing users to tailor the system to their specific needs.
-3. Comprehensive Environmental Monitoring: Including temperature, humidity, CO₂, oxygen, and light intensity.
-4. Offline Data Portability: Ensuring data collection even when Wi-Fi connectivity is lost.
-5. Ease of Use and Maintenance: Minimal technical expertise required for installation and operation.
+After evaluating the advantages and disadvantages of existing systems, it becomes clear that a new solution must address the following gaps:
+1. **Affordability and Scalability:** Designed to be suitable for small to mid-sized operations.
+2. **Modular and Customizable Design:** Allowing users to tailor the system to meet their specific needs.
+3. **Comprehensive Environmental Monitoring:** Covering temperature, humidity, CO₂, oxygen, and light intensity.
+4. **Offline Data Portability:** Ensuring data collection remains functional even without Wi-Fi connectivity.
+5. **Ease of Use and Maintenance:** Requiring minimal technical expertise for installation and operation.
 
-By incorporating these features into a single hybrid solution, the proposed system aims to bridge the gap between DIY and industrial solutions, providing a cost-effective, modular, and robust monitoring system that meets the needs of diverse greenhouse applications.
+By integrating these features into a single hybrid solution, the proposed system aims to bridge the gap between DIY and industrial options, delivering a cost-effective, modular, and robust monitoring system that caters to the diverse needs of greenhouse applications.
 
 ## High-Level Solution
-The proposed portable sensory network will use three remote units using the ESP32 microcontrollers and a raspberry pi as a central control unit. The remote units will each aggregate data via the five sensors (CO2, oxygen, humidity, light intensity, and temperature). After the data has been recorded, it will be sent to the central processing unit (raspberry pi) for cloud uploading and data storage through the MQTT protocol. Each of the individual units will be powered by batteries through a boost-converter to reach a consistent 3.3 volts.  As for the power of the central processing unit, it will be powered by the provided 5-volt power supply. After the data has been recorded and sent to the central processing unit, the data will be uploaded to a cloud for interfacing through a website. The website will give a dashboard view of each of the individual remote units and their respective sensor readings. 
+The proposed portable sensory network will consist of three remote units utilizing ESP32 microcontrollers and a Raspberry Pi as the central control unit. Each remote unit will aggregate data from five sensors—CO2, oxygen, humidity, light intensity, and temperature. These units’ encasement will be 3d printed with PETG filament to ensure moisture and temperature resistance to the box. Once the data is recorded, it will be sent to the central processing unit (Raspberry Pi) for cloud uploading and data storage via Wi-Fi. The ESP boards and Raspberry Pi are Wi-Fi compatible, so its functionalities will be used. Each individual unit will be powered by batteries with a boost converter to maintain a consistent 3.3 volts.  The central processing unit will receive its power from a standard 5-volt power supply. After the data is processed, it will be uploaded to the cloud for interfacing through a dedicated website. This website will provide a dashboard view of each of the remote units along with their respective sensor readings. 
 
 ### Hardware Block Diagram
 
@@ -193,7 +200,8 @@ ________________________________________
 By implementing this high-level solution, the system will effectively bridge the gap between expensive industrial monitoring solutions and affordable DIY alternatives, delivering reliable and scalable environmental monitoring for a wide range of greenhouse applications. 
 
 ## Atomic Subsystem Specifications
-- Sensor Node (ESP32): 
+**Sensor Units:**
+The individual sensor units will communicate data to the central processing unit wirelessly via the MQTT protocol. Each remote sensor unit will have its own device identifier to ensure that the central processing unit does not receive information from multiple devices, preventing data from being overwritten. As sensors collect real-time data, this information will be sent to the Raspberry Pi for integration with the website dashboard. In offline scenarios, the collected data can be stored on an SD card for later retrieval 
   - Functions: Data acquisition, wireless transmission, local storage.
   - Inputs: Sensor data, battery voltage.
   - Outputs: Wireless data (MQTT).
@@ -232,8 +240,7 @@ By implementing this high-level solution, the system will effectively bridge the
   - UL 943 for GFCI safety compliance.
   - UL 1449 for surge protection device compliance.
 ## Resources
-- Budget:
-- The estimated budget for the project is outlined below:
+- Budget: 
 
 | Item | Description | Quantity | Cost |
 |------|-------------|----------|------|
@@ -254,9 +261,9 @@ By implementing this high-level solution, the system will effectively bridge the
   - Total: $500.
 - Division of Labor: 
   - Duy Tran: Sensor Node Design, Sensor Integration.
-  - Michael Feiel: Raspberry Pi Integration, Software Development.
-  - Henry Hurst: Web Dashboard, Camera System.
-  - Mohammed Almehmadi: Enclosure Design, Power Management.
+  - Michael Feiel: Wi-Fi Interfacing, Software Development, Web Dashboard.
+  - Henry Hurst: Camera System, Enclosure Design.
+  - Mohammed Almehmadi: Power Management.
 - Timeline: 
 
 <img src="resources/gantt-chart.png" alt="Gantt Chart" width="auto" height="400"> 
@@ -302,7 +309,7 @@ References
 
 
 ## Statement of Contributions
-- Duy Tran: Sensor Node Design, Power Management, Document Editing.
+- Duy Tran: Sensor Node Design, Document Editing.
 - Michael Feiel: Web Dashboard, Software Development, Flowchart, Block Diagram.
-- Henry Hurst: Raspberry Pi Integration, Camera System.
-- Mohammed Almehmadi: Enclosure Design, Sensor Integration, Constraint Research. 
+- Henry Hurst: Raspberry Pi Integration, Camera System, Enclosure Design.
+- Mohammed Almehmadi: Sensor Integration, Constraint Research, Power Management.
