@@ -247,20 +247,7 @@ The individual sensor units will communicate data to the central processing unit
   - UL 1449 for surge protection device compliance.
 ## Resources
 - Budget: 
-Item No.	Item	Description	Quantity	Cost
-1	Raspberry Pi	Central Microcontroller	1	$35
-2	ESP-WROOM-32	Sensors Microcontroller	3	$12 per 4
-3	Batteries:
-Eneloop Pro (Panasonic)	Power Supply	16	$36.45 per 8
-4	BME280	Environmental Monitoring
-	3	$15.99 per 2
-5	BH1750	Light Measurement	3	$7.49 per 3
-6	MG811	CO2 Monitoring	3	$49.90
-7	MT3608	Boost Converter	3	$5.99 per 5
-8	AlphaSense O2-A3 Oxygen Sensor	Oxygen Sensor	3	$82.00
-9	3D Printing Plastic Filaments	Used for Case Prototype	3	$12.99
-10	DS18B20	Temperature Sensor	3	$9.95
-11	Go Pro	Visual Feed	1	$20.00
+
 
 | Item | Description | Quantity | Cost |
 |------|-------------|----------|------|
