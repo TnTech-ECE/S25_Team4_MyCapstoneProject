@@ -1,6 +1,8 @@
 # Conceptual Design
 ## Introduction
-In today’s rapidly advancing technological landscape, the demand for portable, efficient, and data-driven systems is more prevalent than ever. The proposed project aims to develop a robust, modular solution designed to collect, process, and transmit data wirelessly, all while maintaining portability and operational reliability. The system’s primary objective is to seamlessly integrate hardware and software components into a cohesive framework capable of continuous data monitoring and real-time reporting.
+A greenhouse is a controlled environment used to cultivate plants by regulating temperature, humidity, light, and other growing conditions, allowing for year-round cultivation while protecting crops from harsh weather, pests, and diseases. Accurate measurements inside a greenhouse are crucial for maintaining optimal plant health and productivity. Monitoring temperature prevents stress and ensures proper growth, while humidity control prevents mold and dehydration. Light levels must be measured to optimize photosynthesis, and CO₂ levels should be monitored to support plant development. Additionally, tracking soil moisture and pH helps maintain proper water and nutrient balance, preventing overwatering or nutrient deficiencies. By ensuring precise environmental conditions, greenhouse operators can optimize growth, improve yields, and efficiently manage resources through automation and troubleshooting.
+
+In today’s rapidly advancing technological landscape, the demand for portable, efficient, and data-driven monitoring systems is more prevalent than ever. The proposed project aims to develop a robust, modular solution designed to collect, process, and transmit data wirelessly, all while maintaining portability and operational reliability. The system’s primary objective is to seamlessly integrate hardware and software components into a cohesive framework capable of continuous data monitoring and real-time reporting.
 
 To meet stakeholder expectations and align with industry standards, the system will incorporate modular hardware units powered by battery sources, minimizing cable dependency and enhancing mobility. These modules will transmit data wirelessly to a central processor, which will then update a cloud-based platform when a stable Wi-Fi connection is available. Additionally, the system will feature local data storage to ensure no loss of information during network outages, thereby maintaining data integrity and availability.
 
@@ -51,8 +53,6 @@ Disadvantages:
 - Lack of Accuracy and Durability: These systems are often built with inexpensive sensors, which can diminish in performance over time.
 - High Maintenance: They require regular adjustments and troubleshooting to stay operational.
 - Limited Data Management: Typically lacks advanced data processing and cloud integration.
-________________________________________
-
 #### Industrial Solutions
 Industrial-grade greenhouse monitoring systems offer comprehensive and precise data, tailor-made for large-scale commercial operations. Below is the analysis of some notable options: 
 1. **iGrow 800 Environmental Controller**
@@ -201,24 +201,30 @@ By implementing this high-level solution, the system will effectively bridge the
 
 ## Atomic Subsystem Specifications
 **Sensor Units:**
-The individual sensor units will communicate data to the central processing unit wirelessly via the MQTT protocol. Each remote sensor unit will have its own device identifier to ensure that the central processing unit does not receive information from multiple devices, preventing data from being overwritten. As sensors collect real-time data, this information will be sent to the Raspberry Pi for integration with the website dashboard. In offline scenarios, the collected data can be stored on an SD card for later retrieval 
+The individual sensor units will communicate data to the central processing unit wirelessly via Wi-Fi. Each remote sensor unit will have its own device identifier to ensure that the central processing unit does not receive information from multiple devices, preventing data from being overwritten. As sensors collect real-time data, this information will be sent to the Raspberry Pi for integration with the website dashboard. In offline scenarios, the collected data can be stored on an SD card for later retrieval 
   - Functions: Data acquisition, wireless transmission, local storage.
   - Inputs: Sensor data, battery voltage.
-  - Outputs: Wireless data (MQTT).
+  - Outputs: Wireless data (Wi-Fi).
   - Interfaces: Sensor data (digital, analog), battery power, Wi-Fi.
-  - “Shall” measure temperature, humidity, light, CO2, and O2. “Shall” transmit data every 5 minutes when Wi-Fi is available. “Shall” store data hourly when Wi-Fi is unavailable.
+  - “Shall” measure temperature, humidity, light, CO2, and O2. “Shall” transmit data every 5 minutes when Wi-Fi is available and unavailable. “Shall” timestamp each sample using synchronized Wi-Fi connection. “Shall” store data in internal SD card until overwriting oldest data.
+
+**Central Processing Hub:**
 - Raspberry Pi 4: 
   - Functions: Data processing, storage, web interface.
-  - Inputs: Wireless data (MQTT), camera feed.
-  - Outputs: Web dashboard, data offloading.
-  - Interfaces: Wi-Fi, USB, camera module.
+  - Inputs: Wireless data (Wi-Fi).
+  - Outputs: Web dashboard, data offloading, time synchronization (Wi-Fi).
+  - Interfaces: Wi-Fi, USB.
   - “Shall” store sensor data in a database. “Shall” host a web server for data visualization. “Shall” allow data offloading via USB.
+
+**Monitoring Dashboard**
 - Web Dashboard: 
-  - Functions: Data visualization, user interface.
+  - Functions: Data visualization, user interface, store data in .xslx.
   - Inputs: Database data, camera feed.
-  - Outputs: User interface.
+  - Outputs: User interface, .xlsx download.
   - Interfaces: Web browser.
   - “Shall” display real time and historical data. “Shall” provide user authentication. “Shall” display camera feed.
+
+**Real-Time Monitoring Unit**
 - Camera System: 
   - Functions: image capture, image storage.
   - Inputs: Raspberry Pi trigger.
@@ -241,6 +247,20 @@ The individual sensor units will communicate data to the central processing unit
   - UL 1449 for surge protection device compliance.
 ## Resources
 - Budget: 
+Item No.	Item	Description	Quantity	Cost
+1	Raspberry Pi	Central Microcontroller	1	$35
+2	ESP-WROOM-32	Sensors Microcontroller	3	$12 per 4
+3	Batteries:
+Eneloop Pro (Panasonic)	Power Supply	16	$36.45 per 8
+4	BME280	Environmental Monitoring
+	3	$15.99 per 2
+5	BH1750	Light Measurement	3	$7.49 per 3
+6	MG811	CO2 Monitoring	3	$49.90
+7	MT3608	Boost Converter	3	$5.99 per 5
+8	AlphaSense O2-A3 Oxygen Sensor	Oxygen Sensor	3	$82.00
+9	3D Printing Plastic Filaments	Used for Case Prototype	3	$12.99
+10	DS18B20	Temperature Sensor	3	$9.95
+11	Go Pro	Visual Feed	1	$20.00
 
 | Item | Description | Quantity | Cost |
 |------|-------------|----------|------|
@@ -312,4 +332,5 @@ References
 - Duy Tran: Sensor Node Design, Document Editing.
 - Michael Feiel: Web Dashboard, Software Development, Flowchart, Block Diagram.
 - Henry Hurst: Raspberry Pi Integration, Camera System, Enclosure Design.
-- Mohammed Almehmadi: Sensor Integration, Constraint Research, Power Management.
+- Mohammed Almehmadi:  Constraint Research, Power Management.
+
