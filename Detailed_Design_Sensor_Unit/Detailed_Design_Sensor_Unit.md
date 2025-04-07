@@ -41,8 +41,8 @@ As one of the four primary components of the greenhouse monitoring solution, the
 
 ## 3D Model of Sensor Unit Interconnect PCB
 
-![Front of Sensor Unit PCB](C:/front_pcb.png)
-![Back of Sensor Unit PCB](C:/back_pcb.png)
+![Front of Sensor Unit PCB](front_pcb.png)
+![Back of Sensor Unit PCB](back_pcb.png)
 
 ## Buildable Schematic 
 
