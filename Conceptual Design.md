@@ -138,10 +138,11 @@ By integrating these features into a single hybrid solution, the proposed system
 The proposed portable sensory network will consist of three remote units utilizing ESP32 microcontrollers and a Raspberry Pi as the central control unit. Each remote unit will aggregate data from five sensors—CO2, oxygen, humidity, light intensity, and temperature. These units’ encasement will be 3d printed with PETG filament to ensure moisture and temperature resistance to the box. Once the data is recorded, it will be sent to the central processing unit (Raspberry Pi) for cloud uploading and data storage via Wi-Fi. The ESP boards and Raspberry Pi are Wi-Fi compatible, so its functionalities will be used. Each individual unit will be powered by batteries with a boost converter to maintain a consistent 3.3 volts.  The central processing unit will receive its power from a standard 5-volt power supply. After the data is processed, it will be uploaded to the cloud for interfacing through a dedicated website. This website will provide a dashboard view of each of the remote units along with their respective sensor readings. 
 
 ### Hardware Block Diagram
-
+ 
 <img src="resources/concept-block-diagram.png" alt="Block Diagram" width="auto" height="auto"> 
 
 ### Operational Flowchart
+ 
 
 <img src="resources/concept-flow-chart.png" alt="Flow Chart" width="auto" height="auto"> 
 
@@ -200,54 +201,107 @@ ________________________________________
 By implementing this high-level solution, the system will effectively bridge the gap between expensive industrial monitoring solutions and affordable DIY alternatives, delivering reliable and scalable environmental monitoring for a wide range of greenhouse applications. 
 
 ## Atomic Subsystem Specifications
-**Sensor Units:**
+
+**Sensor Units**
+
 The individual sensor units will communicate data to the central processing unit wirelessly via Wi-Fi. Each remote sensor unit will have its own device identifier to ensure that the central processing unit does not receive information from multiple devices, preventing data from being overwritten. As sensors collect real-time data, this information will be sent to the Raspberry Pi for integration with the website dashboard. In offline scenarios, the collected data can be stored on an SD card for later retrieval 
+
   - Functions: Data acquisition, wireless transmission, local storage.
   - Inputs: Sensor data, battery voltage.
   - Outputs: Wireless data (Wi-Fi).
   - Interfaces: Sensor data (digital, analog), battery power, Wi-Fi.
-  - “Shall” measure temperature, humidity, light, CO2, and O2. “Shall” transmit data every 5 minutes when Wi-Fi is available and unavailable. “Shall” timestamp each sample using synchronized Wi-Fi connection. “Shall” store data in internal SD card until overwriting oldest data.
+  - Shall measure temperature, humidity, light, CO2, and O2. 
+  - Shall” transmit data every 5 minutes when Wi-Fi is available and unavailable. 
+  - Shall timestamp each sample using synchronized Wi-Fi connection. 
+  - Shall store data in internal SD card until overwriting oldest data.
 
-**Central Processing Hub:**
-- Raspberry Pi 4: 
-  - Functions: Data processing, storage, web interface.
-  - Inputs: Wireless data (Wi-Fi).
-  - Outputs: Web dashboard, data offloading, time synchronization (Wi-Fi).
-  - Interfaces: Wi-Fi, USB.
-  - “Shall” store sensor data in a database. “Shall” host a web server for data visualization. “Shall” allow data offloading via USB.
+**Central Processing Hub (Raspberry Pi 4)**
+
+- Functions: Data processing, storage, web interface.
+- Inputs: Wireless data (Wi-Fi).
+- Outputs: Web dashboard, data offloading, time synchronization (Wi-Fi).
+- Interfaces: Wi-Fi, USB.
+- Shall store sensor data in a database. 
+- Shall host a web server for data visualization. 
+- Shall allow data offloading via USB.
 
 **Monitoring Dashboard**
-- Web Dashboard: 
+
+  - Web Dashboard: 
   - Functions: Data visualization, user interface, store data in .xslx.
   - Inputs: Database data, camera feed.
   - Outputs: User interface, .xlsx download.
   - Interfaces: Web browser.
-  - “Shall” display real time and historical data. “Shall” provide user authentication. “Shall” display camera feed.
+  - Shall display real time and historical data. 
+  - Shall provide user authentication. 
+  - Shall display camera feed.
+  - Shall store and output an excel file upon request.
 
-**Real-Time Monitoring Unit**
-- Camera System: 
+ **Real-Time Monitoring Unit**
+
+  - Camera System: 
   - Functions: image capture, image storage.
   - Inputs: Raspberry Pi trigger.
   - Outputs: Image files.
   - Interfaces: Raspberry Pi camera port.
-  - “Shall” take a photo every hour. “Shall” store photos on the Raspberry Pi.
+  - Shall take a photo every hour. Shall store photos on the Raspberry Pi.
+
 ## Ethical, Professional, and Standards Considerations
+
 - Environmental Impact: The system promotes efficient resource management in greenhouses, reducing waste. This has implications for local food security, reducing dependency on imports and strengthening regional food systems.  
 - Long-Term Cost Considerations: While the system may increase initial power usage, optimizing energy efficiency and automating data collection could lead to long-term savings by improving resource management and reducing manual labor.
 - Safety: Adherence to electrical safety standards (OSHA, NEC, UL) ensures safe operation. Such risks involve electricity, structure, and gases.
 - Data Privacy: User authentication and access control protect sensitive data.
-- Standards: Compliance with IEC 60529, NEC, UL standards for environmental protection and electrical safety.
-  - 29 CFR 1910.303 for general electrical safety compliance.
-  - 29 CFR 1910.307 for electrical safety in wet/damp locations.
-  - 50V or lower DC systems classified as "low voltage" per OSHA standards.
-  - NEC Article 547, which covers electrical safety requirements for agricultural buildings, including greenhouses.
-  - NEC 250.32, which specifies grounding requirements for separate structures.
-  - NEC 210.8(B), which mandates GFCI protection for 15A & 20A, 120V outlets in damp/wet.
-  - UL 943 for GFCI safety compliance.
-  - UL 1449 for surge protection device compliance.
-## Resources
-- Budget: 
 
+IEC 60529 (IP67/IP68 Rating):
+- Ensures enclosures are resistant to dust and water ingress.
+- Helps maintain device function in high humidity greenhouse environments.
+
+NEMA 250 (Type 4X Enclosure):
+
+- Equivalent to IP ratings but includes corrosion resistance.
+- Ensures electrical enclosures can withstand greenhouse conditions.
+
+ASTM B117:
+
+- Ensures corrosion resistance of enclosure materials, especially in high humidity greenhouses.
+
+OSHA 29 CFR 1910.303:
+
+- Provides general electrical safety standards, for example max 50V DC.
+- Ensures safe operating voltage and insulation for user protection.
+
+OSHA 29 CFR 1910.307:
+
+- Addresses requirements for electrical systems in wet/damp locations.
+- Ensures safe installation of equipment in greenhouse environments.
+
+NEC Article 547:
+
+- Specifies electrical design and installation for agricultural buildings.
+- Ensures system wiring and grounding is greenhouse compliant.
+
+NEC 210.8(B):
+
+- Requires GFCI protection for outlets in wet/damp environments.
+- Helps prevent electrical shock hazards near watering systems.
+
+NEC 250.32:
+
+- Covers grounding of separate buildings/structures.
+- Ensures electrical safety if greenhouse and control unit are in different buildings.
+
+UL 943:
+
+- Certifies ground-fault protection devices.
+- Ensures protection from electrical shocks in damp zones.
+
+UL 1449:
+
+- Certifies devices that protect from voltage spikes.
+- Helps protect electronics during lightning or power fluctuations.
+
+## Resources
 
 | Item | Description | Quantity | Cost |
 |------|-------------|----------|------|
@@ -276,7 +330,7 @@ The individual sensor units will communicate data to the central processing unit
 <img src="resources/gantt-chart.png" alt="Gantt Chart" width="auto" height="400"> 
  
 
-References
+References:
 - [1] DATASHEET raspberry pi 4 model B. (n.d.). https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf 
 - [2] Adafruit. (n.d.-a). https://cdn-learn.adafruit.com/assets/assets/000/115/588/original/bst-bme280-ds002.pdf?1664822559= 
 - [3] Digital 16bit serial output type ambient light sensor IC. (n.d.-c). https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf 
@@ -284,10 +338,10 @@ References
 - [5] Karle, S., Bansode, V., Tambe, P., & Bhambare, R. (n.d.). (PDF) IOT based greenhouse monitoring system using Raspberry Pi. IoT Based Greenhouse Monitoring System Using Raspberry Pi. https://www.researchgate.net/publication/354297402_IoT_Based_Greenhouse_Monitoring_System_Using_Raspberry_Pi
 - [6] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI.
 - [7] Amazon. (n.d.). Environmental monitoring, light measurement, batteries, and boost converter devices. 
-  - -BME280 Sensor: https://www.amazon.com/Atmospheric-Pressure-Temperature-Humidity-GY-BME280/dp/B0DHPCFXCK/
-  - - BH1750 Light Sensor: https://www.amazon.com/HiLetgo-BH1750FVI-intensity-illumination-arduino/dp/B00M0F29OS/
-  - - Eneloop Pro Batteries: https://www.amazon.com/Panasonic-BK-3HCCA8BA-eneloop-Pre-Charged-Rechargeable/dp/B00MXCIK32/
-  - - MT3608 Boost Converter: https://www.amazon.com/AITRIP-Converter-Adjustable-Voltage-Regulator/dp/B0C858YYQ1/
+  - BME280 Sensor: https://www.amazon.com/Atmospheric-Pressure-Temperature-Humidity-GY-BME280/dp/B0DHPCFXCK/
+  - BH1750 Light Sensor: https://www.amazon.com/HiLetgo-BH1750FVI-intensity-illumination-arduino/dp/B00M0F29OS/
+  - Eneloop Pro Batteries: https://www.amazon.com/Panasonic-BK-3HCCA8BA-eneloop-Pre-Charged-Rechargeable/dp/B00MXCIK32/
+  - MT3608 Boost Converter: https://www.amazon.com/AITRIP-Converter-Adjustable-Voltage-Regulator/dp/B0C858YYQ1/
 - [8] Elecfreaks. CO2 Monitoring Sensor: https://shop.elecfreaks.com/products/elecfreaks-octopus-co2-gas-sensor-mg811?srsltid=AfmBOoo9ZJgZG6MylX-AZjXNEBDBYNR3Z3_EC5a-3VQngJpJEwLPc0AH
 - [9] International Electrotechnical Commission (IEC). (1989). Degrees of Protection Provided by Enclosures (IP Code), IEC 60529. IEC.
 - [10] Liu, Y. (n.d.). Smart Greenhouse Monitoring and controlling based on ... Smart Greenhouse Monitoring and Controlling based  on NodeMCU . https://thesai.org/Downloads/Volume13No9/Paper_70-Smart_Greenhouse_Monitoring_and_Controlling.pdf 
@@ -304,15 +358,17 @@ References
 - [21] Sensaphone 400 & 800 monitoring systems. Sensaphone. (n.d.). https://sensaphone.com/products/sensaphone-400-and-800-monitoring-systems/ 
 - [22] Industries, A. (n.d.). Waterproof 1-wire DS18B20 digital temperature sensor. adafruit industries blog RSS. https://www.adafruit.com/product/381?gQT=1
 
-- Sources for Standards:
-  - ASTM International.
-  - U.S. Department of Defense.
-  - International Electrotechnical Commission (IEC) 60529 Standard.
-  - National Electrical Manufacturers Association (NEMA) Standards Publication 250.
-  - Occupational Safety and Health Administration (OSHA) regulations.
-  - European Union Directive 2014/35/EU.
-  - National Fire Protection Association (NFPA) 70 – National Electrical Code (NEC).
-  - Underwriters Laboratories (UL) Standards.
+Sources for Standards:
+- [1] ASTM International. (n.d.). Environmental sensor standards. ASTM. 
+- [2] U.S. Department of Defense. (n.d.). Defense Standardization Program (DSP). Defense Logistics Agency. https://www.dsp.dla.mil/
+- [3] International Electrotechnical Commission. (2013). IEC 60529: Degrees of protection provided by enclosures (IP Code). IEC Webstore.   https://webstore.iec.ch/en/publication/2452
+- [4] National Electrical Manufacturers Association. (2020). ANSI/NEMA 250-2020 – Enclosures for Electrical Equipment (1000 Volts Maximum). American National Standards Institute. https://webstore.ansi.org/standards/nema/ansinema2502020
+- [5] Occupational Safety and Health Administration. (n.d.). Standard 1910.303 – General Requirements. OSHA. https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.303
+- [6] Occupational Safety and Health Administration. (n.d.). Standard 1910.307 – Hazardous (Classified) Locations. OSHA. https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.307
+- [7] European Union. (2014). Directive 2014/35/EU – Low Voltage Directive. EUR-Lex. https://eur-lex.europa.eu/eli/dir/2014/35/oj/eng
+- [8] National Fire Protection Association. (2023). NFPA 70 – National Electrical Code. NFPA. https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70
+- [9] Underwriters Laboratories. (n.d.). UL Standards Catalog. UL. https://www.ul.com/resources/apps/standards-catalog
+
 
 
 ## Statement of Contributions
