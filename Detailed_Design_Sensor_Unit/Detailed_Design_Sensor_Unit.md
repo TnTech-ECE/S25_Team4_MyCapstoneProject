@@ -46,15 +46,15 @@ As one of the four primary components of the greenhouse monitoring solution, the
 
 ## Buildable Schematic 
 
-![Schematic](C:/schematic_sensor.png)
+![Schematic](schematic_sensor.png)
 
 ## Printed Circuit Board Layout
 
-![PCB Layout](C:/PCB_layers.png)
+![PCB Layout](PCB_layers.png)
 
 ## Operational Flowchart
 
-![Flowchart](C:/flowchart.png)
+![Flowchart](flowchart.png)
 
 ## Bill of Materials (BOM)
 
