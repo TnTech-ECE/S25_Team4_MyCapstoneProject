@@ -1,4 +1,4 @@
-# Sensor Unit Detailed Design
+# Sensor Unit Detailed Design 
 
 This document presents a comprehensive overview of the Sensor Subsystem, one of the four key components of the greenhouse monitoring solution—the others being the Power Subsystem, Central Processing Hub Subsystem, and Mechanical Subsystem. While the primary focus is on the Sensor Subsystem, a high-level integration overview with the remaining subsystems is also provided to highlight system interdependencies and ensure cohesive functionality. The document further outlines the technical constraints, relevant industry standards, and operational limitations that influence the design and deployment of the Sensor Subsystem. Lastly, it details the step-by-step procedure for constructing and implementing the subsystem as part of the overall greenhouse monitoring solution
 ## Function of the Subsystem
