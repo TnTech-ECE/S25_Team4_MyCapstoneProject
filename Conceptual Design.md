@@ -28,15 +28,18 @@ The primary objective of this project is to develop a portable, modular data col
 These requirements have been established in collaboration with stakeholders to address functional needs while complying with industry standards and best practices. The design will also account for ethical, safety, and environmental considerations to minimize risks and enhance system sustainability.
 
 ### Constraints:
-- Environmental Conditions (IP67): To ensure reliability in high-humidity, dust-prone environments (IEC 60529 Standard).
+- Environmental Conditions (IP67) and RoHS: To ensure reliability in high-humidity, dust-prone environments (IEC 60529 Standard).
   - IP65 or higher for protection against dust and low-pressure water jets.
   - IP67 if additional submersion resistance is required.
   - The enclosures shall comply with NEMA 4X as an alternative to IP ratings, providing dust-tight, watertight, and corrosion-resistant enclosures.
   - The materials used in enclosures and components shall comply with ASTM B117 for salt fog resistance in corrosion-prone areas.
-- Power Limitations (50V max): To comply with OSHA regulations for electrical safety (29 CFR 1910.303, 29 CFR 1910.307).
-  - 29 CFR 1910.303 for general electrical safety compliance
-  - 29 CFR 1910.307 for electrical safety in wet/damp locations.
+  - Restriction of Hazardous Substances (RoHS) standards for environmental sustainability pertaining to PCB materials. 
+- Power Limitations (50V max): To comply with OSHA regulations for electrical safety (29 CFR CFR 1910 Subpart S, 29 CFR 1910.1200, 29 CFR 1910.1000, and 29 CFR 1910.39).
+  - OSHA 29 CFR 1910.39 for electrical safety in wet/damp locations such that the subsystems are flame-retardant.
+  - OSHA 29 CFR 1910.1200 pertaining to to hazardous communication such that the device does not affect the soil and plants from the combo-power and sensor unit subsystem. 
   - 50V or lower DC systems classified as "low voltage" per OSHA standards.
+  - OSHA 29 CFR 1910 Subpart S for Sensor Unit pertaining to electrical safety.
+  - OSHA 29 CFR 1910.1000 pertaining to the emmitance of air contaminants from the power and sensor subsystem. 
 - Safety and Regulatory Compliance (NEC, UL): To prevent electrical hazards and ensure safe operation (NEC Article 547, NEC 210.8(B), NEC 250.32, UL 943, UL 1449).
 - Sensor and Actuator Integration: To ensure accurate responses based on environmental data.
 ## Comparative Analysis of Potential Solutions
