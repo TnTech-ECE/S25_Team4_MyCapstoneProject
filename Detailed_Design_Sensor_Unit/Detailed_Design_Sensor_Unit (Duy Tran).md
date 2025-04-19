@@ -8,6 +8,7 @@ The remote sensor units play a crucial role in the greenhouse monitoring system 
 For communication, each ESP-WROOM-32-based remote sensor unit will utilize Wi-Fi to establish a wireless connection with the central processing hub. To ensure accurate data management, every sensor unit will be assigned a unique device identifier, allowing the central hub to differentiate incoming data streams and avoid any potential overwriting of information. As real-time environmental data is collected from the onboard sensors, it is transmitted to the Raspberry Pi for processing and visualization on the system's website dashboard. In the event of network downtime or offline operation, the Raspberry Pi is equipped with an SD card that serves as a local storage solution, retaining the latest recorded data from each sensor unit to ensure data integrity and continuity.
 
 ## Specifications and Constraints
+The sensor subsystem shall monitor and record critical environmental parameters—temperature, humidity, and barometric pressure using the BME280; light intensity using the BH1750; carbon dioxide (CO₂) concentrationusing the SCD40; and oxygen levels using the Gravity Electrochemical Oxygen Sensor—across multiple locations within the greenhouse environment to ensure comprehensive spatial data coverage and real-time condition tracking.
 
 1. Electrical Safety Compliance
 
