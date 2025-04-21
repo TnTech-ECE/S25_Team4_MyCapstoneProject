@@ -1,0 +1,23 @@
+Warning: Width correction constrained.  The width correction value must be in the range of [0.000001 mm; 0.199999 mm] for the current design rules.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Cu.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Cu.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Paste.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Paste.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Mask.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Mask.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-Edge_Cuts.gbr'.
+Created Gerber job file 'C:\Users\moalm\OneDrive\Documents\new11\new11-job.gbrjob'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Cu.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Cu.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Paste.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Paste.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-F_Mask.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-B_Mask.gbr'.
+Plotted to 'C:\Users\moalm\OneDrive\Documents\new11\new11-Edge_Cuts.gbr'.
+Created Gerber job file 'C:\Users\moalm\OneDrive\Documents\new11\new11-job.gbrjob'.
+Info: Done.
+Info: Done.
