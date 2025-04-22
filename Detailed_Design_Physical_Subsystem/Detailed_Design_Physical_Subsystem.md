@@ -104,14 +104,19 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 ## 3D Model of Sensor Units
 
+- Front View:
+  
 ![Front of Sensor Unit PCB](3d_Model.PNG)
+
+- Rear View:
+  
 ![Front of Sensor Unit PCB](3d_Model_back.PNG)
 
 ## Bill of Materials (BOM)
 
 | Manufacturer                 | Part Number                                         | Distributor | Distributor Part Number | Quantity | Price      | Purchasing Website URL                                                                                                                                                                                                                                                                                                                                                        |
 |------------------------------|-----------------------------------------------------|-------------|-------------------------|----------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Creality                       | PETG Filament                                     | Amazon      | null                   | 1        | $17.99 | [Link]([https://www.amazon.com/ESP-WROOM-32-Development-Microcontroller-Integrated-Compatible/dp/B08D5ZD528?pd_rd_w=iZ0oF&content-id=amzn1.sym.528bfdfa-ea96-478b-a7d9-043e650836af&pf_rd_p=528bfdfa-ea96-478b-a7d9-043e650836af&pf_rd_r=XJM41MWP1F1G4W97R7DR&pd_rd_wg=OPF1h&pd_rd_r=6db91f4b-742a-4e75-b877-a7100e9508ec&pd_rd_i=B08D5ZD528&ref_=pd_basp_d_rpt_ba_s_2_t&th=1](https://www.amazon.com/CREALITY-PETG-Filament-Dimensional-Black/dp/B0CRLGHWZF/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.yf4QrGfdb01bS0owhB7XaPtXE_o7pZRF3QizKnbgOp2FMAYczqeqdkjwHkYkt19UMm3t0lSctARuqbWB3QffX5cMTKEo7SNFp2VtnWi6ht7PI96nC95HtGC-b2vwNnjrUJ0nSDhZFryZna5GIeCR5WjIeKkl6cw7lGirsoNGqDesm8b2JrUyyWzjEjmgDBty-_nzhJbTCJH9d4-sCxJyYHoq02cPF-cBss0DG3WF7B8.2luK1lZG7mSvF8z_tehzyqiDQt2gRCVWDJROnuUOqxk&dib_tag=se&keywords=PETG+filament&qid=1745203043&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)) |
+| Creality                       | PETG Filament                                     | Amazon      | null                   | 1        | $17.99 | [Link](https://www.amazon.com/CREALITY-PETG-Filament-Dimensional-Black/dp/B0CRLGHWZF/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.yf4QrGfdb01bS0owhB7XaPtXE_o7pZRF3QizKnbgOp2FMAYczqeqdkjwHkYkt19UMm3t0lSctARuqbWB3QffX5cMTKEo7SNFp2VtnWi6ht7PI96nC95HtGC-b2vwNnjrUJ0nSDhZFryZna5GIeCR5WjIeKkl6cw7lGirsoNGqDesm8b2JrUyyWzjEjmgDBty-_nzhJbTCJH9d4-sCxJyYHoq02cPF-cBss0DG3WF7B8.2luK1lZG7mSvF8z_tehzyqiDQt2gRCVWDJROnuUOqxk&dib_tag=se&keywords=PETG+filament&qid=1745203043&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) |
 | **Total** |                                                     |             |                         |          | **$17.99** |                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Analysis
