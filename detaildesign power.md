@@ -59,7 +59,7 @@ All grounds are shared, forming a common electrical reference across all modules
 ![Schematic](Buildable_circuit.png)
 
 ###7. Printed Circuit Board Layout
-![Schematic](Printed_Circuit Board_Layout.png)
+![Schematic](Printed_Circuit_Board_Layot.png)
 
 ### 8. Bill of Materials (BOM)
 
