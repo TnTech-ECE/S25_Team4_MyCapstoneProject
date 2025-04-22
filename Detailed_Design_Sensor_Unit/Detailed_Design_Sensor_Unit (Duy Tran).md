@@ -55,7 +55,7 @@ As one of the four primary components of the greenhouse monitoring solution, the
 
 ## Operational Flowchart
 
-![Flowchart](Operational_Flowgraph.png)
+![Flowchart](Operational_Flowgraph_Solid.png)
 
 ## Bill of Materials (BOM)
 
