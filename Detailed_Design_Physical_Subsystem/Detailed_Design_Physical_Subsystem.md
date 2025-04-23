@@ -55,23 +55,25 @@ The design shall be optimized for additive manufacturing (3D printing) using com
 The enclosure shall be cost-effective for small-batch production, with minimal material waste and efficient use of printable volume.
 
 ## Overview of Proposed Solution
-The proposed solution involves the development of a custom 3D-modeled enclosure designed to house the ESP-WROOM-32 microcontroller and its associated environmental sensors (BME280, BH1750, SCD40, and Gravity Electrochemical Oxygen Sensor). The enclosure is tailored to meet the physical, environmental, and functional specifications required for reliable deployment within a greenhouse setting.
 
-The enclosure will be 3D printed using PETG filament, selected for its excellent resistance to moisture, UV exposure, and temperature fluctuations—conditions commonly present in greenhouse environments. PETG also offers strong layer adhesion and durability, ensuring the case remains structurally sound over time while being environmentally safe and RoHS-compliant.
+The proposed solution will involve the development of a custom 3D-modeled enclosure designed to house the ESP-WROOM-32 microcontroller along with its associated environmental sensors (BME280, BH1750, SCD40, and Gravity Electrochemical Oxygen Sensor). The enclosure will be tailored to meet the physical, environmental, and functional specifications necessary for reliable deployment within a greenhouse setting.
 
-Internally, the case will feature precision mounts and compartments to securely hold the custom PCB and electronic components in place. External design elements will include:
+The enclosure will be 3D printed using PETG filament, which will be selected for its excellent resistance to moisture, UV exposure, and temperature fluctuations—conditions that are expected in greenhouse environments. PETG will also provide strong layer adhesion and durability, ensuring that the case remains structurally sound over time while being environmentally safe and RoHS-compliant.
 
-- Ventilation slots or mesh-covered cutouts to allow air circulation for gas and humidity sensors.
-- A transparent or translucent window over the light sensor (BH1750) for accurate illumination readings.
-- Openings or filtered ports for gas sensors to ensure exposure to ambient air without allowing dust or debris inside.
-  
-The enclosure will meet at least an IP54 rating, providing protection against dust and splashing water while allowing proper airflow. Integrated mounting flanges and rail slots will enable secure attachment to greenhouse poles or walls, keeping the unit stable and optimally oriented for sensing.
+Internally, the case will feature precision mounts and compartments that will securely hold the custom PCB and electronic components in place. External design features will include:
 
-To maintain proper thermal conditions and sensor accuracy, passive ventilation features will be included in the design, preventing heat buildup around temperature-sensitive electronics. Additionally, the case will incorporate snap-fit or screw-secured closures to simplify assembly and allow access for maintenance or sensor upgrades.
+-	Mesh-covered ventilation slots to allow air circulation for gas and humidity sensors while preventing the ingress of dust or debris.
+-	A transparent or translucent window positioned above the light sensor (BH1750) to ensure accurate illumination readings.
+-	No additional filtered ports, as the mesh-covered ventilation slots will sufficiently expose the gas sensors to ambient air while offering necessary protection.
 
-The 3D model will be optimized for efficient FDM printing using PETG, minimizing support structures and ensuring material efficiency without compromising structural integrity.
+The enclosure will be designed to meet at least an IP54 rating, ensuring protection against limited dust ingress and splashing water while maintaining adequate airflow. It will also include integrated mounting flanges and rail slots to enable secure attachment to greenhouse poles or walls, keeping the unit stable and optimally oriented for environmental sensing.
 
-By leveraging the mechanical and chemical resilience of PETG along with a purpose-built design, this solution meets all outlined constraints—ranging from environmental protection and fire safety to OSHA compliance and ease of manufacturing—while ensuring the sensor subsystem operates effectively within the greenhouse environment.
+To maintain appropriate thermal conditions and sensor accuracy, passive ventilation features will be incorporated into the design to prevent heat buildup around temperature-sensitive components. Additionally, the case will include snap-fit or screw-secured closures to facilitate assembly and enable straightforward access for maintenance or sensor upgrades.
+
+The 3D model will be optimized for efficient FDM printing using PETG, with careful design to minimize the need for support structures and to ensure material efficiency without compromising structural integrity.
+
+By leveraging the mechanical and chemical resilience of PETG in combination with a purpose-driven design, the solution will meet all specified constraints—including environmental protection, fire safety, OSHA compliance, and ease of manufacturing—while ensuring the sensor subsystem will operate effectively within the greenhouse environment.
+
 
 ## Interface with Other Subsystems
 The 3D-modeled sensor case serves as the physical interface between the environmental sensing hardware and the broader greenhouse monitoring system. While it is a passive mechanical component, its design directly impacts the quality, reliability, and functionality of the data collected and transferred by the sensor subsystem. The enclosure ensures that each internal component can effectively perform its intended function while safely interfacing with other subsystems.
@@ -128,6 +130,8 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 ## Analysis
 The proposed PETG 3D-printed sensor case successfully fulfills all functional and environmental requirements for greenhouse deployment. Its internal layout securely houses the ESP-WROOM-32 and associated sensors, while the angled ventilation slats allow direct exposure to ambient air and light for accurate environmental readings. The integrated hook enables easy suspension at canopy level for optimal data collection. The 1.27 mm wall thickness provides sufficient structural strength while keeping filament use low, making the design both durable and cost-effective. PETG's resistance to moisture, UV, and moderate heat makes it well-suited for long-term greenhouse use.
+
+The enclosure design will also provide physical protection for sensitive electronics, particularly the ESP-WROOM-32 microcontroller and custom PCB. By securely mounting these components within isolated internal compartments, and enclosing them in PETG with reinforced walls, the system will safeguard against mechanical shocks, moisture ingress, and particulate contamination. The use of snap-fit closures and internal standoffs will minimize movement and vibration, reducing the risk of solder joint fatigue or component dislodgement during transport or prolonged operation in a dynamic greenhouse environment.
 
 From a compliance standpoint, the design meets multiple OSHA standards for electrical safety, hazardous communication, and air quality by enclosing electronics in a non-conductive, chemically stable PETG shell. It also adheres to RoHS requirements, ensuring eco-friendly materials are used throughout. The non-metallic construction ensures uninterrupted Wi-Fi connectivity for seamless data transmission to the Raspberry Pi hub. Overall, the sensor case is safe, scalable, and optimized for both performance and environmental compatibility in a greenhouse monitoring system.
 
