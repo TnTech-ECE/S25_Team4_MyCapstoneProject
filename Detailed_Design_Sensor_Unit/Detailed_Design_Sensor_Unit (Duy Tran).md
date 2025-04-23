@@ -123,3 +123,5 @@ https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf
 ‌<br/><br/>
 [12]“Ideal Greenhouse Temperature And Humidity,” Atlas Scientific, Jul. 28, 2022. https://atlas-scientific.com/blog/ideal-greenhouse-temperature-and-humidity/
 ‌<br/><br/>
+[13]“SCD40 CO2 Sensor with Temperature and Humidity Sensor,” Bastelgarage.ch, 2025. https://www.bastelgarage.ch/scd40-co2-sensor-with-temperature-and-humidity-sensor
+‌<br/><br/>
