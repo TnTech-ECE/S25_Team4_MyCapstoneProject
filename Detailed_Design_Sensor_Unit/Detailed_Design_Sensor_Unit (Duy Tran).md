@@ -94,7 +94,7 @@ In controlled-environment agriculture such as a greenhouse, CO₂ concentration 
 
 The Gravity Electrochemical Oxygen Sensor is particularly effective for monitoring ambient oxygen levels in greenhouse environments, where microbial activity, plant respiration, and ventilation performance can all impact O₂ availability. This sensor is engineered for continuous analog output and is polled in real time by the ESP-WROOM-32 microcontroller. It features an accuracy of ±3% full scale over a 0–25% oxygen volume range, with a resolution of 0.1% and repeatability of ±0.1% under consistent environmental conditions. Its electrochemical design is inherently resistant to high humidity and temperature variations, key characteristics of greenhouse atmospheres. Additionally, its chemical stability allows for prolonged deployment without the need for frequent recalibration, making it well-suited for low-maintenance environmental sensing in biologically active zones such as near soil beds or composting stations within a greenhouse.
 
-Together, these sensors offer robust, high-resolution, and repeatable monitoring across key environmental variables. Their resilience to the high humidity, dynamic lighting, and temperature fluctuations typical of greenhouse environments ensures that the system delivers accurate data essential for plant health and environmental optimization.
+To summarize, these sensors offer robust, high-resolution, and repeatable monitoring across key environmental variables. Their resilience to the high humidity, dynamic lighting, and temperature fluctuations typical of greenhouse environments ensures that the system delivers accurate data essential for plant health and environmental optimization.
 
 ## References
 
