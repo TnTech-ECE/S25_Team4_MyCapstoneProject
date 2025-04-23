@@ -97,6 +97,12 @@ The Gravity Electrochemical Oxygen Sensor is particularly effective for monitori
 
 To summarize, these sensors offer robust, high-resolution, and repeatable monitoring across key environmental variables. Their resilience to the high humidity, dynamic lighting, and temperature fluctuations typical of greenhouse environments ensures that the system delivers accurate data essential for plant health and environmental optimization.
 
+### PCB Dimension 
+
+The chosen size for the interconnect PCB is approximately 3 inches by 2 inches reducing the dimensions of a printed circuit board (PCB) below its current size of 3 inches by 2 inches can lead to increased parasitic effects due to the closer proximity of conductive traces. When traces are placed in close proximity, unintended capacitance—known as parasitic capacitance—can form between them. This phenomenon is particularly problematic in circuits with small footprints, where it can lead to issues such as crosstalk, electromagnetic interference (EMI), and signal integrity degradation. Parasitic capacitance arises because closely spaced conductors separated by a dielectric material can store electric charge, effectively forming a capacitor. This unintended capacitance can alter the performance of the circuit by introducing unwanted coupling between signal lines, leading to potential malfunction or reduced efficiency of the system [15]. 
+
+The impact of parasitic capacitance becomes more pronounced as the spacing between traces decreases, which is often the case when attempting to miniaturize the PCB. This is especially critical in analog and high-speed digital circuit use cases as the goal is to maintain signal integrity for the ESP32 to read accurately from the sensors. Therefore, while reducing the PCB size might seem advantageous for space-saving, it is essential to account for the trade-offs associated with increased parasitic effects. The design has been evaluated to account for the implications of trace spacing and layout to mitigate these unwanted parasitic elements and ensure the reliable operation of the circuit for greenhouse deployment [14].
+
 ## References
 
 [1] Nfpa.org, 2024. https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70
