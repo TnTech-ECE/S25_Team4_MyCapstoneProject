@@ -1,6 +1,7 @@
 # Sensor Unit Detailed Design 
 
-This document presents a comprehensive overview of the Sensor Subsystem, one of the four key components of the greenhouse monitoring solution—the others being the Power Subsystem, Central Processing Hub Subsystem, and Mechanical Subsystem. While the primary focus is on the Sensor Subsystem, a high-level integration overview with the remaining subsystems is also provided to highlight system interdependencies and ensure cohesive functionality. The document further outlines the technical constraints, relevant industry standards, and operational limitations that influence the design and deployment of the Sensor Subsystem. Lastly, it details the step-by-step procedure for constructing and implementing the subsystem as part of the overall greenhouse monitoring solution
+This document presents a comprehensive overview of the Sensor Subsystem, one of the four key components of the greenhouse monitoring solution—the others being the Power Subsystem, Central Processing Hub Subsystem, and Mechanical Subsystem. While the primary focus is on the Sensor Subsystem, a high-level integration overview with the remaining subsystems is also provided to highlight system interdependencies and ensure cohesive functionality. The document further outlines the technical constraints, relevant industry standards, and operational limitations that influence the design and deployment of the Sensor Subsystem. Lastly, it details the step-by-step procedure for constructing and implementing the subsystem as part of the overall greenhouse monitoring solution.
+
 ## Function of the Subsystem
 
 The remote sensor units play a crucial role in the greenhouse monitoring system by communicating with each other and transmitting aggregated environmental data to the central processing hub, a Raspberry Pi. Each unit is built around the ESP-WROOM-32 microcontroller and integrates multiple environmental sensors to capture a comprehensive range of parameters. These include the BME280 sensor, which measures relative humidity, barometric pressure, and ambient temperature; the BH1750, used for light intensity measurement; the SCD40, dedicated to CO₂ monitoring; and the Gravity Electrochemical Oxygen Sensor for detecting oxygen levels. All sensors are mounted on a printed circuit board (PCB) alongside the ESP-WROOM-32, enabling compact design and facilitating streamlined prototyping and deployment.
@@ -125,3 +126,7 @@ https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf
 ‌<br/><br/>
 [13]“SCD40 CO2 Sensor with Temperature and Humidity Sensor,” Bastelgarage.ch, 2025. https://www.bastelgarage.ch/scd40-co2-sensor-with-temperature-and-humidity-sensor
 ‌<br/><br/>
+[14] I. Williams, C. Presented, and T. Kuehl, “Parasitics in Precision PCB Layouts Material created,” 2013. Accessed: Apr. 23, 2025. [Online]. Available: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/14/Parasitics-in-Precision-PCB-Layouts_5F00_Feb2013.pdf
+‌<br/><br/>
+[15]The Sierra Team, “Reducing Parasitic Capacitance in PCB Layout | Sierra Circuits,” Sierra Circuits, Feb. 23, 2021. https://www.protoexpress.com/blog/how-to-reduce-parasitic-capacitance-pcb-layout/
+‌‌<br/><br/>
