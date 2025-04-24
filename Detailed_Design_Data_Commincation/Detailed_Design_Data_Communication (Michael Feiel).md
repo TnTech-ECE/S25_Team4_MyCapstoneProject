@@ -60,7 +60,7 @@ As one of the four primary components of the greenhouse monitoring solution, the
 
 | Manufacturer | Part Number | Distributor | Distributor Part Number | Quantity | Price | Purchasing Website URL |
 |-----|-----|-----|-----|-----|-----|-----|
-| RaspberryPi | N/A | PiShop | 4GB-9004 | 1 | $55.00 | [Link](https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/?src=raspberrypi) |
+| RaspberryPi | SC0193(6A) | PiShop | 4GB-9004 | 1 | $55.00 | [Link](https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/?src=raspberrypi) |
 | SanDisk (Western Digital Technologies, Inc.) | SDSQUA4-512G-GN6MA | Amazon |  | 1 | $45.99 | [Link](https://www.amazon.com/SanDisk-512GB-microSDXC-Memory-Adapter/dp/B0B7NVXLLM?ref_=ast_sto_dp&th=1) |
 | **Total** |   |   |   |   | **$100.99** |   |
 
