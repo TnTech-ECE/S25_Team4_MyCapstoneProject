@@ -44,7 +44,7 @@ All circuit boards used in this subsystem shall comply with OSHA 29 CFR 1910.120
 
 ## Interface with Other Subsystems
 
-As one of the four primary components of the greenhouse monitoring solution, the data communication subsystem interfaces closely with the power, sensor, and mechanical subsystems. The power electronic subsystem shall provide regulated power to the ESP-WROOM-32 microcontroller and the Raspberry Pi 4—via a USB-C interface. This standardized connection ensures efficient and reliable power delivery. Once powered, the ESP32 will establish wireless connection to the Pi. Upon initialization, the ESP32 shall communicate with all onboard sensors using the I²C protocol to collect environmental data. The mechanical subsystem will provide structural support and environmental shielding for the sensor module, ensuring stable operation under greenhouse conditions. This coordinated interaction among subsystems ensures a robust, scalable, and integrated monitoring framework.
+As one of the four primary components of the greenhouse monitoring solution, the data communication subsystem interfaces closely with the power, sensor, and mechanical subsystems. The power electronic subsystem shall provide regulated power to the ESP-WROOM-32 microcontroller and the Raspberry Pi 4—via a USB-C interface. This standardized connection ensures efficient and reliable power delivery. The power system will supply power solely with batteries, which will last at least 3 days before needing to be recharged. Once powered, the ESP32—located on the PCB and wired to all the sensors—will establish wireless connection to the Pi. Upon initialization, the ESP32 shall communicate with all onboard sensors using the I²C protocol to collect environmental data. The mechanical subsystem will provide structural support, housing, and environmental shielding for the sensor module (individual sensors plus PCB), ensuring stable operation under greenhouse conditions. This coordinated interaction among subsystems ensures a robust, scalable, and integrated monitoring framework.
 
 ## Operational Flowcharts
 
@@ -58,12 +58,6 @@ As one of the four primary components of the greenhouse monitoring solution, the
 
 ## Bill of Materials (BOM)
 
-Manufacturer	Part Number	Distributor	Distributor Part Number	Quantity	Price	Purchasing Website URL
-RaspberryPi	N/A	PiShop	4GB-9004	1	$55.00	Link
-
-SanDisk (Western Digital Technologies, Inc.)	SDSQUA4-512G-GN6MA	Amazon		1	$45.99	Link
-
-Total					$100.99	
 | Manufacturer | Part Number | Distributor | Distributor Part Number | Quantity | Price | Purchasing Website URL |
 |-----|-----|-----|-----|-----|-----|-----|
 | RaspberryPi | N/A | PiShop | 4GB-9004 | 1 | $55.00 | [Link](https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/?src=raspberrypi) |
@@ -72,9 +66,13 @@ Total					$100.99
 
 ## Analysis
 
-The use of a Raspberry Pi 4 for centralized data communication emphasizes processing capability, network reliability, and ease of integration. Its built-in dual-band Wi-Fi supports stable wireless transmission, while its 0°C to 50°C operating range suits typical greenhouse conditions. The selected microSD card, rated for frequent read/write cycles and wide temperature tolerance, ensures durable local storage. Formatted in FAT32, it maintains compatibility with web-based interfaces and cloud backups.
+The use of a Raspberry Pi 4 for centralized data communication emphasizes processing capability, network reliability, and ease of integration. Its built-in dual-band Wi-Fi supports stable wireless transmission, while its 0°C to 50°C operating range suits typical greenhouse conditions. It is common for the Pi to be used as a Wi-Fi hotspot or extender, so using it as the host for a Wi-Fi system is ideal. It also comes with Wi-Fi software easily addable and configurable to any desired system. This will allow for complying with common wireless communication standards.
 
-Both components are RoHS-compliant, aligning with OSHA 29 CFR 1910.1200 and 1910.1000 by avoiding hazardous substances and emissions. The reliance on secure, software-based data handling over physical interfaces further enhances durability and minimizes maintenance risks. This streamlined, standards-aligned design supports robust, safe, and efficient communication within the greenhouse monitoring network.
+ The selected microSD card, rated for frequent read/write cycles and wide temperature tolerance, ensures durable local storage. Formatted in FAT32, it maintains compatibility with web-based interfaces and cloud backups.
+
+The website will be made specifically for this project. To ensure usability across multiple platforms, it will be implemented using HTML5, CSS3, and JavaScript (ECMAScript 2015 or later). It will be made with functionality across multiple systems in mind, conforming to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. Additionally, the website will be able to output data upon request in .xlsx format. To ensure compatibility with spreadsheet applications such as Microsoft Excel, Office Open XML Spreadsheet specification (ISO/IEC 29500) will be at the forefront of the file offboarding process.
+
+The reliance on secure, software-based data handling over physical interfaces further enhances durability and minimizes maintenance risks. This streamlined, standards-aligned design supports robust, safe, and efficient communication within the greenhouse monitoring network.
 
 ## References
 
