@@ -21,7 +21,7 @@ This design uses:
 
 ## 2. Specifications and Constraints
 
-### Specifications (Shall Statements)
+### Specifications 
 
 1. The subsystem **shall** provide regulated output voltages of 5V or 3.3V depending on module requirements.  
 2. Each ESP32 sensor module **shall** be powered by a 3-cell Eneloop Pro AA battery pack with a nominal voltage of 3.6V.  
@@ -30,7 +30,7 @@ This design uses:
 5. The Raspberry Pi 4 **shall** be powered by a Geekworm X728 UPS module with dual power bank inputs and internal 18650 batteries.  
 6. The UPS **shall** ensure uninterrupted operation of the Raspberry Pi during power bank replacement or failure.
 
-### Constraints (Shall Statements)
+### Constraints
 
 1. The subsystem **shall** not exceed 50V DC under any condition, in compliance with OSHA Standard 29 CFR 1910.303.  
 
