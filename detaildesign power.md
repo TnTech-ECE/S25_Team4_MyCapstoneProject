@@ -14,8 +14,7 @@ The Power Management Subsystem ensures reliable, safe, and efficient electrical 
 
 This design uses:
 - 3-cell AA Eneloop Pro battery packs with MT3608 boost converters for ESP32 units.
-- A Geekworm X728 UPS HAT with two 20,000mAh USB-C power banks and two 18650 batteries to power the Raspberry Pi.
-- The system enables continuous off-grid operation with safe switchover and recharge methods.
+- A Diymore 18650 Battery Shield with two 18650 Li-ion batteries to power the Raspberry Pi 
 
 ---
 
@@ -23,106 +22,231 @@ This design uses:
 
 ### Specifications 
 
-1. The subsystem **shall** provide regulated output voltages of 5V or 3.3V depending on module requirements.  
-2. Each ESP32 sensor module **shall** be powered by a 3-cell Eneloop Pro AA battery pack with a nominal voltage of 3.6V.  
-3. Each ESP32 module **shall** include an MT3608 boost converter to raise the voltage to 5V.  
-4. Each sensor module **shall** operate for a minimum of 72 hours per charge cycle( this will be affected by other teammates subsystems).  
-5. The Raspberry Pi 4 **shall** be powered by a Geekworm X728 UPS module with dual power bank inputs and internal 18650 batteries.  
-6. The UPS **shall** ensure uninterrupted operation of the Raspberry Pi during power bank replacement or failure.
+1. The subsystem **shall** provides regulated output voltages of 5V for all modules.
+2. Each ESP32 sensor module **shall** be powered by a 3-cell Eneloop Pro AA battery pack with a nominal voltage of 3.6V.
+3. Each ESP32 module **shall** include an MT3608 boost converter to raise the voltage to 5V.
+4. Each sensor module **shall** operate for a typical duration of 10–12 hours per full charge cycle (it will depend on other subsystems to reach more than 72 hours).
+5. The Raspberry Pi 4 **shall** be powered by a Diymore 18650 Battery Shield with two 18650 batteries.
+6. The Raspberry Pi subsystem **shall** operate for a typical duration of 6–7 hours per full charge cycle under light to moderate load conditions(it will depend on other subsystems to reach more than 72 hours).
 
 ### Constraints
 
-1. The subsystem **shall** not exceed 50V DC under any condition, in compliance with OSHA Standard 29 CFR 1910.303.  
-
-2. The 18650 battery cells **shall** operate within 80% depth of discharge to preserve longevity and prevent degradation.  
-
-3. All components **shall** operate safely within a temperature range of 0°C to 60°C.  
-
-4. All electrical materials and connectors **shall** meet ASTM B117 corrosion resistance requirements.  
-
+1. The subsystem **shall** not exceed 50V DC under any condition, in compliance with OSHA Standard 29 CFR 1910.303.
+2. All components **shall** operate safely within a temperature range of 0°C to 60°C.
+3. All electrical materials and connectors **shall** meet ASTM B117 corrosion resistance requirements.
 
 ---
 
 ## 3. Overview of Proposed Solution
 
-Each ESP32 module is powered by a 3-cell Eneloop Pro battery pack connected to an MT3608 boost converter. The output is manually tuned to 5V using a multimeter.
+Each ESP32 module is powered by a 3-cell Eneloop Pro battery pack connected to an MT3608 boost converter. The output is manually tuned to 5V using a multimeter for consistent delivery to the ESP32 and attached sensors.
 
-The Raspberry Pi 4 is powered by a Geekworm X728 UPS board that:
-- Draws primary power from USB Power Bank A
-- Switches to USB Power Bank B when needed
-- Temporarily bridges power via internal 18650 cells during switching
+The Raspberry Pi 4 is powered by a Diymore 18650 Battery Shield using two parallel-connected 18650 Li-ion cells. The shield boosts the battery voltage to a stable 5V output suitable for Pi operation. 
 
-This allows for uninterrupted Raspberry Pi operation while maintaining modular, user-friendly power management for field deployment.
+This modular setup enables lightweight, rechargeable, and portable field deployment without the need for wall power or continuous tethered charging.
 
 ---
 
 ## 4. Interface with Other Subsystems
 
 | Connected Subsystem       | Interface Type     | Direction | Description                                     |
-|---------------------------|--------------------|-----------|-------------------------------------------------|
-| ESP32 Sensor Boards       | Wired (Vin, GND)   | Output    | 5V from MT3608 boost converter                  |
-| Sensors (e.g., Gravity O₂)| Wired (VOUT, GND)  | Output    | 5V regulated                                    |
-| Raspberry Pi 4            | USB-C              | Output    | 5V from Geekworm X728 UPS                       |
-| USB Power Banks           | USB-A to Micro-USB | Input     | Supplies 5V input to the UPS board              |
-
+|----------------------------|--------------------|-----------|-------------------------------------------------|
+| ESP32 Sensor Boards        | Wired (Vin, GND)    | Output    | 5V from MT3608 boost converter                  |
+| Sensors (e.g., Gravity O₂) | Wired (VOUT, GND)   | Output    | 5V regulated                                    |
+| Raspberry Pi 4             | USB-A or soldered 5V output | Output | 5V from Diymore 18650 Battery Shield            |
+| 18650 Battery Cells        | Battery Holder Connection | Input | 3.7V nominal per cell, parallel connected        |
 ---
 
-###5. 3D Model
-
+### 5. 3D Model
 ![3dmodel](3D_Model.png)
 
-###6. Buildable Schematic
+### 6. Buildable Schematic
 ![Schematic](Buildable_circuit.png)
-
-###7. Printed Circuit Board Layout
+### 7. Printed Circuit Board Layout
 ![Schematic](Printed_Circuit_Board_Layot.png)
 
+## 9. Block diagram
+   ![Block_Diagram](Block_Diagram.png)
 ## 8. Bill of Materials (BOM)
 
-| Ref  | Component                          | Part Number      | Manufacturer    | Distributor         | Qty | Unit Price | Total     | URL                                                                 |
-|------|------------------------------------|------------------|-----------------|----------------------|-----|-------------|-----------|----------------------------------------------------------------------|
-| U1   | MT3608 Boost Converter             | MT3608           | AITRIP          | Amazon               | 3   | $1.20       | $3.60     | [Link](https://www.amazon.com/dp/B0C858YYQ1)                         |
-| B1   | Eneloop Pro AA Battery (10-Pack)   | BK-3HCCA10FA     | Panasonic       | Amazon               | 10  | $45.99      | $45.99    | [Link](https://www.amazon.com/dp/B0D2JBNH4H)                         |
-| H1   | 3-AA Battery Holder                | BH3AAW           | Elenco          | Digikey              | 3   | $1.50       | $4.50     | [Link](https://www.digikey.com)                                     |
-| D1   | LED (3mm Red)                      | LTL-307EE        | Lite-On         | Digikey              | 3   | $0.50       | $1.50     | [Link](https://www.digikey.com)                                     |
-| R1   | Resistor 330Ω                      | CF14JT330R       | Stackpole       | Mouser               | 3   | $0.05       | $0.15     | [Link](https://www.mouser.com)                                      |
-| P1   | JST Connector Pair                 | B2B-PH-K-S       | JST             | Digikey              | 12  | $0.30       | $3.60     | [Link](https://www.digikey.com)                                     |
-| PWR  | USB-C Power Bank (20,000mAh)       | B07SQ5MQ6K       | Anker           | Amazon               | 2   | $54.99      | $109.98   | [Link](https://www.amazon.com/dp/B07SQ5MQ6K)                         |
-| UPS  | Geekworm UPS Board for Raspberry Pi| X728             | Geekworm        | Geekworm             | 1   | $43.00      | $43.00    | [Link](https://geekworm.com/products/x728)                          |
-| B2   | 18650 Li-ion Battery (Flat-Top)    | INR18650-25R     | Samsung         | 18650BatteryStore    | 2   | $3.99       | $7.98     | [Link](https://www.18650batterystore.com/products/samsung-25r-18650)|
-| CBL  | USB-A to Micro-B Cable             | DH-20M50057      | Cvilux USA      | Digikey              | 2   | $1.15       | $2.30     | [Link](https://www.digikey.com/en/products/detail/cvilux-usa/DH-20M50057/13177527) |
+| Ref  | Component                          | Part Number        | Manufacturer    | Distributor         | Qty | Unit Price | Total     | URL                                                                 |
+|------|------------------------------------|--------------------|-----------------|----------------------|-----|-------------|-----------|----------------------------------------------------------------------|
+| U1   | MT3608 Boost Converter             | MT3608             | AITRIP          | Amazon               | 3   | $1.20       | $3.60     | [Link](https://www.amazon.com/dp/B0C858YYQ1)                         |
+| B1   | Eneloop Pro AA Battery (10-Pack)   | BK-3HCCA10FA       | Panasonic       | Amazon               | 10  | $45.99      | $45.99    | [Link](https://www.amazon.com/dp/B0D2JBNH4H)                         |
+| H1   | 3-AA Battery Holder                | BH3AAW             | Elenco          | Digikey              | 3   | $1.50       | $4.50     | [Link](https://www.digikey.com/en/products/category/battery-products/6?s=N4IgTCBcDaIEIAkDMBBFB1ABNnvMgF0BfIA) |
+| D1   | LED (3mm Red)                      | LTL-307EE          | Lite-On         | Digikey              | 3   | $0.50       | $1.50     | [Link](https://www.digikey.com/en/products/category/optoelectronics/7?s=N4IgTCBcDaIDIBU4FoDMAGA7AUWyAugL5A) |
+| R1   | Resistor 330Ω                      | CF14JT330R         | Stackpole       | Mouser               | 3   | $0.05       | $0.15     | [Link](https://www.mouser.com/c/?q=CF14JT330R) |
+| P1   | JST Connector Pair                 | B2B-PH-K-S         | JST             | Digikey              | 12  | $0.30       | $3.60     | [Link](https://www.digikey.com/en/products/category/rectangular-connectors/2027?s=N4IgTCBcDaIEJjgWgAoAkkGkkGUAEIAugL5A) |
+| B2   | 18650 Li-ion Battery (Protected Button-Top) | INR18650-35E-Protected | Samsung         | 18650BatteryStore    | 2   | $11.99      | $23.98    | [Link](https://www.18650batterystore.com/products/samsung-35e-protected) |
+| SH1  | Diymore 18650 Battery Shield V8    | Diymore V8         | Diymore         | Amazon               | 1   | $13.99      | $13.99    | [Link](https://www.amazon.com/Diymore-Lithium-Battery-Charging-Arduino/dp/B07SZKNST4) |
 
-**Total BOM Cost: $221.20**
 ---
 
+**Total BOM Cost: $140.31**
 ## 9. Analysis
 
-- This power management design ensures continuous, modular, and off-grid-capable operation of all critical subsystems.
-- It utilizes reliable Eneloop Pro AA batteries for sensor modules and a dual power bank + UPS strategy for the Raspberry Pi 4.
-- The integrated kill switch provides an essential function:
-  - It allows the user to safely disconnect power during power bank replacement without disrupting Raspberry Pi operation.
-  - When a power bank runs low, the user activates the kill switch, swaps in a fully charged power bank, and re-engages power — all without requiring reboot or rewiring.
-  - This process minimizes the risk of data corruption and ensures system uptime.
-- Although this architecture is more expensive than traditional SLA-battery or relay-based systems, it offers major benefits:
-  - **Usability**: Power banks are easy to swap and recharge.
-  - **Modularity**: Each component is independently serviceable.
-  - **Field efficiency**: No special tools or skills are needed.
-- The use of swappable USB-C power banks allows users to recharge devices with common, readily available charging equipment.
-- The Geekworm X728 UPS handles automatic switchovers between sources, eliminating the need for manual switches or relays and reducing user error.
-- This investment in a smarter, user-friendly design saves **time, energy, and maintenance costs** over the long term.
-- It is especially advantageous in remote or high-humidity environments like greenhouses, where uninterrupted operation and easy maintenance are critical.
+# Power System Analysis
+
+## 1. System Overview
+
+The greenhouse monitoring system uses two independent battery subsystems:
+
+- **Subsystem 1:** Raspberry Pi 4 powered by a Diymore 18650 Battery Shield (2 × high-capacity 18650 Li-ion cells, ~3500mAh each)
+- **Subsystem 2:** ESP32 microcontroller and sensors powered by three AA Eneloop Pro batteries (in series) with an MT3608 boost converter
+
+Each subsystem was analyzed separately for power consumption, battery runtime, and ability to support peak current demands, based on datasheets and provided specifications.
+
+---
+
+## 2. Raspberry Pi 4 Power Analysis
+
+**Power Source:** Diymore 18650 Battery Shield with 2 × 18650 batteries (3.7V, 3500mAh each)
+
+| Parameter | Value |
+|:---|:---|
+| Nominal battery voltage | 3.7V |
+| Total capacity (parallel connection) | 7000mAh |
+| Total energy available | 25.9Wh (3.7V × 7Ah) |
+| Boost conversion efficiency | ~85% |
+| Corrected usable energy | 22Wh (25.9Wh × 0.85) |
+
+### Raspberry Pi 4 Power Consumption
+
+| Condition | Current Draw | Power Consumption |
+|:---|:---|:---|
+| Light/Idle Load | 700mA @ 5V | 3.5W (5V × 0.7A) |
+| Moderate Load | 1.5A @ 5V | 7.5W (5V × 1.5A) |
+
+### Raspberry Pi Runtime Estimation
+
+| Load Condition | Runtime (hours) |
+|:---|:---|
+| Light/Idle (700mA) | 6.29 hours (22Wh / 3.5W) |
+| Moderate Load (1.5A) | 2.93 hours (22Wh / 7.5W) |
+
+### Raspberry Pi Current Supply Check
+
+- Diymore 18650 Shield rated for 5V 3A maximum output.
+- Raspberry Pi operational current (~700mA to 1.5A) is safely within the shield's capability.
+
+---
+
+## 3. ESP32 and Sensor Subsystem Power Analysis
+
+**Power Source:** Three AA Eneloop Pro Batteries (1.2V nominal per cell) connected in series (3.6V total) with an MT3608 boost converter to 5V.
+
+| Parameter | Value |
+|:---|:---|
+| Nominal battery voltage | 3.6V |
+| Battery capacity | 2550mAh |
+| Total energy available | 9.18Wh (3.6V × 2.55Ah) |
+| Boost conversion efficiency | ~85% |
+| Corrected usable energy | 7.8Wh (9.18Wh × 0.85) |
+
+### ESP32 and Sensor Load
+
+| Component | Typical Current Draw | Peak Current Draw |
+|:---|:---|:---|
+| ESP32 (Wi-Fi Idle) | ~80mA | ~500mA (transmitting) |
+| BH1750 Light Sensor | 120µA | - |
+| BME280 Temp/Humidity/Pressure Sensor | 3.6µA | 714µA peak |
+| Gravity O₂ Sensor | ~100µA | - |
+| SCD40 CO₂ Sensor | 15mA avg | 205mA peak |
+
+### ESP32 + Sensors Typical and Peak Current
+
+- **Typical Load:** ~100–150mA total
+- **Peak Load:** ~700–800mA during Wi-Fi burst + CO₂ measurement
+
+### ESP32 + Sensor Runtime Estimation
+
+| Load Condition | Runtime (hours) |
+|:---|:---|
+| Typical Load (150mA) | 10.4 hours (7.8Wh / (5V × 0.15A)) |
+
+### ESP32 Current Supply Check
+
+- MT3608 boost converter can supply up to 2A.
+- Maximum subsystem draw (~800mA) is safely within the converter’s limit.
+
+---
+
+## 4. Overall Power System Conclusion
+
+| Subsystem | Power Source | Estimated Runtime | Current Supply Analysis |
+|:---|:---|:---|:---|
+| Raspberry Pi 4 | Diymore 18650 Shield (2×3500mAh 18650 cells) | 6.29h light load, 2.93h moderate load | ✅ Enough for light/moderate loads |
+| ESP32 + Sensors | 3x AA Eneloop Pro + MT3608 Boost | 10.4h typical | ✅ Safely supports normal operation |
+
+Thus, the proposed power design is fully appropriate for the intended lightweight greenhouse environmental monitoring system.
+
+---
+
+## 5. Equations and Example Calculations Used
+
+### 6.1 Battery Energy (Wh)
+
+**Energy (Wh) = Battery Voltage (V) × Capacity (Ah)**
+
+Example for Raspberry Pi batteries:  
+Energy = 3.7V × 7Ah = 25.9Wh
+
+---
+
+### 6.2 Corrected Usable Energy (Wh)
+
+**Corrected Energy (Wh) = Energy (Wh) × 0.85**
+
+Example:  
+Corrected Energy = 25.9Wh × 0.85 = 22Wh
+
+---
+
+### 6.3 Power Consumption (W)
+
+**Power (W) = Voltage (V) × Current (A)**
+
+Examples:  
+5V × 0.7A = 3.5W (Light Load for Pi)  
+5V × 1.5A = 7.5W (Moderate Load for Pi)
+
+---
+
+### 6.4 Runtime (hours)
+
+**Runtime (hours) = Corrected Usable Energy (Wh) ÷ Power Consumption (W)**
+
+Examples:  
+Runtime = 22Wh ÷ 3.5W = 6.29h  
+Runtime = 22Wh ÷ 7.5W = 2.93h  
+Runtime = 7.8Wh ÷ (5V × 0.15A) = 10.4h
 
  ---
 
 ## 10. References
 
-[1] Occupational Safety and Health Administration (OSHA), "Standard 29 CFR 1910.303 – General Requirements," OSHA Regulations, [Online]. Available: https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.303
 
-[2] Amazon, "MT3608 Boost Converter Module," Amazon.com, [Online]. Available: https://www.amazon.com/dp/B0C858YYQ1
+[1] Raspberry Pi Foundation, "Raspberry Pi 4 Model B Datasheet," [Online]. Available: https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf
 
-[3] Espressif Systems, ESP-WROOM-32 Datasheet, 2020. [Online]. Available: https://www.espressif.com/sites/default/files/documentation/esp-wroom-32
+[2] Espressif Systems, "ESP32-WROOM-32 Datasheet," [Online]. Available: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf
 
-[4] Olimex Ltd., MT3608 Step-Up Converter Module Datasheet. [Online]. Available: https://www.olimex.com/Products/Breadboarding/BB-PWR-3608/resources/MT3608.pdf
+[3] Bosch Sensortec, "BME280 – Combined Humidity and Pressure Sensor Datasheet," [Online]. Available: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf
 
-[5] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI.
+[4] Rohm Semiconductor, "BH1750FVI Ambient Light Sensor Datasheet," [Online]. Available: https://www.mouser.com/datasheet/2/348/bh1750fvi-e-1862471.pdf
+
+[5] Sensirion, "SCD40 CO₂ Sensor Datasheet," [Online]. Available: https://sensirion.com/media/documents/6B37BFA7/629448F6/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf
+
+[6] DFRobot, "Gravity Electrochemical Oxygen Sensor (0–25% Vol) Datasheet," [Online]. Available: https://wiki.dfrobot.com/Gravity__Electrochemical_Oxygen_Sensor_SKU_SEN0321
+
+
+[7] Diymore Store, "18650 Battery Shield V8 Module for Arduino/Raspberry Pi Product Page," [Online]. Available: https://www.amazon.com/Diymore-Lithium-Battery-Charging-Arduino/dp/B07SZKNST4
+
+[8] Texas Instruments, "MT3608 DC-DC Boost Converter Datasheet," [Online]. Available: https://www.ti.com/lit/ds/symlink/mt3608.pdf
+
+[9] Occupational Safety and Health Administration (OSHA), "Standard 29 CFR 1910.303 – General Requirements," OSHA Regulations, [Online]. Available: https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.303
+
+[10] M. Rentschler, "Recommendation of Diymore 18650 Battery Shield V8 for portable Raspberry Pi and ESP32 applications," Personal communication, Apr. 2025. [Online]. Available: https://www.amazon.com/Diymore-Lithium-Battery-Charging-Arduino/dp/B07SZKNST4
+
+[11] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI
+
 
