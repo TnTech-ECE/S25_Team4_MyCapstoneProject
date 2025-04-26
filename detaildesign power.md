@@ -65,9 +65,9 @@ This modular setup enables lightweight, rechargeable, and portable field deploym
 ### 7. Printed Circuit Board Layout
 ![Schematic](Printed_Circuit_Board_Layot.png)
 
-## 9. Block diagram
+## 8. Block diagram
    ![Block_Diagram](Block_Diagram.png)
-## 8. Bill of Materials (BOM)
+## 9. Bill of Materials (BOM)
 
 | Ref  | Component                          | Part Number        | Manufacturer    | Distributor         | Qty | Unit Price | Total     | URL                                                                 |
 |------|------------------------------------|--------------------|-----------------|----------------------|-----|-------------|-----------|----------------------------------------------------------------------|
@@ -83,7 +83,7 @@ This modular setup enables lightweight, rechargeable, and portable field deploym
 ---
 
 **Total BOM Cost: $140.31**
-## 9. Analysis
+## 10. Analysis
 
 # Power System Analysis
 
@@ -184,7 +184,7 @@ Thus, the proposed power design is fully appropriate for the intended lightweigh
 
 ## 5. Equations and Example Calculations Used
 
-### 6.1 Battery Energy (Wh)
+###  Battery Energy (Wh)
 
 **Energy (Wh) = Battery Voltage (V) × Capacity (Ah)**
 
@@ -193,7 +193,7 @@ Energy = 3.7V × 7Ah = 25.9Wh
 
 ---
 
-### 6.2 Corrected Usable Energy (Wh)
+###  Corrected Usable Energy (Wh)
 
 **Corrected Energy (Wh) = Energy (Wh) × 0.85**
 
@@ -202,7 +202,7 @@ Corrected Energy = 25.9Wh × 0.85 = 22Wh
 
 ---
 
-### 6.3 Power Consumption (W)
+### Power Consumption (W)
 
 **Power (W) = Voltage (V) × Current (A)**
 
@@ -212,7 +212,7 @@ Examples:
 
 ---
 
-### 6.4 Runtime (hours)
+### Runtime (hours)
 
 **Runtime (hours) = Corrected Usable Energy (Wh) ÷ Power Consumption (W)**
 
@@ -223,7 +223,7 @@ Runtime = 7.8Wh ÷ (5V × 0.15A) = 10.4h
 
  ---
 
-## 10. References
+## 11. References
 
 
 [1] Raspberry Pi Foundation, "Raspberry Pi 4 Model B Datasheet," [Online]. Available: https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf
