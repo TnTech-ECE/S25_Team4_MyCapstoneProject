@@ -164,11 +164,17 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 **Total typical load**: ~95–110mA (ESP32 + sensors)
 **Peak load** (ESP32 + CO₂ burst): ~250–300mA  
 **Required supply capability**: ≥ 500mA (per ESP32 datasheet, Table 1)
+
 [https://www.dfrobot.com/product-2052.html]
+
 [https://cdn.sparkfun.com/assets/d/4/9/a/d/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf]
+
 [file:///C:/Users/moalm/OneDrive/Documents/bh1750fvi-e-186247.pdf]
+
 [file:///C:/Users/moalm/OneDrive/Documents/esp32-wroom-32_datasheet_en.pdf]
+
 [file:///C:/Users/moalm/OneDrive/Documents/bst-bme280-ds002.pdf]
+
 **Runtime Estimation**:
 
 - Power consumption (typical): 5V × 0.11A = **0.55W**
