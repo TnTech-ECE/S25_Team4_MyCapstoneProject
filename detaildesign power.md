@@ -12,22 +12,23 @@
 
 The Power Management Subsystem ensures reliable, safe, and efficient electrical delivery to all modules of the greenhouse system — including three ESP32-based sensor units and one Raspberry Pi 4-based central processor.
 
-This design uses:
-- 3-cell AA Eneloop Pro battery packs with MT3608 boost converters for ESP32 units.
-- A Diymore 18650 Battery Shield with two 18650 Li-ion batteries to power the Raspberry Pi 
+This updated design uses:
+
+- Diymore 18650 V9 battery shields with Samsung 30Q 3000mAh 18650 cells for ESP32 units.
+- An ECO-WORTHY 12V 50Ah LiFePO₄ battery connected to a DROK 12V-to-5V 5A buck converter (USB output) to power the Raspberry Pi 4.
 
 ---
 
 ## 2. Specifications and Constraints
 
-### Specifications 
+### Specifications
 
-1. The subsystem **shall** provides regulated output voltages of 5V for all modules.
-2. Each ESP32 sensor module **shall** be powered by a 3-cell Eneloop Pro AA battery pack with a nominal voltage of 3.6V.
-3. Each ESP32 module **shall** include an MT3608 boost converter to raise the voltage to 5V.
-4. Each sensor module **shall** operate for a typical duration of 10–12 hours per full charge cycle (it will depend on other subsystems to reach more than 72 hours).
-5. The Raspberry Pi 4 **shall** be powered by a Diymore 18650 Battery Shield with two 18650 batteries.
-6. The Raspberry Pi subsystem **shall** operate for a typical duration of 6–7 hours per full charge cycle under light to moderate load conditions(it will depend on other subsystems to reach more than 72 hours).
+1. The subsystem **shall** provide regulated output voltages of 5V depending on module requirements.
+2. Each ESP32 sensor module **shall** be powered by a Diymore 18650 V9 battery shield with four Samsung 30Q 3000mAh 18650 cells.
+3.Each ESP32 sensor module **shall** operate for a minimum of 72 hours per charge cycle.
+4. The Raspberry Pi 4 **shall** be powered by an ECO-WORTHY 12V 50Ah LiFePO₄ battery via a DROK buck converter that outputs regulated 5V via USB.
+5. The power output to the Raspberry Pi 4 **shall** be delivered through a USB-A to USB-C cable.
+6. The battery system **shall** support over 72 hours of Raspberry Pi 4 runtime per charge.
 
 ### Constraints
 
@@ -39,191 +40,181 @@ This design uses:
 
 ## 3. Overview of Proposed Solution
 
-Each ESP32 module is powered by a 3-cell Eneloop Pro battery pack connected to an MT3608 boost converter. The output is manually tuned to 5V using a multimeter for consistent delivery to the ESP32 and attached sensors.
+Each ESP32 module is powered by a Diymore 18650 V9 battery shield fitted with four Samsung 30Q 3000mAh 18650 cells.  
+The Diymore V9 shield includes an integrated boost converter that provides regulated 5V output, which is supplied directly to the ESP32’s Vin and GND pins.
 
-The Raspberry Pi 4 is powered by a Diymore 18650 Battery Shield using two parallel-connected 18650 Li-ion cells. The shield boosts the battery voltage to a stable 5V output suitable for Pi operation. 
+The Raspberry Pi 4 is powered by an ECO-WORTHY 12V 50Ah battery through a DROK buck converter that:
 
-This modular setup enables lightweight, rechargeable, and portable field deployment without the need for wall power or continuous tethered charging.
+- Receives 12V input directly from the battery terminals.
+- Outputs regulated 5V via a USB-A port.
+- Connects to the Raspberry Pi 4 via a short USB-A to USB-C cable.
 
 ---
 
 ## 4. Interface with Other Subsystems
 
-| Connected Subsystem       | Interface Type     | Direction | Description                                     |
-|----------------------------|--------------------|-----------|-------------------------------------------------|
-| ESP32 Sensor Boards        | Wired (Vin, GND)    | Output    | 5V from MT3608 boost converter                  |
-| Sensors (e.g., Gravity O₂) | Wired (VOUT, GND)   | Output    | 5V regulated                                    |
-| Raspberry Pi 4             | USB-A or soldered 5V output | Output | 5V from Diymore 18650 Battery Shield            |
-| 18650 Battery Cells        | Battery Holder Connection | Input | 3.7V nominal per cell, parallel connected        |
+| Connected Subsystem         | Interface Type     | Direction | Description                                    |
+|------------------------------|--------------------|-----------|------------------------------------------------|
+| ESP32 Sensor Boards          | Wired (Vin, GND)    | Output    | 5V regulated output from Diymore 18650 V9 shield |
+| Sensors (e.g., Gravity O₂)   | Wired (VOUT, GND)   | Output    | 5V regulated supply through ESP32              |
+| Raspberry Pi 4               | USB-C (via USB-A)   | Output    | 5V from DROK buck converter                    |
+| Battery Input (ESP32 side)   | Wired (18650 Cells) | Input     | Samsung 30Q 3000mAh 18650 rechargeable cells   |
+| Battery Input (Raspberry Pi) | Wired (12V DC)      | Input     | 12V from ECO-WORTHY LiFePO₄ battery           |
+
 ---
+## 5 Block Diagram
 
-### 5. 3D Model
-![3dmodel](3D_Model.png)
-
-### 6. Buildable Schematic
-![Schematic](Buildable_circuit.png)
-### 7. Printed Circuit Board Layout
-![Schematic](Printed_Circuit_Board_Layot.png)
-
-## 8. Block diagram
-   ![Block_Diagram](Block_Diagram.png)
-## 9. Bill of Materials (BOM)
-
-| Ref  | Component                          | Part Number        | Manufacturer    | Distributor         | Qty | Unit Price | Total     | URL                                                                 |
-|------|------------------------------------|--------------------|-----------------|----------------------|-----|-------------|-----------|----------------------------------------------------------------------|
-| U1   | MT3608 Boost Converter             | MT3608             | AITRIP          | Amazon               | 3   | $1.20       | $3.60     | [Link](https://www.amazon.com/dp/B0C858YYQ1)                         |
-| B1   | Eneloop Pro AA Battery (10-Pack)   | BK-3HCCA10FA       | Panasonic       | Amazon               | 10  | $45.99      | $45.99    | [Link](https://www.amazon.com/dp/B0D2JBNH4H)                         |
-| H1   | 3-AA Battery Holder                | BH3AAW             | Elenco          | Digikey              | 3   | $1.50       | $4.50     | [Link](https://www.digikey.com/en/products/category/battery-products/6?s=N4IgTCBcDaIEIAkDMBBFB1ABNnvMgF0BfIA) |
-| D1   | LED (3mm Red)                      | LTL-307EE          | Lite-On         | Digikey              | 3   | $0.50       | $1.50     | [Link](https://www.digikey.com/en/products/category/optoelectronics/7?s=N4IgTCBcDaIDIBU4FoDMAGA7AUWyAugL5A) |
-| R1   | Resistor 330Ω                      | CF14JT330R         | Stackpole       | Mouser               | 3   | $0.05       | $0.15     | [Link](https://www.mouser.com/c/?q=CF14JT330R) |
-| P1   | JST Connector Pair                 | B2B-PH-K-S         | JST             | Digikey              | 12  | $0.30       | $3.60     | [Link](https://www.digikey.com/en/products/category/rectangular-connectors/2027?s=N4IgTCBcDaIEJjgWgAoAkkGkkGUAEIAugL5A) |
-| B2   | 18650 Li-ion Battery (Protected Button-Top) | INR18650-35E-Protected | Samsung         | 18650BatteryStore    | 2   | $11.99      | $23.98    | [Link](https://www.18650batterystore.com/products/samsung-35e-protected) |
-| SH1  | Diymore 18650 Battery Shield V8    | Diymore V8         | Diymore         | Amazon               | 1   | $13.99      | $13.99    | [Link](https://www.amazon.com/Diymore-Lithium-Battery-Charging-Arduino/dp/B07SZKNST4) |
+[Block_diagram_updated]
 
 ---
 
-**Total BOM Cost: $140.31**
-## 10. Analysis
+## 6 Bill of Materials (BOM)
 
-# Power System Analysis
+| Ref  | Component                              | Part Number      | Manufacturer    | Distributor         | Qty | Unit Price | Total     | URL                                                                 |
+|------|----------------------------------------|------------------|-----------------|----------------------|-----|------------|-----------|----------------------------------------------------------------------|
+| U1   | Diymore 18650 V9 Battery Shield        | V9               | Diymore         | Amazon               | 3   | $6.99      | $20.97    | [Link](https://www.amazon.com/dp/B0CBMQ8PZH)                         |
+| B1   | Samsung 30Q 18650 3000mAh Battery      | INR18650-30Q     | Samsung         | IMRbatteries         | 12  | $5.99      | $71.88    | [Link](https://imrbatteries.com/products/samsung-30q-18650-3000mah-15a-battery) |
+| PWR1 | ECO-WORTHY 12V 50Ah LiFePO₄ Battery     | US-L13080202015-1                | ECO-WORTHY      | Amazon               | 1   | $127.99    | $127.99   | [Link](https://www.amazon.com/ECO-WORTHY-50Ah-Trolling-Rechargeable-Phosphate/dp/B0C49STP5P?th=1)                         |
+| PWR2 | DROK Buck Converter 12V to 5V, 5A USB   | B01NALDSJ0       | DROK            | Amazon               | 1   | $9.99      | $9.99     | [Link](https://www.amazon.com/dp/B01NALDSJ0)                         |
+| CBL1 | Baiwwa Short USB Type C Cable (USB-A to USB-C, 3A Rated, 1ft, 2-Pack) | B0BBFP95GD | Baiwwa | Amazon | 1 | $4.99 | $4.99 | [Link](https://www.amazon.com/Baiwwa-Charging-Braided-Charger-Compatible/dp/B0BBFP95GD/ref=asc_df_B0BBFP95GD?mcid=4dddfc575332313ba7705f1e74c3b3cf&hvocijid=4133860197123646353-B0BBFP95GD-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=4133860197123646353&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2281435177418&th=1) |
+                                      |
+| CN1  | Ring Terminal, 5/16 Stud, 10-12 AWG    | 31123            | TE Connectivity AMP Connectors | DigiKey    | 4   | $0.27      | $1.08     | [Link](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/31123/333510) |
+| F1   | MCIGICM 12 AWG Inline Fuse Holder with 30A Blade Fuse (5 Pack) | B081DHT8Y7 | MCIGICM | Amazon | 1 | $7.99 | $7.99 | [Link](https://www.amazon.com/dp/B081DHT8Y7) |
+| F2   | Eaton Bussmann Series ATC 10A Blade Fuse (5 Pack) | ATC10 | Bussmann | Amazon | 1 | $4.61 | $4.61 | [Link](https://www.amazon.com/Bussmann-ATC10-Blade-Fuse/dp/B00139IRK2) |
+| W1   | BNTECHGO 12 Gauge Silicone Wire 3ft Red and 3ft Black | - | BNTECHGO | Amazon | 1 | $7.98 | $7.98 | [Link](https://www.amazon.com/BNTECHGO-Silicone-Flexible-Strands-Stranded/dp/B01AQU3ST8) |
+
+---
+
+**Total BOM Cost (Updated System): ~$285**
+
+# 7. Analysis
+**Power System Analysis**
+
+---
 
 ## 1. System Overview
 
-The greenhouse monitoring system uses two independent battery subsystems:
+The Modular Greenhouse Monitoring System uses two independent battery subsystems:
 
-- **Subsystem 1:** Raspberry Pi 4 powered by a Diymore 18650 Battery Shield (2 × high-capacity 18650 Li-ion cells, ~3500mAh each)
-- **Subsystem 2:** ESP32 microcontroller and sensors powered by three AA Eneloop Pro batteries (in series) with an MT3608 boost converter
-
-Each subsystem was analyzed separately for power consumption, battery runtime, and ability to support peak current demands, based on datasheets and provided specifications.
+- **Subsystem 1**: Raspberry Pi 4 powered by an ECO-WORTHY 12V 50Ah LiFePO₄ battery connected through a DROK 12V-to-5V 5A buck converter.
+- **Subsystem 2**: ESP32 sensor modules powered individually by Diymore 18650 V9 shields, each populated with four Samsung 30Q 18650 3000mAh cells.
 
 ---
 
 ## 2. Raspberry Pi 4 Power Analysis
 
-**Power Source:** Diymore 18650 Battery Shield with 2 × 18650 batteries (3.7V, 3500mAh each)
+**Power Source**: ECO-WORTHY 12V 50Ah LiFePO₄ Battery
 
 | Parameter | Value |
 |:---|:---|
-| Nominal battery voltage | 3.7V |
-| Total capacity (parallel connection) | 7000mAh |
-| Total energy available | 25.9Wh (3.7V × 7Ah) |
-| Boost conversion efficiency | ~85% |
-| Corrected usable energy | 22Wh (25.9Wh × 0.85) |
+| Nominal battery voltage | 12V |
+| Total battery capacity | 50Ah |
+| Usable battery capacity (80% DOD) | 40Ah |
+| Buck converter efficiency | 90% |
 
-### Raspberry Pi 4 Power Consumption
+
+**Available Energy**:
+
+Battery Energy (Wh) = Battery Voltage (V) × Usable Capacity (Ah)  
+Battery Energy = 12V × 40Ah = **480Wh**
+
+**Raspberry Pi 4 Power Consumption**:
 
 | Condition | Current Draw | Power Consumption |
 |:---|:---|:---|
-| Light/Idle Load | 700mA @ 5V | 3.5W (5V × 0.7A) |
-| Moderate Load | 1.5A @ 5V | 7.5W (5V × 1.5A) |
+| Typical Load | 600mA @ 5V | 3.0W |
+| Peak Load | 1.2A @ 5V | 6.0W |
+[https://www.raspberrypi.com/documentation/computers/raspberry-pi.html]
 
-### Raspberry Pi Runtime Estimation
+**Runtime Estimation**:
 
-| Load Condition | Runtime (hours) |
-|:---|:---|
-| Light/Idle (700mA) | 6.29 hours (22Wh / 3.5W) |
-| Moderate Load (1.5A) | 2.93 hours (22Wh / 7.5W) |
+- For **typical load** (3.0W):  
+Runtime = 480Wh ÷ 3.0W = **160 hours**
 
-### Raspberry Pi Current Supply Check
+- For **peak load** (6.0W):  
+Runtime = 480Wh ÷ 6.0W = **80 hours**
 
-- Diymore 18650 Shield rated for 5V 3A maximum output.
-- Raspberry Pi operational current (~700mA to 1.5A) is safely within the shield's capability.
+**Conclusion**:  
+The Raspberry Pi 4 can operate for approximately **160 hours** at typical usage and **80 hours** under full load. The ECO-WORTHY 50Ah 12V battery with a DROK buck converter safely supports both conditions.
 
 ---
 
 ## 3. ESP32 and Sensor Subsystem Power Analysis
 
-**Power Source:** Three AA Eneloop Pro Batteries (1.2V nominal per cell) connected in series (3.6V total) with an MT3608 boost converter to 5V.
+**Power Source**:  
+Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected internally and regulated to 5V output).
 
 | Parameter | Value |
 |:---|:---|
-| Nominal battery voltage | 3.6V |
-| Battery capacity | 2550mAh |
-| Total energy available | 9.18Wh (3.6V × 2.55Ah) |
-| Boost conversion efficiency | ~85% |
-| Corrected usable energy | 7.8Wh (9.18Wh × 0.85) |
+| Nominal battery voltage (each cell) | 3.6V |
+| Battery capacity per cell | 3000mAh |
+| Effective capacity (parallel config) | 12000mAh (12Ah) |
+| Usable capacity (80% DOD) | 9.6Ah |
+| Output voltage (regulated) | 5V |
 
-### ESP32 and Sensor Load
+**ESP32 and Sensor Load** (based on verified datasheets only):
 
 | Component | Typical Current Draw | Peak Current Draw |
 |:---|:---|:---|
-| ESP32 (Wi-Fi Idle) | ~80mA | ~500mA (transmitting) |
-| BH1750 Light Sensor | 120µA | - |
-| BME280 Temp/Humidity/Pressure Sensor | 3.6µA | 714µA peak |
-| Gravity O₂ Sensor | ~100µA | - |
+| ESP32 (CPU active, Wi-Fi idle) | ~80mA | Required supply: ≥ 500mA |
+| BH1750 Light Sensor | 120μa | - |
+| BME280 (humidity + temp only) | 1.8μa | - |
+| Gravity Oxygen (O₂) Sensor | ~100μa | - |
 | SCD40 CO₂ Sensor | 15mA avg | 205mA peak |
 
-### ESP32 + Sensors Typical and Peak Current
+**Total typical load**: ~95–110mA (ESP32 + sensors)
+**Peak load** (ESP32 + CO₂ burst): ~250–300mA  
+**Required supply capability**: ≥ 500mA (per ESP32 datasheet, Table 1)
+[https://www.dfrobot.com/product-2052.html]
+[https://cdn.sparkfun.com/assets/d/4/9/a/d/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf]
+[file:///C:/Users/moalm/OneDrive/Documents/bh1750fvi-e-186247.pdf]
+[file:///C:/Users/moalm/OneDrive/Documents/esp32-wroom-32_datasheet_en.pdf]
+[file:///C:/Users/moalm/OneDrive/Documents/bst-bme280-ds002.pdf]
+**Runtime Estimation**:
 
-- **Typical Load:** ~100–150mA total
-- **Peak Load:** ~700–800mA during Wi-Fi burst + CO₂ measurement
+- Power consumption (typical): 5V × 0.11A = **0.55W**
+- Usable battery energy: 5V × 9.6Ah = **48Wh**
+- Estimated runtime: 48Wh ÷ 0.55W = **87 hours**
 
-### ESP32 + Sensor Runtime Estimation
 
-| Load Condition | Runtime (hours) |
-|:---|:---|
-| Typical Load (150mA) | 10.4 hours (7.8Wh / (5V × 0.15A)) |
-
-### ESP32 Current Supply Check
-
-- MT3608 boost converter can supply up to 2A.
-- Maximum subsystem draw (~800mA) is safely within the converter’s limit.
-
----
-
-## 4. Overall Power System Conclusion
-
-| Subsystem | Power Source | Estimated Runtime | Current Supply Analysis |
-|:---|:---|:---|:---|
-| Raspberry Pi 4 | Diymore 18650 Shield (2×3500mAh 18650 cells) | 6.29h light load, 2.93h moderate load | ✅ Enough for light/moderate loads |
-| ESP32 + Sensors | 3x AA Eneloop Pro + MT3608 Boost | 10.4h typical | ✅ Safely supports normal operation |
-
-Thus, the proposed power design is fully appropriate for the intended lightweight greenhouse environmental monitoring system.
+**Conclusion**:  
+- Typical runtime per ESP32 module is approximately **87 hours**.
+- Subsystem must use a power supply capable of providing **at least 500mA**, as required by the ESP32 datasheet.
+- The Diymore 18650 V9 shield (rated 5V 3A output) is more than sufficient.
 
 ---
 
-## 5. Equations and Example Calculations Used
 
-###  Battery Energy (Wh)
 
-**Energy (Wh) = Battery Voltage (V) × Capacity (Ah)**
+## 4. Current Supply Check
 
-Example for Raspberry Pi batteries:  
-Energy = 3.7V × 7Ah = 25.9Wh
-
----
-
-###  Corrected Usable Energy (Wh)
-
-**Corrected Energy (Wh) = Energy (Wh) × 0.85**
-
-Example:  
-Corrected Energy = 25.9Wh × 0.85 = 22Wh
+| Subsystem           | Required Supply Capability | Actual Peak Demand | Supply Provided           | Status         |
+|---------------------|-----------------------------|---------------------|----------------------------|----------------|
+| Raspberry Pi 4      | ≥ 1.2A                   | Up to 1.2A         | DROK Buck Converter (5V/5A) |  Sufficient |
+| ESP32 + Sensors     | ≥ 500mA                  | ~250–300mA        | Diymore V9 Shield (5V/3A)   |  Sufficient |
 
 ---
 
-### Power Consumption (W)
+## 5. Overall Power System Conclusion
 
-**Power (W) = Voltage (V) × Current (A)**
-
-Examples:  
-5V × 0.7A = 3.5W (Light Load for Pi)  
-5V × 1.5A = 7.5W (Moderate Load for Pi)
+| Subsystem         | Power Source                           | Estimated Runtime                         | Current Supply Analysis |
+|-------------------|----------------------------------------|-------------------------------------------|--------------------------|
+| Raspberry Pi 4    | 12V 50Ah LiFePO₄ Battery             | 160h (typical), 80h (peak)                |  Sufficient           |
+| ESP32 + Sensors   | 4× Samsung 30Q 18650 (per module)     | ~87h typical, 4–7 days with deep sleep   |  Sufficient           |
 
 ---
 
-### Runtime (hours)
+## 6. Equations Used
 
-**Runtime (hours) = Corrected Usable Energy (Wh) ÷ Power Consumption (W)**
+- **Battery Energy (Wh)** = Battery Voltage (V) × Capacity (Ah)
+- **Corrected Usable Energy (Wh)** = Energy (Wh) × Efficiency (typically 0.85–0.9)
+- **Power Consumption (W)** = Voltage (V) × Current (A)
+- **Runtime (hours)** = Usable Energy (Wh) ÷ Power Consumption (W)
 
-Examples:  
-Runtime = 22Wh ÷ 3.5W = 6.29h  
-Runtime = 22Wh ÷ 7.5W = 2.93h  
-Runtime = 7.8Wh ÷ (5V × 0.15A) = 10.4h
+---
 
- ---
 
-## 11. References
+## 8. References
 
 
 [1] Raspberry Pi Foundation, "Raspberry Pi 4 Model B Datasheet," [Online]. Available: https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf
