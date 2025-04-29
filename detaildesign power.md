@@ -64,7 +64,7 @@ The Raspberry Pi 4 is powered by an ECO-WORTHY 12V 50Ah battery through a DROK b
 ---
 ## 5 Block Diagram
 
-[Block_diagram_updated]
+![Block_diagram_updated](Block_diagram_updated.png)
 
 ---
 
@@ -77,7 +77,6 @@ The Raspberry Pi 4 is powered by an ECO-WORTHY 12V 50Ah battery through a DROK b
 | PWR1 | ECO-WORTHY 12V 50Ah LiFePO₄ Battery     | US-L13080202015-1                | ECO-WORTHY      | Amazon               | 1   | $127.99    | $127.99   | [Link](https://www.amazon.com/ECO-WORTHY-50Ah-Trolling-Rechargeable-Phosphate/dp/B0C49STP5P?th=1)                         |
 | PWR2 | DROK Buck Converter 12V to 5V, 5A USB   | B01NALDSJ0       | DROK            | Amazon               | 1   | $9.99      | $9.99     | [Link](https://www.amazon.com/dp/B01NALDSJ0)                         |
 | CBL1 | Baiwwa Short USB Type C Cable (USB-A to USB-C, 3A Rated, 1ft, 2-Pack) | B0BBFP95GD | Baiwwa | Amazon | 1 | $4.99 | $4.99 | [Link](https://www.amazon.com/Baiwwa-Charging-Braided-Charger-Compatible/dp/B0BBFP95GD/ref=asc_df_B0BBFP95GD?mcid=4dddfc575332313ba7705f1e74c3b3cf&hvocijid=4133860197123646353-B0BBFP95GD-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=4133860197123646353&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2281435177418&th=1) |
-                                      |
 | CN1  | Ring Terminal, 5/16 Stud, 10-12 AWG    | 31123            | TE Connectivity AMP Connectors | DigiKey    | 4   | $0.27      | $1.08     | [Link](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/31123/333510) |
 | F1   | MCIGICM 12 AWG Inline Fuse Holder with 30A Blade Fuse (5 Pack) | B081DHT8Y7 | MCIGICM | Amazon | 1 | $7.99 | $7.99 | [Link](https://www.amazon.com/dp/B081DHT8Y7) |
 | F2   | Eaton Bussmann Series ATC 10A Blade Fuse (5 Pack) | ATC10 | Bussmann | Amazon | 1 | $4.61 | $4.61 | [Link](https://www.amazon.com/Bussmann-ATC10-Blade-Fuse/dp/B00139IRK2) |
