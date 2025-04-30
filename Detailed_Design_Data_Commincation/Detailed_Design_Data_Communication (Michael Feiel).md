@@ -104,3 +104,5 @@ The reliance on secure, software-based data handling over physical interfaces fu
 [13] W3C, “Media Queries Level 3,” W3.org, 2012. https://www.w3.org/TR/css3-mediaqueries/ ‌
 
 [14] ISO, “ISO/IEC 29500 – Office Open XML
+
+[15] C. Hollinger, “Christian Hollinger’s Garden Gets Smart with a Raspberry Pi, Sensors, and Grafana,” Hackster.io, 2023. https://www.hackster.io/news/christian-hollinger-s-garden-gets-smart-with-a-raspberry-pi-sensors-and-grafana-f49b6d4142e3
