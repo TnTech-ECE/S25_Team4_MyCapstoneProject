@@ -169,10 +169,15 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 **Total typical load**: ~95–110mA (ESP32 + sensors)
 **Peak load** (ESP32 + CO₂ burst): ~250–300mA  
 **Required supply capability**: ≥ 500mA (per ESP32 datasheet, Table 1)
+
 [Reference: [2] ESP32 Page 6]
+
 [Reference: [4] BH1750 Page 2]
+
 [Reference: [3] BME280 Page 9]
+
 [Reference: [6] Gravity Oxygen (O₂)]
+
 [Reference: [5] SCD40 CO₂]
 
 **Runtime Estimation**:
