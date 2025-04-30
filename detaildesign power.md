@@ -21,20 +21,24 @@ This updated design uses:
 
 ## 2. Specifications and Constraints
 
-### Specifications
+The power subsystem shall ensure reliable, regulated energy delivery to all modules of the greenhouse monitoring system — including ESP32-based sensor units and the central processing unit (Raspberry Pi 4). It shall support long-term off-grid operation, comply with electrical safety limits, and operate under indoor greenhouse environmental conditions.
 
-1. The subsystem **shall** provide regulated output voltages of 5V depending on module requirements.
-2. Each ESP32 sensor module **shall** be powered by a Diymore 18650 V9 battery shield with four Samsung 30Q 3000mAh 18650 cells.
-3.Each ESP32 sensor module **shall** operate for a minimum of 72 hours per charge cycle.
-4. The Raspberry Pi 4 **shall** be powered by an ECO-WORTHY 12V 50Ah LiFePO₄ battery via a DROK buck converter that outputs regulated 5V via USB.
-5. The power output to the Raspberry Pi 4 **shall** be delivered through a USB-A to USB-C cable.
-6. The battery system **shall** support over 72 hours of Raspberry Pi 4 runtime per charge.
+1. Electrical Safety Compliance
+The power subsystem shall comply with OSHA 29 CFR 1910 Subpart S, which pertains to general electrical safety. All power connections shall be limited to a maximum voltage of 50V DC or less to ensure safe low-voltage operation. Electrical terminals shall be properly insulated, and all wiring shall be secured and rated to handle expected loads.
 
-### Constraints
+2. Runtime Performance Compliance
+The ESP32 modules and central processor shall be powered independently by battery systems. Each ESP32 unit shall operate for a minimum of 72 hours under normal sensing and transmission load. The Raspberry Pi 4 shall operate for a minimum of 72 hours under typical data processing and wireless communication tasks.
 
-1. The subsystem **shall** not exceed 50V DC under any condition, in compliance with OSHA Standard 29 CFR 1910.303.
-2. All components **shall** operate safely within a temperature range of 0°C to 60°C.
-3. All electrical materials and connectors **shall** meet ASTM B117 corrosion resistance requirements.
+3. Environmental Operation Compliance
+The subsystem shall be designed to operate within indoor greenhouse environments, including high humidity and airborne dust. The temperature range for safe operation shall be between 0°C and 60°C. All enclosures and components shall be resistant to condensation, dust, and moderate thermal cycling.
+
+4. Current Supply Compliance
+Each ESP32 module shall be supplied with a stable 5V regulated output to support sensor operation and wireless communication. The central processing unit shall receive a 5V power supply suitable for sustained processing and data transfer. 
+
+5. Corrosion and Material Compliance
+All wiring, fuses, and terminals shall meet ASTM B117 corrosion resistance standards to ensure durability in moist or chemically active greenhouse conditions. Terminals and cable jackets shall be chosen to prevent premature degradation in such environments.
+
+
 
 ---
 
@@ -72,7 +76,7 @@ The Raspberry Pi 4 is powered by an ECO-WORTHY 12V 50Ah battery through a DROK b
 
 | Ref  | Component                              | Part Number      | Manufacturer    | Distributor         | Qty | Unit Price | Total     | URL                                                                 |
 |------|----------------------------------------|------------------|-----------------|----------------------|-----|------------|-----------|----------------------------------------------------------------------|
-| U1   | Diymore 18650 V9 Battery Shield        | V9               | Diymore         | Amazon               | 3   | $6.99      | $20.97    | [Link](https://www.amazon.com/dp/B0CBMQ8PZH)                         |
+| U1   | Diymore 18650 V9 Battery Shield        |       -         | Diymore         | Amazon               | 3   | $6.99      | $20.97    | [Link](https://www.amazon.com/dp/B0CBMQ8PZH)                         |
 | B1   | Samsung 30Q 18650 3000mAh Battery      | INR18650-30Q     | Samsung         | IMRbatteries         | 12  | $5.99      | $71.88    | [Link](https://imrbatteries.com/products/samsung-30q-18650-3000mah-15a-battery) |
 | PWR1 | ECO-WORTHY 12V 50Ah LiFePO₄ Battery     | US-L13080202015-1                | ECO-WORTHY      | Amazon               | 1   | $127.99    | $127.99   | [Link](https://www.amazon.com/ECO-WORTHY-50Ah-Trolling-Rechargeable-Phosphate/dp/B0C49STP5P?th=1)                         |
 | PWR2 | DROK Buck Converter 12V to 5V, 5A USB   | B01NALDSJ0       | DROK            | Amazon               | 1   | $9.99      | $9.99     | [Link](https://www.amazon.com/dp/B01NALDSJ0)                         |
@@ -123,7 +127,8 @@ Battery Energy = 12V × 40Ah = **480Wh**
 |:---|:---|:---|
 | Typical Load | 600mA @ 5V | 3.0W |
 | Peak Load | 1.2A @ 5V | 6.0W |
-[https://www.raspberrypi.com/documentation/computers/raspberry-pi.html]
+(Reference: [12] Computer>> rasperi pi hardware >> power supply >> Typical power requirements table )
+
 
 **Runtime Estimation**:
 
@@ -164,28 +169,24 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 **Total typical load**: ~95–110mA (ESP32 + sensors)
 **Peak load** (ESP32 + CO₂ burst): ~250–300mA  
 **Required supply capability**: ≥ 500mA (per ESP32 datasheet, Table 1)
-
-[https://www.dfrobot.com/product-2052.html]
-
-[https://cdn.sparkfun.com/assets/d/4/9/a/d/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf]
-
-[file:///C:/Users/moalm/OneDrive/Documents/bh1750fvi-e-186247.pdf]
-
-[file:///C:/Users/moalm/OneDrive/Documents/esp32-wroom-32_datasheet_en.pdf]
-
-[file:///C:/Users/moalm/OneDrive/Documents/bst-bme280-ds002.pdf]
+[Reference: [2] ESP32 Page 6]
+[Reference: [4] BH1750 Page 2]
+[Reference: [3] BME280 Page 9]
+[Reference: [6] Gravity Oxygen (O₂)]
+[Reference: [5] SCD40 CO₂]
 
 **Runtime Estimation**:
 
 - Power consumption (typical): 5V × 0.11A = **0.55W**
-- Usable battery energy: 5V × 9.6Ah = **48Wh**
-- Estimated runtime: 48Wh ÷ 0.55W = **87 hours**
-
+- Usable battery energy: 3.6V × 9.6Ah = **34.56Wh**
+- Estimated runtime: 34.56Wh ÷ 0.55W ≈ **62.8 hours**
+The ESP32 firmware uses deep sleep cycles between sensor readings to significantly reduce average power draw. During deep sleep, the ESP32 consumes significantly less power, which reduces the system's total energy demand over time. With deep sleep enabled, the average power consumption drops well below 0.55W, allowing each ESP32 sensor module to meet or exceed the 72-hour runtime requirement using the current 9.6Ah battery configuration.
 
 **Conclusion**:  
-- Typical runtime per ESP32 module is approximately **87 hours**.
+- Typical runtime per ESP32 module will exceed the 72 hours minimum
 - Subsystem must use a power supply capable of providing **at least 500mA**, as required by the ESP32 datasheet.
 - The Diymore 18650 V9 shield (rated 5V 3A output) is more than sufficient.
+
 
 ---
 
@@ -205,7 +206,7 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 | Subsystem         | Power Source                           | Estimated Runtime                         | Current Supply Analysis |
 |-------------------|----------------------------------------|-------------------------------------------|--------------------------|
 | Raspberry Pi 4    | 12V 50Ah LiFePO₄ Battery             | 160h (typical), 80h (peak)                |  Sufficient           |
-| ESP32 + Sensors   | 4× Samsung 30Q 18650 (per module)     | ~87h typical, 4–7 days with deep sleep   |  Sufficient           |
+| ESP32 + Sensors   | 4× Samsung 30Q 18650 (per module)     | Will exceed 72 hours up to 7 days with deep sleep   |  Sufficient           |
 
 ---
 
@@ -219,7 +220,7 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 ---
 
 
-## 8. References
+## 8. References 
 
 
 [1] Raspberry Pi Foundation, "Raspberry Pi 4 Model B Datasheet," [Online]. Available: https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf
@@ -228,12 +229,11 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 
 [3] Bosch Sensortec, "BME280 – Combined Humidity and Pressure Sensor Datasheet," [Online]. Available: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf
 
-[4] Rohm Semiconductor, "BH1750FVI Ambient Light Sensor Datasheet," [Online]. Available: https://www.mouser.com/datasheet/2/348/bh1750fvi-e-1862471.pdf
+[4] “Digital 16bit Serial Output Type Ambient Light Sensor IC BH1750FVI.” Available: https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf ‌
 
-[5] Sensirion, "SCD40 CO₂ Sensor Datasheet," [Online]. Available: https://sensirion.com/media/documents/6B37BFA7/629448F6/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf
+[5] Sensirion AG, “SCD40 - Compact & cost-effective photoacoustic NDIR CO2 sensor,” Sensirion.com, 2024. https://sensirion.com/products/catalog/SCD40 ‌
 
-[6] DFRobot, "Gravity Electrochemical Oxygen Sensor (0–25% Vol) Datasheet," [Online]. Available: https://wiki.dfrobot.com/Gravity__Electrochemical_Oxygen_Sensor_SKU_SEN0321
-
+[6] DFRobot, "Gravity Electrochemical Oxygen Sensor (0–25% Vol) Datasheet," [Online]. Available: https://www.dfrobot.com/product-2052.html?srsltid=AfmBOorSAyVzRlXAK_eZcoe1fjlFbqMoD4c2uKpNF5Vo8n08V-KDZj13
 
 [7] Diymore Store, "18650 Battery Shield V8 Module for Arduino/Raspberry Pi Product Page," [Online]. Available: https://www.amazon.com/Diymore-Lithium-Battery-Charging-Arduino/dp/B07SZKNST4
 
@@ -244,5 +244,11 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 [10] M. Rentschler, "Recommendation of Diymore 18650 Battery Shield V8 for portable Raspberry Pi and ESP32 applications," Personal communication, Apr. 2025. [Online]. Available: https://www.amazon.com/Diymore-Lithium-Battery-Charging-Arduino/dp/B07SZKNST4
 
 [11] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI
+
+[12] Typical Power Requirements,  Raspberry Pi Documentation Power Supply. [Online]. Available: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply
+
+
+
+
 
 
