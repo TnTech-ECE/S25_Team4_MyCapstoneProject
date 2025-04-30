@@ -138,6 +138,15 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
   Bottom Layer: Contains Boost converter and battery banks. This is the power layer where the batteries can be connected and disconected with ease.
 
+ - Safety Container:
+
+![Front of Sensor Unit PCB](3d_Model_Container.PNG)
+
+-Explination of Safety Container:
+
+Safety Continer will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The Rod will be inserted in the box to keep connected.This box will e edited in the future upon testing.
+
+
 ## Bill of Materials (BOM)
 
 | Manufacturer                 | Part Number                                         | Distributor | Distributor Part Number | Quantity | Price      | Purchasing Website URL                                                                                                                                                                                                                                                                                                                                                        |
