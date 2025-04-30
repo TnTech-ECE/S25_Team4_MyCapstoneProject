@@ -121,6 +121,23 @@ The enclosure allows for non-invasive access to internal components via snap-fit
   
 ![Front of Sensor Unit PCB](3d_Model_back.PNG)
 
+- Views With Sensors
+
+![Front of Sensor Unit PCB](3d_Model_sensors_front.PNG)
+![Front of Sensor Unit PCB](3d_Model_sensors.PNG)
+
+- Explination of Mounting:
+
+  Disclaimer: Mounting in the model will be adjusted once the capstone team recieves the neccessary parts to build and adjust to real sizes and measurments. 
+
+  Top Layer: Contains temperature sensor as it needs to be set apart to not collect heat from the other sensors.
+  
+  Second Layer: Contains CO2 and Light sensor. Light sensor will be placed verrying on weight distrubution once given the physical chips and adjusments.
+
+  First Layer: Contains ESP-WROOM-32 with custom PCB attached and the O2 sensor having the most weight on this layer depending on the battery layer.
+
+  Bottom Layer: Contains Boost converter and battery banks. This is the power layer where the batteries can be connected and disconected with ease.
+
 ## Bill of Materials (BOM)
 
 | Manufacturer                 | Part Number                                         | Distributor | Distributor Part Number | Quantity | Price      | Purchasing Website URL                                                                                                                                                                                                                                                                                                                                                        |
