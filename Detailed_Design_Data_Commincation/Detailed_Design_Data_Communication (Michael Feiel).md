@@ -10,27 +10,27 @@ For communication, each ESP-WROOM-32-based remote sensor unit will utilize Wi-Fi
 
 ## Specifications and Constraints
 
-The data communication subsystem shall wirelessly transmit environmental sensor data from each greenhouse monitoring node to a centralized storage system via Wi-Fi. Data shall be logged locally to an SD card for redundancy and also transmitted to a cloud-based server for remote access and long-term archival. A responsive web-based interface shall enable authorized users to visualize real-time and historical data from most modern internet-connected devices. Users shall also be able to export datasets as Excel-compatible files for external analysis.
+The data communication subsystem shall wirelessly transmit environmental sensor data from each greenhouse monitoring node to a centralized storage system via Wi-Fi [1]. Data shall be logged locally to an SD card for redundancy [5] and also transmitted to a cloud-based server for remote access and long-term archival. A responsive web-based interface shall enable authorized users to visualize real-time and historical data from most modern internet-connected devices. Users shall also be able to export datasets as Excel-compatible files for external analysis.
 
 ### Wireless Communication Standards Compliance
 
-The subsystem shall adhere to the IEEE 802.11n standard for wireless local area networking, enabling robust and energy-efficient Wi-Fi connectivity suitable for embedded systems. All communication modules shall support WPA2-PSK encryption or higher to meet current cybersecurity best practices, as outlined in the IEEE 802.11i standard for wireless security. IPv4 addressing shall be used for device identification and data routing within the local network, consistent with RFC 791.
+The subsystem shall adhere to the IEEE 802.11n standard for wireless local area networking [1], enabling robust and energy-efficient Wi-Fi connectivity suitable for embedded systems. All communication modules shall support WPA2-PSK encryption or higher [2] to meet current cybersecurity best practices, as outlined in the IEEE 802.11i standard for wireless security. IPv4 addressing shall be used for device identification and data routing within the local network, consistent with RFC 791 [3].
 
 ### Local Storage Compliance
 
-Sensor data shall be locally stored on SD cards using the FAT32 file system, as defined by the SD Association and Microsoft FAT specification. This ensures compatibility with common file readers and simplifies data recovery in the event of communication failure. The physical interface shall conform to SD Physical Layer Specification Version 2.00 or later.
+Sensor data shall be locally stored on SD cards using the FAT32 file system [4], as defined by the SD Association and Microsoft FAT specification [5]. This ensures compatibility with common file readers and simplifies data recovery in the event of communication failure. The physical interface shall conform to SD Physical Layer Specification Version 2.00 or later.
 
 ### Cloud Storage and Data Transmission Security
 
-All outbound data transmitted to cloud servers shall be encrypted using the Transport Layer Security (TLS) protocol, version 1.2 or higher, consistent with RFC 5246. Data payloads shall be formatted in JavaScript Object Notation (JSON), as defined in ECMA-404, to support interoperability with modern RESTful APIs. Cloud services shall maintain ISO/IEC 27001 compliance to ensure appropriate information security management practices are observed.
+All outbound data transmitted to cloud servers shall be encrypted using the Transport Layer Security (TLS) protocol, version 1.2 or higher [6], consistent with RFC 5246. Data payloads shall be formatted in JavaScript Object Notation (JSON), as defined in ECMA-404 [7], to support interoperability with modern RESTful APIs. Cloud services shall maintain ISO/IEC 27001 compliance to ensure appropriate information security management practices are observed [8].
 
 ### Web Display Accessibility and Compatibility
 
-The web-based data visualization interface shall be implemented using HTML5, CSS3, and JavaScript (ECMAScript 2015 or later) to ensure cross-platform compatibility. The interface shall conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA to promote usability across a broad range of devices and accessibility needs. The site shall employ responsive design principles using W3C-standard media queries to optimize presentation across screen sizes.
+The web-based data visualization interface shall be implemented using HTML5 [9], CSS3 [10], and JavaScript (ECMAScript 2015 or later) [11] to ensure cross-platform compatibility. The interface shall conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA [12] to promote usability across a broad range of devices and accessibility needs. The site shall employ responsive design principles using W3C-standard media queries [13] to optimize presentation across screen sizes.
 
 ### Data Export Functionality
 
-The system shall support the export of stored data as Excel-compatible spreadsheets in .xlsx format. Exported files shall comply with the Office Open XML Spreadsheet specification (ISO/IEC 29500) to ensure compatibility with Microsoft Excel and other spreadsheet applications. Where necessary, data may also be made available in RFC 4180–compliant comma-separated values (CSV) format to support broader accessibility.
+The system shall support the export of stored data as Excel-compatible spreadsheets in .xlsx format. Exported files shall comply with the Office Open XML Spreadsheet specification (ISO/IEC 29500) [14] to ensure compatibility with Microsoft Excel and other spreadsheet applications. Where necessary, data may also be made available in RFC 4180–compliant comma-separated values (CSV) format to support broader accessibility.
 
 ### Time Synchronization and Timestamp Accuracy
 
@@ -67,11 +67,11 @@ As one of the four primary components of the greenhouse monitoring solution, the
 
 ## Analysis
 
-The use of a Raspberry Pi 4 for centralized data communication emphasizes processing capability, network reliability, and ease of integration. The Pi 4's dual-band Wi-Fi can handle multiple connections, suitable for acting as a local access point for ESP32 modules. Its built-in dual-band Wi-Fi supports stable wireless transmission, while its 0°C to 50°C operating range suits typical greenhouse conditions. It is common for the Pi to be used as a Wi-Fi hotspot or extender, so using it as the host for a Wi-Fi system is ideal. It also comes with Wi-Fi software easily addable and configurable to any desired system. This will allow for complying with common wireless communication standards. Additionally, running a lightweight Node.js server to serve HTML5/CSS3/JavaScript pages is well within the Pi 4's capabilities. Handling periodic data from ESP32 modules and storing it on a 512 GB microSD card is manageable, especially with efficient data handling practices. Tasks like JSON parsing and data formatting are lightweight and easily handled by the Pi 4. The Raspberry Pi 4 is a perfect fit—if not a little exaggerative—for this solution.
+The use of a Raspberry Pi 4 for centralized data communication emphasizes processing capability, network reliability, and ease of integration [15]. The Pi 4's dual-band Wi-Fi can handle multiple connections, suitable for acting as a local access point for ESP32 modules. Its built-in dual-band Wi-Fi supports stable wireless transmission [1], while its 0°C to 50°C operating range suits typical greenhouse conditions. It is common for the Pi to be used as a Wi-Fi hotspot or extender, so using it as the host for a Wi-Fi system is ideal [15]. It also comes with Wi-Fi software easily addable and configurable to any desired system. This will allow for complying with common wireless communication standards [1]. Additionally, running a lightweight Node.js server to serve HTML5/CSS3/JavaScript pages [9][10][11] is well within the Pi 4's capabilities. Handling periodic data from ESP32 modules and storing it on a 512 GB microSD card is manageable, especially with efficient data handling practices. Tasks like JSON parsing and data formatting are lightweight and easily handled by the Pi 4 [7].
 
-The selected microSD card, rated for frequent read/write cycles and wide temperature tolerance, ensures durable local storage. Formatted in FAT32, it maintains compatibility with web-based interfaces and cloud backups. Assuming a very generous 64 bytes per sensor datapoint—including 6 sensor readings every 5 minutes from each box—sensor data will utilize physical storage at an overestimated rate of 324 KB/day, or 118.26 MB/year. 
+The selected microSD card, rated for frequent read/write cycles and wide temperature tolerance, ensures durable local storage [5]. Formatted in FAT32 [4], it maintains compatibility with web-based interfaces and cloud backups. Assuming a very generous 64 bytes per sensor datapoint—including 6 sensor readings every 5 minutes from each box—sensor data will utilize physical storage at an overestimated rate of 324 KB/day, or 118.26 MB/year.
 
-The website will be made specifically for this project using Node.js. To ensure usability across multiple platforms, it will be implemented using HTML5, CSS3, and JavaScript (ECMAScript 2015 or later). It will be made with functionality across multiple systems in mind, conforming to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. Additionally, the website will be able to output data upon request in .xlsx format. To ensure compatibility with spreadsheet applications such as Microsoft Excel, Office Open XML Spreadsheet specification (ISO/IEC 29500) will be at the forefront of the file offboarding process.
+The website will be made specifically for this project using Node.js. To ensure usability across multiple platforms, it will be implemented using HTML5 [9], CSS3 [10], and JavaScript (ECMAScript 2015 or later) [11]. It will be made with functionality across multiple systems in mind, conforming to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA [12]. Additionally, the website will be able to output data upon request in .xlsx format. To ensure compatibility with spreadsheet applications such as Microsoft Excel, Office Open XML Spreadsheet specification (ISO/IEC 29500) will be at the forefront of the file offboarding process [14].
 
 The reliance on secure, software-based data handling over physical interfaces further enhances durability and minimizes maintenance risks. This streamlined, standards-aligned design supports robust, safe, and efficient communication within the greenhouse monitoring network.
 
@@ -94,7 +94,6 @@ The reliance on secure, software-based data handling over physical interfaces fu
 [8] ISO, “ISO/IEC 27001 – Information security management,” Iso.org, 2024. https://www.iso.org/isoiec-27001-information-security.html ‌
 
 [9] W3C, “HTML Living Standard,” Html.spec.whatwg.org, 2024. https://html.spec.whatwg.org/ ‌
-
 [10] W3C, “CSS – Cascading Style Sheets,” W3.org, 2024. https://www.w3.org/Style/CSS/ ‌
 
 [11] Ecma International, “ECMAScript 2015 Language Specification,” Ecma-international.org, 2024. https://262.ecma-international.org/6.0/ ‌
