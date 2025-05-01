@@ -41,6 +41,7 @@ The enclosure shall use snap-fit mechanisms or minimal fasteners for ease of ass
 | Camera Module                  | 56.6 mm × 47.7 mm × 29.4 mm             |
 | Battery Holder (4xAA)          | ~76 mm × 60 mm × 19 mm                  |
 | Custom PCB (approx.)           | ~80 mm × 50 mm                          |
+| Fan                            | 30 mm x 30 mm x 10 mm                   |
 
 ### Design Constraints:
 - Dimensional Limits:
@@ -128,7 +129,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Explination of Mounting:
 
-  Disclaimer: Mounting in the model will be adjusted once the capstone team recieves the neccessary parts to build and adjust to real sizes and measurments. 
+  Disclaimer: Mounting in the model will be adjusted once the capstone team recieves the neccessary parts to build and adjust to real sizes and measurments. Indentations and proper slots will be made to model to secure the boards as well as zipties. 
 
   Top Layer: Contains temperature sensor as it needs to be set apart to not collect heat from the other sensors.
   
@@ -161,7 +162,7 @@ The enclosure design will also provide physical protection for sensitive electro
 
 From a compliance standpoint, the design meets multiple OSHA standards for electrical safety, hazardous communication, and air quality by enclosing electronics in a non-conductive, chemically stable PETG shell. It also adheres to RoHS requirements, ensuring eco-friendly materials are used throughout. The non-metallic construction ensures uninterrupted Wi-Fi connectivity for seamless data transmission to the Raspberry Pi hub. Overall, the sensor case is safe, scalable, and optimized for both performance and environmental compatibility in a greenhouse monitoring system.
 
-## References
+[## References
 [1] Espressif Systems. (2022). ESP-WROOM-32 Datasheet. Retrieved from https://www.espressif.com
 ‌<br/><br/>
 [2] Bosch Sensortec. (2018). BME280 Combined Humidity and Pressure Sensor Datasheet. Retrieved from https://www.bosch-sensortec.com
@@ -182,5 +183,7 @@ From a compliance standpoint, the design meets multiple OSHA standards for elect
 ‌<br/><br/>
 [10] IEEE. (2016). IEEE 802.11 Standards for Wireless LAN. Retrieved from https://standards.ieee.org
 ‌<br/><br/>
+[11] Amazon. (n.d.). 30x30x10MM Cooler Small Cooling Fan for 3D Printer. Retrieved from https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP
+<br/><br/>]
 
 
