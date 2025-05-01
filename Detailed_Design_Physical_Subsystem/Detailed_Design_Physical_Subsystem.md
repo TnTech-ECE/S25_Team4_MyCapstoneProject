@@ -129,7 +129,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Explination of Mounting:
 
-  Disclaimer: Mounting in the model will be adjusted once the capstone team recieves the neccessary parts to build and adjust to real sizes and measurments. Indentations and proper slots will be made to model to secure the boards as well as zipties. 
+  Disclaimer: Mounting in the model will be adjusted once the capstone team recieves the neccessary parts to build and adjust to real sizes and measurments. Indentations and proper slots will be made to model to secure the boards as well as zipties. ESP-Wroom-32 will be ziptied and indented into the custom PCB securly fastened to the base. Batteries will be secured in the pull-in/ pull-out box and adjusted in batteryholders via the Power Detailed Design. Any converters will be placed behind where the battery box will be instered and connected.  
 
   Top Layer: Contains temperature sensor as it needs to be set apart to not collect heat from the other sensors.
   
@@ -146,6 +146,14 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 -Explination of Safety Container:
 
 Safety Continer will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The Rod will be inserted in the box to keep connected.This box will e edited in the future upon testing.
+
+ - Updated Fan for Air Flow
+
+![Front of Sensor Unit PCB](3d_Model_fan_front.PNG)
+
+ - Explination of Fan:
+
+   Fan will be centered in the roof of the box. Fan will provide fored airflow through the box when enclosed expelling internal heat and pulling air from the outside.
 
 
 ## Bill of Materials (BOM)
