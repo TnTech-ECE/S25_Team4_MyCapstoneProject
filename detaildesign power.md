@@ -57,7 +57,7 @@ The Raspberry Pi 4 is powered directly from wall power using the Vilros Raspberr
 
 | Connected Subsystem         | Interface Type     | Direction | Description                                    |
 |----------------------------|--------------------|-----------|------------------------------------------------|
-| ESP32 Sensor Boards        | Wired (Vin, GND)   | Output    | 5V regulated output from Diymore 18650 V9 shield |
+| ESP32 Sensor Boards        | USB-A, USB-C   | Output    | 5V regulated output from Diymore 18650 V9 shield |
 | Sensors (e.g., Gravity O₂) | Wired (VOUT, GND)  | Output    | 5V regulated supply through ESP32              |
 | Raspberry Pi 4             | USB-C (Wall Plug)  | Output    | 5V from Vilros integrated power supply         |
 | Battery Input (ESP32 side) | Wired (18650 Cells)| Input     | Samsung 30Q 3000mAh 18650 rechargeable cells   |
