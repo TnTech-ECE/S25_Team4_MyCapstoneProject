@@ -272,6 +272,7 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 [11] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI
 
 [12] Typical Power Requirements,  Raspberry Pi Documentation Power Supply. [Online]. Available: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply
+
 [13] Espressif Systems, *ESP32 Series Datasheet, Version 4.9*, Espressif Systems, Apr. 2024. [Online]. Available: https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
 
 
