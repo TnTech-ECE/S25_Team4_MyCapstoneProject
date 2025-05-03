@@ -157,20 +157,66 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
 [Reference: [5] SCD40 CO₂]
 
 
-**Runtime Estimation**:
-
-- Power consumption (typical): 5V × 0.11A = **0.55W**
-- Usable battery energy: 3.6V × 9.6Ah = **34.56Wh**
-- Estimated runtime: 34.56Wh ÷ 0.55W ≈ **62.8 hours**
-
-With deep sleep enabled, the ESP32 draws less power and exceeds the 72-hour minimum runtime.
-
-**Conclusion**:
-
-- Runtime per ESP32 module exceeds 72 hours.
-- Power supply (5V 3A) from Diymore shield is sufficient.
-
----
+  **Continuous Runtime Estimation**:
+  
+  - Power consumption (typical): 5V × 0.11A = **0.55W**
+  - Usable battery energy: 3.6V × 9.6Ah = **34.56Wh**
+  - Estimated runtime: 34.56Wh ÷ 0.55W ≈ **62.8 hours**
+  
+  **Energy Used per 5-Minute Cycle. 1 minute active phase and 4 minutes sleep phase**
+  
+  **Active phase (1 minute = 60 seconds):**  
+  Power = 5V × 0.11A = **0.55 W**  
+  Energy = 0.55 W × 60 s = **33 J**
+  
+  **Sleep phase (4 minutes = 240 seconds):**  
+  Power = 5V × 0.00001A = **0.00005 W**  
+  Energy = 0.00005 W × 240 s = **0.012 J**
+  
+  [Refrence[13], page 5]
+  
+  **Total energy per 5-minute cycle:**  
+  33 J + 0.012 J = **33.012 J**
+  
+  Convert to Watt-hours:  
+  33.012 J ÷ 3600 = **0.00917 Wh**
+  
+  ---
+  
+  ### Step 3: Estimate Total Runtime
+  
+  **Battery Setup per ESP32 Unit:**  
+  4 × Samsung 30Q 3000mAh 18650 cells  
+  → Raw energy = 4 × 3.6V × 3Ah = 43.2 Wh  
+  → Usable energy (80% DoD × 90% boost efficiency):  
+  43.2 Wh × 0.8 × 0.9 = **31.1 Wh**
+  
+  **Number of 5-minute cycles:**  
+  31.1 Wh ÷ 0.00917 Wh/cycle ≈ **3392 cycles**
+  
+  ---
+  
+  ### Step 4: Convert Cycles to Hours
+  
+  Each cycle = 5 minutes  
+  3392 cycles × 5 min = **16,960 minutes**  
+  16,960 ÷ 60 = **~282.7 hours**
+  
+  ---
+  
+  ### Step 5: Final Runtime Estimation
+  
+  **Estimated runtime ≈ 283 hours**  
+  (**~11.8 days**) when ESP32 is awake for 1 minute and asleep for 4 minutes in each 5-minute cycle.
+  
+  This runtime meets and far exceeds the required 72-hour threshold under your detailed design.
+  
+  **Conclusion**:
+  
+  - Runtime per ESP32 module exceeds 72 hours.
+  - Power supply (5V 3A) from Diymore shield is sufficient.
+  
+  ---
 
 ### 3. Current Supply Check
 
@@ -226,6 +272,8 @@ With deep sleep enabled, the ESP32 draws less power and exceeds the 72-hour mini
 [11] ChatGPT. (2025). AI-based text refinement for improved structure, readability, and formatting. OpenAI
 
 [12] Typical Power Requirements,  Raspberry Pi Documentation Power Supply. [Online]. Available: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply
+[13] Espressif Systems, *ESP32 Series Datasheet, Version 4.9*, Espressif Systems, Apr. 2024. [Online]. Available: https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
+
 
 
 
