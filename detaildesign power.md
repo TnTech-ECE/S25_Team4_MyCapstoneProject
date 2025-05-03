@@ -209,7 +209,7 @@ Diymore 18650 V9 Shield with four Samsung 30Q 3000mAh 18650 cells (connected int
   **Estimated runtime ≈ 283 hours**  
   (**~11.8 days**) when ESP32 is awake for 1 minute and asleep for 4 minutes in each 5-minute cycle.
   
-  This runtime meets and far exceeds the required 72-hour threshold under your detailed design.
+  
   
   **Conclusion**:
   
