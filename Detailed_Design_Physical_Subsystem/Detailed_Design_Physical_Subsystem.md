@@ -117,7 +117,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Front View:
   
-![Front of Sensor Unit PCB](boxes_Frontface.PNG)
+![Front of Sensor Unit PCB](boxes_Frontface2.PNG)
 
 - Topside View:
   
@@ -169,7 +169,7 @@ Safety Container will protect sensors fom stray water and shaking from outside s
 | Creality                       | PETG Filament                                     | Amazon      | null                   | 1        | $17.99 | [Link](https://www.amazon.com/CREALITY-PETG-Filament-Dimensional-Black/dp/B0CRLGHWZF/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.yf4QrGfdb01bS0owhB7XaPtXE_o7pZRF3QizKnbgOp2FMAYczqeqdkjwHkYkt19UMm3t0lSctARuqbWB3QffX5cMTKEo7SNFp2VtnWi6ht7PI96nC95HtGC-b2vwNnjrUJ0nSDhZFryZna5GIeCR5WjIeKkl6cw7lGirsoNGqDesm8b2JrUyyWzjEjmgDBty-_nzhJbTCJH9d4-sCxJyYHoq02cPF-cBss0DG3WF7B8.2luK1lZG7mSvF8z_tehzyqiDQt2gRCVWDJROnuUOqxk&dib_tag=se&keywords=PETG+filament&qid=1745203043&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) |
 | Generic	|30x30x10MM Fan |	Amazon | null |	2 |	$13.98 | [Link](https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP/ref=asc_df_B0CWYJY5MP?mcid=a2ba0a38cf7b3e93a76390863af27890&hvocijid=2739221034031248568-B0CWYJY5MP-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=2739221034031248568&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2281435177418&th=1) |
 | FVIEXE	| Standoff Mounting Kit |	Amazon | null |	1 |	$7.99 | [Link](https://www.amazon.com/FVIEXE-Standoff-Mounting-Stainless-Advertising/dp/B09KC9VW42/ref=pd_bxgy_d_sccl_2/146-8871660-1011307?pd_rd_w=tXTdq&content-id=amzn1.sym.de9a1315-b9df-4c24-863c-7afcb2e4cc0a&pf_rd_p=de9a1315-b9df-4c24-863c-7afcb2e4cc0a&pf_rd_r=KMHBSS9588MK0NHXW87P&pd_rd_wg=D5qPN&pd_rd_r=4c52d0b4-78f1-4aaa-bc06-a06be6fc88b8&pd_rd_i=B09KC9VW42&psc=1) |
-| uxcell	| B092PWW4BF |	Amazon | null |	1 |	$10.99 | [Link](https://www.amazon.com/uxcell-Acrylic-Plastic-Display-Projects/dp/B092PWW4BF) |
+| Elavain	| B09TQHVFF9 |	Amazon | null |	1 |	$10.99 | [Link](https://www.amazon.com/Elavain-Plexiglass-Replacement-Transparent-Projects/dp/B09TQHVFF9?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1IAGFXK3ICQ72&gQT=1&th=1) |
 | **Total** |                                                     |             |                         |          | **$50.95** |                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Analysis
@@ -204,7 +204,7 @@ From a compliance standpoint, the design meets multiple OSHA standards for elect
 <br/><br/>
 [12] FVIEXE. (n.d.). Standoff Mounting Stainless Steel Kit. Retrieved from https://www.amazon.com/FVIEXE-Standoff-Mounting-Stainless-Advertising/dp/B09KC9VW42
 <br/><br/>
-[13] uxcell. (2024). Acrylic Plastic Sheet, Transparent, 8"x12", 1.5mm Thickness. Retrieved from https://www.amazon.com/uxcell-Acrylic-Plastic-Display-Projects/dp/B092PWW4BF
+[13] Elavain. (2024). Plexiglass Acrylic Sheet, 8"x12", Transparent, for Display and DIY Projects. Retrieved from https://www.amazon.com/Elavain-Plexiglass-Replacement-Transparent-Projects/dp/B09TQHVFF9?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1IAGFXK3ICQ72&gQT=1&th=1
 <br/><br/>]
 
 
