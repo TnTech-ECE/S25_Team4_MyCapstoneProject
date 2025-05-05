@@ -45,7 +45,7 @@ The enclosure shall use snap-fit mechanisms or minimal fasteners for ease of ass
 
 ### Design Constraints:
 - Dimensional Limits:
-The case size is 127mm x 63.5mm x 73.41mm (LxWxH) in outer dimensions to maintain portability and ease of deployment across multiple greenhouse locations.
+The case size is 127mm x 71.12mm x 83.318mm (LxWxH) in outer dimensions to maintain portability and ease of deployment across multiple greenhouse locations. With the hook it is 120.34mm in height.
 - Environmental Exposure:
 The case must withstand ambient greenhouse conditions, including high humidity (up to 100%), temperatures ranging from 5°C to 50°C, and prolonged exposure to moisture and soil particulates.
 - Safety Compliance:
@@ -120,7 +120,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Topside View:
   
-![Front of Sensor Unit PCB](boxes_topside.PNG)
+![Front of Sensor Unit PCB](boxes_topside2.PNG)
 
 - Views With Sensors
 
@@ -150,7 +150,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 -Explanation of Safety Container:
 
-Safety Continer will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The bottom section of the box will release heat out the walls while the top section takes in the fair flow through the ventilation. The Rod will be inserted in the box to keep connected.This box will be edited in the future upon testing.
+Safety Container will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The bottom section of the box will release heat out the walls while the top section takes in ambient air flow through the ventilation. The Rod will be inserted in the box to keep connected.This box will be edited in the future upon testing.
 
 
 
@@ -162,7 +162,8 @@ Safety Continer will protect sensors fom stray water and shaking from outside so
 | Creality                       | PETG Filament                                     | Amazon      | null                   | 1        | $17.99 | [Link](https://www.amazon.com/CREALITY-PETG-Filament-Dimensional-Black/dp/B0CRLGHWZF/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.yf4QrGfdb01bS0owhB7XaPtXE_o7pZRF3QizKnbgOp2FMAYczqeqdkjwHkYkt19UMm3t0lSctARuqbWB3QffX5cMTKEo7SNFp2VtnWi6ht7PI96nC95HtGC-b2vwNnjrUJ0nSDhZFryZna5GIeCR5WjIeKkl6cw7lGirsoNGqDesm8b2JrUyyWzjEjmgDBty-_nzhJbTCJH9d4-sCxJyYHoq02cPF-cBss0DG3WF7B8.2luK1lZG7mSvF8z_tehzyqiDQt2gRCVWDJROnuUOqxk&dib_tag=se&keywords=PETG+filament&qid=1745203043&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) |
 | Generic	|30x30x10MM Fan |	Amazon | null |	2 |	$13.98 | [Link](https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP/ref=asc_df_B0CWYJY5MP?mcid=a2ba0a38cf7b3e93a76390863af27890&hvocijid=2739221034031248568-B0CWYJY5MP-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=2739221034031248568&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2281435177418&th=1) |
 | FVIEXE	| Standoff Mounting Kit |	Amazon | null |	1 |	$7.99 | [Link](https://www.amazon.com/FVIEXE-Standoff-Mounting-Stainless-Advertising/dp/B09KC9VW42/ref=pd_bxgy_d_sccl_2/146-8871660-1011307?pd_rd_w=tXTdq&content-id=amzn1.sym.de9a1315-b9df-4c24-863c-7afcb2e4cc0a&pf_rd_p=de9a1315-b9df-4c24-863c-7afcb2e4cc0a&pf_rd_r=KMHBSS9588MK0NHXW87P&pd_rd_wg=D5qPN&pd_rd_r=4c52d0b4-78f1-4aaa-bc06-a06be6fc88b8&pd_rd_i=B09KC9VW42&psc=1) |
-| **Total** |                                                     |             |                         |          | **$39.96** |                                                                                                                                                                                                                                                                                                                                                                          |
+| uxcell	| B092PWW4BF |	Amazon | null |	1 |	$10.99 | [Link](https://www.amazon.com/uxcell-Acrylic-Plastic-Display-Projects/dp/B092PWW4BF) |
+| **Total** |                                                     |             |                         |          | **$50.95** |                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Analysis
 The proposed PETG 3D-printed sensor case successfully fulfills all functional and environmental requirements for greenhouse deployment. Its internal layout securely houses the ESP-WROOM-32 and associated sensors, while the angled ventilation slats allow direct exposure to ambient air and light for accurate environmental readings. The integrated hook enables easy suspension at canopy level for optimal data collection. The 1.27 mm wall thickness provides sufficient structural strength while keeping filament use low, making the design both durable and cost-effective. PETG's resistance to moisture, UV, and moderate heat makes it well-suited for long-term greenhouse use.
@@ -195,6 +196,8 @@ From a compliance standpoint, the design meets multiple OSHA standards for elect
 [11] Amazon. (n.d.). 30x30x10MM Cooler Small Cooling Fan for 3D Printer. Retrieved from https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP
 <br/><br/>
 [12] FVIEXE. (n.d.). Standoff Mounting Stainless Steel Kit. Retrieved from https://www.amazon.com/FVIEXE-Standoff-Mounting-Stainless-Advertising/dp/B09KC9VW42
+<br/><br/>
+[13] uxcell. (2024). Acrylic Plastic Sheet, Transparent, 8"x12", 1.5mm Thickness. Retrieved from https://www.amazon.com/uxcell-Acrylic-Plastic-Display-Projects/dp/B092PWW4BF
 <br/><br/>]
 
 
