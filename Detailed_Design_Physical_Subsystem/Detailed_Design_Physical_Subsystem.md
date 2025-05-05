@@ -42,6 +42,7 @@ The enclosure shall use snap-fit mechanisms or minimal fasteners for ease of ass
 | Battery Holder (4xAA)          | ~76 mm × 60 mm × 19 mm                  |
 | Custom PCB (approx.)           | ~80 mm × 50 mm                          |
 | Standoffs with Screws          | 12 x 20 mm                              |
+| Raspberry Pi 4 Model B         | 56 mm x 85 mm  x 17 mm                  |
 
 ### Design Constraints:
 - Dimensional Limits:
@@ -130,6 +131,10 @@ The enclosure allows for non-invasive access to internal components via snap-fit
    
 ![Front of Sensor Unit PCB](Batterycase.PNG)
 
+- Main Box
+
+![Front of Sensor Unit PCB](Main_Box.PNG)
+
 - Explanation of Mounting:
 
   Disclaimer: Mounting in the model will be adjusted once the capstone team receives the necessary parts to build and adjust to real sizes and measurements. Indentations and proper slots will be made to model to secure the boards as well as 1/2 x 3/4 Inch Stainless Steel Standoff Screws. ESP-Wroom-32 will be attacched with the same standoff screws and indented into the custom PCB securely fastened to the base. Batteries will be secured in the pull-in/ pull-out box and adjusted in battery holders via the Power Detailed Design. Any converters will be placed behind where the battery box will be inserted and connected.
@@ -144,13 +149,15 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
   Bottom Layer: Contains Boost converter and battery banks. This is the power layer where the batteries can be connected and disconected with ease.
 
+  Main Box: The main box contains the Raspberry Pi 4 Model B, batteries, and a optional camera spot on the top that will be encased in clear cast Acrylic Sheet to provide a safety from water and dust.
+
  - Safety Container:
 
 ![Front of Sensor Unit PCB](3d_Model_Container.PNG)
 
 -Explanation of Safety Container:
 
-Safety Container will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The bottom section of the box will release heat out the walls while the top section takes in ambient air flow through the ventilation. The Rod will be inserted in the box to keep connected.This box will be edited in the future upon testing.
+Safety Container will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The bottom section of the box will release heat out the walls while the top section takes in ambient air flow through the ventilation. The front open face of the box will be covered in clear cast Acrylic Sheet for easy viewing of the sensors and for the camera viewing. The Rod will be inserted in the box to keep connected.This box will be edited in the future upon testing.
 
 
 
