@@ -42,6 +42,7 @@ The enclosure shall use snap-fit mechanisms or minimal fasteners for ease of ass
 | Battery Holder (4xAA)          | ~76 mm × 60 mm × 19 mm                  |
 | Custom PCB (approx.)           | ~80 mm × 50 mm                          |
 | Fan                            | 30 mm x 30 mm x 10 mm                   |
+| Standoffs with Screws          | 12 x 20 mm                              |
 
 ### Design Constraints:
 - Dimensional Limits:
@@ -129,7 +130,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Explanation of Mounting:
 
-  Disclaimer: Mounting in the model will be adjusted once the capstone team receives the necessary parts to build and adjust to real sizes and measurements. Indentations and proper slots will be made to model to secure the boards as well as zip ties. ESP-Wroom-32 will be zip tied and indented into the custom PCB securely fastened to the base. Batteries will be secured in the pull-in/ pull-out box and adjusted in battery holders via the Power Detailed Design. Any converters will be placed behind where the battery box will be inserted and connected.
+  Disclaimer: Mounting in the model will be adjusted once the capstone team receives the necessary parts to build and adjust to real sizes and measurements. Indentations and proper slots will be made to model to secure the boards as well as 1/2 x 3/4 Inch Stainless Steel Standoff Screws. ESP-Wroom-32 will be attacched with the same standoff screws and indented into the custom PCB securely fastened to the base. Batteries will be secured in the pull-in/ pull-out box and adjusted in battery holders via the Power Detailed Design. Any converters will be placed behind where the battery box will be inserted and connected.
 
   Top Layer: Contains temperature sensor as it needs to be set apart to not collect heat from the other sensors.
   
@@ -162,7 +163,8 @@ Safety Continer will protect sensors fom stray water and shaking from outside so
 |------------------------------|-----------------------------------------------------|-------------|-------------------------|----------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Creality                       | PETG Filament                                     | Amazon      | null                   | 1        | $17.99 | [Link](https://www.amazon.com/CREALITY-PETG-Filament-Dimensional-Black/dp/B0CRLGHWZF/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.yf4QrGfdb01bS0owhB7XaPtXE_o7pZRF3QizKnbgOp2FMAYczqeqdkjwHkYkt19UMm3t0lSctARuqbWB3QffX5cMTKEo7SNFp2VtnWi6ht7PI96nC95HtGC-b2vwNnjrUJ0nSDhZFryZna5GIeCR5WjIeKkl6cw7lGirsoNGqDesm8b2JrUyyWzjEjmgDBty-_nzhJbTCJH9d4-sCxJyYHoq02cPF-cBss0DG3WF7B8.2luK1lZG7mSvF8z_tehzyqiDQt2gRCVWDJROnuUOqxk&dib_tag=se&keywords=PETG+filament&qid=1745203043&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1) |
 | Generic	|30x30x10MM Fan |	Amazon | null |	2 |	$13.98 | [Link](https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP/ref=asc_df_B0CWYJY5MP?mcid=a2ba0a38cf7b3e93a76390863af27890&hvocijid=2739221034031248568-B0CWYJY5MP-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=2739221034031248568&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2281435177418&th=1) |
-| **Total** |                                                     |             |                         |          | **$31.97** |                                                                                                                                                                                                                                                                                                                                                                          |
+| FVIEXE	| Standoff Mounting Kit |	Amazon | null |	1 |	$7.99 | [Link]([https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP/ref=asc_df_B0CWYJY5MP?mcid=a2ba0a38cf7b3e93a76390863af27890&hvocijid=2739221034031248568-B0CWYJY5MP-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=2739221034031248568&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2281435177418&th=1](https://www.amazon.com/FVIEXE-Standoff-Mounting-Stainless-Advertising/dp/B09KC9VW42/ref=pd_bxgy_d_sccl_2/146-8871660-1011307?pd_rd_w=tXTdq&content-id=amzn1.sym.de9a1315-b9df-4c24-863c-7afcb2e4cc0a&pf_rd_p=de9a1315-b9df-4c24-863c-7afcb2e4cc0a&pf_rd_r=KMHBSS9588MK0NHXW87P&pd_rd_wg=D5qPN&pd_rd_r=4c52d0b4-78f1-4aaa-bc06-a06be6fc88b8&pd_rd_i=B09KC9VW42&psc=1)) |
+| **Total** |                                                     |             |                         |          | **$39.96** |                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Analysis
 The proposed PETG 3D-printed sensor case successfully fulfills all functional and environmental requirements for greenhouse deployment. Its internal layout securely houses the ESP-WROOM-32 and associated sensors, while the angled ventilation slats allow direct exposure to ambient air and light for accurate environmental readings. The integrated hook enables easy suspension at canopy level for optimal data collection. The 1.27 mm wall thickness provides sufficient structural strength while keeping filament use low, making the design both durable and cost-effective. PETG's resistance to moisture, UV, and moderate heat makes it well-suited for long-term greenhouse use.
@@ -193,6 +195,8 @@ From a compliance standpoint, the design meets multiple OSHA standards for elect
 [10] IEEE. (2016). IEEE 802.11 Standards for Wireless LAN. Retrieved from https://standards.ieee.org
 ‌<br/><br/>
 [11] Amazon. (n.d.). 30x30x10MM Cooler Small Cooling Fan for 3D Printer. Retrieved from https://www.amazon.com/30x30x10MM-Cooler-Small-Cooling-Pinter/dp/B0CWYJY5MP
+<br/><br/>
+[12] FVIEXE. (n.d.). Standoff Mounting Stainless Steel Kit. Retrieved from https://www.amazon.com/FVIEXE-Standoff-Mounting-Stainless-Advertising/dp/B09KC9VW42
 <br/><br/>]
 
 
