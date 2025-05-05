@@ -41,7 +41,6 @@ The enclosure shall use snap-fit mechanisms or minimal fasteners for ease of ass
 | Camera Module                  | 56.6 mm × 47.7 mm × 29.4 mm             |
 | Battery Holder (4xAA)          | ~76 mm × 60 mm × 19 mm                  |
 | Custom PCB (approx.)           | ~80 mm × 50 mm                          |
-| Fan                            | 30 mm x 30 mm x 10 mm                   |
 | Standoffs with Screws          | 12 x 20 mm                              |
 
 ### Design Constraints:
@@ -117,26 +116,31 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Front View:
   
-![Front of Sensor Unit PCB](3d_Model.PNG)
+![Front of Sensor Unit PCB](boxes_Frontface.PNG)
 
-- Rear View:
+- Topside View:
   
-![Front of Sensor Unit PCB](3d_Model_back.PNG)
+![Front of Sensor Unit PCB](boxes_topside.PNG)
 
 - Views With Sensors
 
-![Front of Sensor Unit PCB](3d_Model_sensors_front.PNG)
-![Front of Sensor Unit PCB](3d_Model_sensors.PNG)
+![Front of Sensor Unit PCB](SensorBox_Side.PNG)
+
+ - Battery Box
+   
+![Front of Sensor Unit PCB](Batterycase.PNG)
 
 - Explanation of Mounting:
 
   Disclaimer: Mounting in the model will be adjusted once the capstone team receives the necessary parts to build and adjust to real sizes and measurements. Indentations and proper slots will be made to model to secure the boards as well as 1/2 x 3/4 Inch Stainless Steel Standoff Screws. ESP-Wroom-32 will be attacched with the same standoff screws and indented into the custom PCB securely fastened to the base. Batteries will be secured in the pull-in/ pull-out box and adjusted in battery holders via the Power Detailed Design. Any converters will be placed behind where the battery box will be inserted and connected.
 
-  Top Layer: Contains temperature sensor as it needs to be set apart to not collect heat from the other sensors.
-  
-  Second Layer: Contains CO2 and Light sensor. Light sensor will be placed varying on weight distribution once given the physical chips and adjustments.
+  Roof: Contains hook, hood ventilation, and the Light Sensor that will be covered by clear cast Acrylic Sheet to provide safety from dust and water. 
 
-  First Layer: Contains ESP-WROOM-32 with custom PCB attached and the O2 sensor having the most weight on this layer depending on the battery layer.
+  Top Layer: Contains temperature sensor and CO2 sensor as they needs to be set apart to not collect heat from the other sensors and room for wiring and mounting.
+  
+  Second Layer: Nothing is contained in this layer to provide extra spacing and protection from the heat generating boards to the sensitive sensors. This layer will also hold the main wiring to help keep the box sorted.
+
+  First Layer: Contains ESP-WROOM-32 with custom PCB attached and the O2 sensor having the most weight on this layer depending on the battery layer. This Layer and the second layer are cut off by a isolation wall to stop heat from going to the sensors with the exception for the center holes for connecting wire through and will be packed to ensure saftey to the sensors.
 
   Bottom Layer: Contains Boost converter and battery banks. This is the power layer where the batteries can be connected and disconected with ease.
 
@@ -146,15 +150,9 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 -Explanation of Safety Container:
 
-Safety Continer will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The Rod will be inserted in the box to keep connected.This box will e edited in the future upon testing.
+Safety Continer will protect sensors fom stray water and shaking from outside sources ensuring proper ventilation. The bottom section of the box will release heat out the walls while the top section takes in the fair flow through the ventilation. The Rod will be inserted in the box to keep connected.This box will be edited in the future upon testing.
 
- - Updated Fan for Air Flow
 
-![Front of Sensor Unit PCB](3d_Model_fan_front.PNG)
-
- - Explanation of Fan:
-
-   Fan will be centered in the roof of the box. Fan will provide fored airflow through the box when enclosed expelling internal heat and pulling air from the outside.
 
 
 ## Bill of Materials (BOM)
