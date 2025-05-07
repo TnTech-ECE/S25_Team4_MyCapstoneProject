@@ -132,7 +132,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 ![Front of Sensor Unit PCB](SCD-40_C02_Sensor.PNG)
   -  BH1750
 ![Front of Sensor Unit PCB](BH1750.PNG)
-  - Gravity Electrochemical O₂ Sensor: Unfortunatly where is no CAD file for this sensor. Blue Box has been made in its place on the first layer Sensor Units. 
+  - Gravity Electrochemical O₂ Sensor: Unfortunatly where is no CAD file for this sensor. Blue Box has been made in its place on the first layer of the Sensor Units. 
 
  - Battery Box
    
