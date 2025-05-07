@@ -125,7 +125,14 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 
 - Views With Sensors
 
-![Front of Sensor Unit PCB](SensorBox_Side.PNG)
+![Front of Sensor Unit PCB](SensorBox_Side2.PNG)
+  -  ESP-Wroom-32
+![Front of Sensor Unit PCB](ESP-Wroom-32.PNG)
+  -  SCD-40 C02 Sensor
+![Front of Sensor Unit PCB](SCD-40_C02_Sensor.PNG)
+  -  BH1750
+![Front of Sensor Unit PCB](BH1750.PNG)
+  - Gravity Electrochemical O₂ Sensor: Unfortunatly where is no CAD file for this sensor. Blue Box has been made in its place on the first layer Sensor Units. 
 
  - Battery Box
    
@@ -134,6 +141,9 @@ The enclosure allows for non-invasive access to internal components via snap-fit
 - Main Box
 
 ![Front of Sensor Unit PCB](Main_Box.PNG)
+
+  - Raspberry_Pi_4_Model_B.PNG
+![Front of Sensor Unit PCB](Raspberry_Pi_4_Model_B.PNG)
 
 - Explanation of Mounting:
 
@@ -145,7 +155,7 @@ The enclosure allows for non-invasive access to internal components via snap-fit
   
   Second Layer: Nothing is contained in this layer to provide extra spacing and protection from the heat generating boards to the sensitive sensors. This layer will also hold the main wiring to help keep the box sorted.
 
-  First Layer: Contains ESP-WROOM-32 with custom PCB attached and the O2 sensor having the most weight on this layer depending on the battery layer. This Layer and the second layer are cut off by a isolation wall to stop heat from going to the sensors with the exception for the center holes for connecting wire through and will be packed to ensure saftey to the sensors.
+  First Layer: Contains ESP-WROOM-32 with custom PCB attached and the O2 sensor (Infront of the PCB) having the most weight on this layer depending on the battery layer. This Layer and the second layer are cut off by a isolation wall to stop heat from going to the sensors with the exception for the center holes for connecting wire through and will be packed to ensure saftey to the sensors.
 
   Bottom Layer: Contains Boost converter and battery banks. This is the power layer where the batteries can be connected and disconected with ease.
 
