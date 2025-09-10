@@ -1,6 +1,6 @@
 # Greenhouse Team 4
 ## Time: 5:00-6:00pm
-## Date: 08/29/25
+## Date: 09/09/25
 ### (All members in attendence)
 Duy Tran - Append items to BOM for interconnection and PCB.
 
@@ -12,7 +12,7 @@ Henry Hurst - Append items to BOM pertaing to case filaments and necessary items
 ## Key Points
 ### (Applies to all team members)
 
-The team will append items to the BOM and request purchase.
+The team will append items to the BOM and request purchase. Currently, the BOM is being under review by Dr. Rizvi and will be sent to Ms. Julie once approved.
 
 ## Future plans
 
