@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This experimental analysis revisits the conceptual design of our greenhouse sensor units, a project born out of the desire to create a portable, modular data collection system that could thrive in diverse environments. The overarching vision was not simply to build hardware, but to engineer a reliable ecosystem where sensors, processors, and communication subsystems work in harmony to provide continuous insight into greenhouse conditions.  
+This experimental analysis revisits the conceptual design of our greenhouse sensor units. The project's overarching goal was to design and develop a portable, modular data collection system that operates reliably in various environments. 
 
-From the earliest design sketches, two themes emerged as critical: endurance and connectivity. Endurance meant that the system had to sustain itself for long periods without human intervention, while connectivity meant that data had to flow seamlessly from the greenhouse floor to the cloud, where it could be monitored and analyzed. These guiding principles shaped the specifications and experiments described in this report.
+Based on conceptual design, the most critical requirements and success criteria pertain to the system’s overall battery life and wireless communication to a central processing unit. As such, the subsystems have been combined to effectively test these two success criteria.
 
 ### Relevant Critical Success Criteria
 
@@ -25,52 +25,59 @@ From the earliest design sketches, two themes emerged as critical: endurance and
 ## Experiment One: Battery Lifespan
 
 ### Purpose and Justification
-The first experiment was designed to test the heartbeat of the system: its battery subsystem. Specifications 1 and 2 were combined to evaluate whether the sensor units could sustain operation for the required three-day minimum and whether the battery indicators provided clear, actionable feedback. In essence, this experiment asked: can the system endure, and can it communicate its own health?
+This is an experiment that aims to combine specifications 1 and 2 for the purpose of testing the battery lifespan of the overall sensor unit. Specification 1 addresses the customer specification for the sensor unit to last before a battery change. As such the sensor units will be in operation for at least three days. Specification 2 addresses the physical indication for when the battery needs to be changed after three days. Therefore, this experiment aims to test the lifespan of the battery for the sensor units using the indication given by the battery subsystem.  
 
 ### Detailed Procedure
-The ESP32 sensor units were connected to a suite of environmental sensors — BME280 for humidity, BH1750 for light, SCD40 for CO₂, and Gravity sensors for O₂. These units were powered by the battery subsystem and tasked with continuously parsing sensor data and transmitting it to the Raspberry Pi central processor.  
+This test involves keeping the ESP32 sensor units connected to the BME280 (Humidity), BH1750 (Light), SCD40 (CO2), and Gravity Sensors (O2). While connected to the battery subsystem, the ESP32 will continue to parse the sensors to gather information and send this information to the central processing unit running on a Raspberry Pi. This test will be performed over a span of three days with each day the battery unit indicator will be monitored and recorded.  
 
-The test spanned three days, during which the LED battery indicators were carefully observed. The indicator system was intuitive: full charge illuminated all LEDs in solid red, while decreasing charge gradually extinguished them. A flashing lowest LED signaled imminent depletion, serving as a final warning before shutdown.  
+<img src="resources/battery-pad.png" alt="Battery Pad" width="auto" height="auto">
+
+Figure 1. The LED indicator shown illustrates the battery-level status. When the batteries are fully charged, all upper LEDs illuminate solid red. As the charge decreases, only the lowest LED remains solid, indicating the battery level has dropped below 20%. When the lowest LED begins flashing, it signifies that the batteries are nearly depleted, and the system is out of power.   
 
 ### Expected Results
-With sleep mode enabled, the ESP32 units were expected to last at least 72 hours. The battery indicator would begin at full capacity (four bars) and gradually decline to zero, providing a visual narrative of the battery’s journey.  
+The ESP32 sensor units are expected to last for at least 72 hours with sleep mode enabled and the battery indicator being at full capacity at the beginning of the test (four full bars) and zero capacity at the end (zero full bars by the end).  
 
 ### Actual Results
-In practice, the ESP32 module depleted its power supply after approximately 55 hours of continuous operation. The discrepancy was traced to the absence of sleep mode, which significantly increased power consumption. Despite this, the battery subsystem itself performed flawlessly, aligning with theoretical calculations.  
-
-Projected runtime without sleep mode was 56.52 hours, and the measured runtime of 55 hours confirmed subsystem integrity. With sleep mode properly implemented, the system’s operational lifetime is projected to extend to approximately 10 days — a result that not only meets but exceeds design expectations.  
+The ESP32 module depleted its power supply after approximately 55 hours of continuous operation. The root cause was identified as the sleep-mode functionality not being enabled, resulting in significantly higher power consumption than intended. Despite this, the battery subsystem performed within expected parameters. 
 
 ### Interpretation and Conclusions
-The experiment validated the robustness of the battery subsystem. The shortfall in runtime was not a failure of hardware but a configuration oversight. Once corrected, the system promises exceptional endurance, reinforcing confidence in its deployment for extended greenhouse monitoring.  
+Based on our power-draw calculations for a non–sleep-mode operating condition, the projected runtime was 62.8 hours x 0.90 (efficiency)= 56.52 hours. The measured runtime of 55 hours confirms that both the battery cells and the battery shield’s 5 V regulation stage are operating correctly and exhibit no performance deficiencies. With sleep mode properly implemented, the system’s average current draw will be substantially reduced. Under these conditions, the projected operational lifetime increases to approximately 10 days, consistent with our design calculations.
 
 ---
 
 ## Experiment Two: Sensor Data Collection and Storage
 
 ### Purpose and Justification
-The second experiment shifted focus from endurance to intelligence: could the system reliably collect, transmit, and store sensor data under both online and offline conditions? Specifications 3 through 6 were combined to test the full communication pipeline, from sensor to cloud.  
+This is an experiment that aims to combine specifications 3, 4, 5, and 6 for the purpose of interfacing the ESP32 sensor units with the central processing Pi. Specification 3 addresses the customer's specification for the sensor unit to work without the need for wires. As such, the sensor units communicate wirelessly through Wi-Fi. Specifications 4, 5, and 6 address the need for easy data collection. As such, there will be a website that collects all of the data for display and an offline storage system. This experiment aims to test the lifespan of data collection when fully connected over the span of many days and the ability to operate online and offline.   
 
 ### Detailed Procedure
-The Raspberry Pi served as the central processor, continuously interfacing with ESP32 sensor units. For online testing, the ESP32 units transmitted data wirelessly to the Pi, which hosted a website displaying real-time readings. For offline testing, the Pi stored data locally on its SD card over three days, ensuring resilience against connectivity interruptions.  
+This experiment will involve the Raspberry Pi (central processing unit) and an ESP32 sensor unit. For the purpose of testing online and offline data collection and display, both subsystems will be plugged into an outlet for a constant source of power. For the online data collection and display, the ESP32 units are flashed to parse the sensors to attain data and send to the Pi. This data is displayed on the website. For the offline testing, over the span of 3 days, the Pi will parse the ESP32 units and store the data on a SD card.  
 
 ### Expected Results
-The system was expected to collect data on CO₂, O₂, humidity, and temperature for three days, display this data on the website, and store it locally in `.csv` format for offline access.  
+The Pi and ESP32 units should be able to gather information on Co2, O2, humidity, and temperature over the span of 3 days. This information should then be displayed on a website. In offline operations, the information is then successfully stored and accessed from the SD card on the Pi.
 
 ### Actual Results
-The Raspberry Pi successfully interfaced with the ESP32 boards, receiving and displaying sensor data in real time. Over three days, the system operated continuously, with data collected every five minutes. Offline storage worked seamlessly, with the SD card retaining data in `.csv` format, readily compatible with Microsoft Excel for further analysis.  
+The Raspberry Pi successfully interfaced with the ESP32 boards to receive their collected sensor data. The Pi functionally hosts a website that displays the data in real-time. As shown by the timestamps, the setup worked perfectly for over three days.
+
+<img src="resources/website-graph.png" alt="Website Graph" width="auto" height="auto">
+Figure 2. The data collected over the three-day test is displayed above. Each datapoint shows the date and time it was collected with a mouseover.
+
+
+<img src="resources/sample-csv.png" alt="Saved CSV" width="auto" height="auto">
+Figure 3. The above screenshot depicts the onboard SD card storage of the Pi, which is holding the data for offline use. It is able to be downloaded for offboard data processing.
 
 ### Interpretation and Conclusions
-The experiment demonstrated that the system could function as both a live monitoring tool and a resilient offline recorder. Graphs displayed inferred datapoints, providing a smooth visualization of trends. Future improvements could include customizable time scales for the website and more precise sampling intervals, but the core functionality was validated.  
+The Pi and ESP32 units successfully collected data over the span of 3 days. Data was collected about every 5 minutes by both boards after being set up. The graphs accurately represent the data collected and draw loose connection lines between points to imply inferred datapoints. The Pi’s SD card stores all the data in .csv format, which is readily compatible with Microsoft Excel for easy data management and manipulation. 
+
+Future iterations could more precisely approach an exact ‘n’ minutes per sample through a timestamp calculation between the ESP32 and the Pi. Additionally, the website only has scales for previous 15 minutes, hour, 24 hours, and 'all time'. A meaningful improvement to this would include a more customizable scale that allows for better viewing.   
 
 ---
 
 ## Conclusion
 
-This capstone project sought to deliver reliable greenhouse sensor units within a constrained development timeline. Despite challenges, the majority of customer requirements were met.  
+This capstone aimed for reliable greenhouse sensor units, but faced constraints from a limited development and testing timeline. However, the majority of the functions provided by our customer, Tennessee Tech Biology Department, were met.  
 
-The interconnect PCB subsystem proved effective in linking ESP32 boards with sensors. The Raspberry Pi central processor successfully parsed and displayed sensor data both online and offline. The battery subsystem demonstrated strong performance, with clear pathways to extended endurance through sleep mode optimization.  
-
-Together, these subsystems formed a cohesive, resilient system capable of supporting greenhouse monitoring with both reliability and adaptability.  
+The interconnect PCB subsystem worked well with interfacing the ESP32 with each of the respective sensors and can communicate with other subsystems. Additionally, the Raspberry Pi central processing unit was successful in parsing each of the sensor units and displaying said information on a website in the event that Wi-Fi is available and on a storage drive locally when Wi-Fi is not available. The battery and chassis subsystem was successful in that it was able to interface with the other subsystems.
 
 ---
 
@@ -98,3 +105,12 @@ The following table documents all components used in the project, their sources,
 | 17 | Plexiglass Sheet | 1 | Amazon | null | Lab | 9/3/2025 | New | 3 sheets used |
 | 18 | Raspberry Pi 4 | 1 | PiShop | 4GB-9004 | Lab | 9/3/2025 | New | Used in experiment |
 | 19 | 512 GB SD Card | 1 | Amazon | null | Lab | 9/3/2025
+
+## Statement of Contributions
+Duy Tran – Interconnect Subsystem 
+
+Mohammed Almehmadi- Power supply analysis 
+
+Henry Hurst – Documenting and Tracking Components 
+
+Michael Feiel – Data Communication and Website 
